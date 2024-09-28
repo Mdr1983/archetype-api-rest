@@ -51,6 +51,12 @@ public class AuditEntryFilter implements Filter {
   @Override
   public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain)
       throws IOException, ServletException {
+    if (excludeAuditEntry(getUrl(servletRequest))) {
+      filterChain.doFilter(servletRequest, servletResponse);
+      return;
+    }
+
+    // Si hacemos auditoria
     long init = Instant.now().toEpochMilli();
 
     ContentCachingRequestWrapper contentCachingRequestWrapper = new ContentCachingRequestWrapper(
@@ -72,6 +78,9 @@ public class AuditEntryFilter implements Filter {
       if (!excludeAuditEntry(getUrl(contentCachingRequestWrapper))) {
         saveAudit(contentCachingRequestWrapper, contentCachingResponseWrapper, httpStatus, init, elapsedTime);
       }
+
+      // Importante: copiar el cuerpo al flujo de respuesta real.
+      contentCachingResponseWrapper.copyBodyToResponse();
     }
   }
 
@@ -109,9 +118,12 @@ public class AuditEntryFilter implements Filter {
     }
   }
 
-  private String getUrl(ContentCachingRequestWrapper reqWrapper) {
-    return reqWrapper.getContextPath() + reqWrapper.getServletPath();
+  private String getUrl(ServletRequest servletRequest) {
+    HttpServletRequest request = (HttpServletRequest) servletRequest;
+
+    return request.getContextPath() + request.getServletPath();
   }
+
 
   private String getParams(ContentCachingRequestWrapper reqWrapper) {
     return reqWrapper.getQueryString();

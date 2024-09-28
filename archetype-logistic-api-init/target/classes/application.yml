@@ -22,14 +22,8 @@ management:
     tracing:
       sampling:
         probability: 1.0  # Tasa de muestreo de trazas (1.0 para 100%)
-    zipkin:
-      enabled: true  # Habilita exportación a Zipkin
-      base-url: http://localhost:9411  # Dirección de tu servidor Zipkin
 
-datasource-primary:
-  enabled: true
-
-excludeAuditEntry: '/h2-console,/v3,/swagger-ui,/manage/health,/cache/health,/master/health'
+excludeAuditEntry: '/h2-console,/v3,/swagger-ui,/actuator/prometheus'
 
 springdoc:
   swagger-ui:
