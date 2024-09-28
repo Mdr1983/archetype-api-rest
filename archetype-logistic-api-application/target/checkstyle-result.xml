@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkstyle version="10.18.0">
+<file name="Z:\workspace\Github-Mdr1983\archetype-logistic-api\archetype-logistic-api-application\src\main\java\com\mdemanuel\archetype_logistic_api\application\config\CacheConfiguration.java">
+</file>
+<file name="Z:\workspace\Github-Mdr1983\archetype-logistic-api\archetype-logistic-api-application\src\main\java\com\mdemanuel\archetype_logistic_api\application\config\SpringConfig.java">
+</file>
+<file name="Z:\workspace\Github-Mdr1983\archetype-logistic-api\archetype-logistic-api-application\src\main\java\com\mdemanuel\archetype_logistic_api\application\domain\model\config\BaseDatasourcesConfiguration.java">
+</file>
+<file name="Z:\workspace\Github-Mdr1983\archetype-logistic-api\archetype-logistic-api-application\src\main\java\com\mdemanuel\archetype_logistic_api\application\domain\model\config\DatasourcesPrimaryConfiguration.java">
+</file>
+<file name="Z:\workspace\Github-Mdr1983\archetype-logistic-api\archetype-logistic-api-application\src\main\java\com\mdemanuel\archetype_logistic_api\application\domain\model\config\principal\DatasourcesConfiguration.java">
+</file>
+<file name="Z:\workspace\Github-Mdr1983\archetype-logistic-api\archetype-logistic-api-application\src\main\java\com\mdemanuel\archetype_logistic_api\application\domain\model\config\principal\DatasourcesConfigurationLocal.java">
+</file>
+<file name="Z:\workspace\Github-Mdr1983\archetype-logistic-api\archetype-logistic-api-application\src\main\java\com\mdemanuel\archetype_logistic_api\application\domain\model\domain\audit\AuditEntryEntity.java">
+</file>
+<file name="Z:\workspace\Github-Mdr1983\archetype-logistic-api\archetype-logistic-api-application\src\main\java\com\mdemanuel\archetype_logistic_api\application\domain\model\domain\audit\AuditExitEntity.java">
+</file>
+<file name="Z:\workspace\Github-Mdr1983\archetype-logistic-api\archetype-logistic-api-application\src\main\java\com\mdemanuel\archetype_logistic_api\application\domain\model\domain\BaseEntity.java">
+</file>
+<file name="Z:\workspace\Github-Mdr1983\archetype-logistic-api\archetype-logistic-api-application\src\main\java\com\mdemanuel\archetype_logistic_api\application\domain\model\domain\master\DataTypeEntity.java">
+</file>
+<file name="Z:\workspace\Github-Mdr1983\archetype-logistic-api\archetype-logistic-api-application\src\main\java\com\mdemanuel\archetype_logistic_api\application\domain\model\exception\BadParamsException.java">
+</file>
+<file name="Z:\workspace\Github-Mdr1983\archetype-logistic-api\archetype-logistic-api-application\src\main\java\com\mdemanuel\archetype_logistic_api\application\domain\model\exception\BaseException.java">
+</file>
+<file name="Z:\workspace\Github-Mdr1983\archetype-logistic-api\archetype-logistic-api-application\src\main\java\com\mdemanuel\archetype_logistic_api\application\domain\model\exception\CourierConnectionStrategyException.java">
+</file>
+<file name="Z:\workspace\Github-Mdr1983\archetype-logistic-api\archetype-logistic-api-application\src\main\java\com\mdemanuel\archetype_logistic_api\application\domain\model\exception\EntityMappingException.java">
+</file>
+<file name="Z:\workspace\Github-Mdr1983\archetype-logistic-api\archetype-logistic-api-application\src\main\java\com\mdemanuel\archetype_logistic_api\application\domain\model\exception\ExceptionCode.java">
+</file>
+<file name="Z:\workspace\Github-Mdr1983\archetype-logistic-api\archetype-logistic-api-application\src\main\java\com\mdemanuel\archetype_logistic_api\application\domain\model\exception\ExternalServiceException.java">
+</file>
+<file name="Z:\workspace\Github-Mdr1983\archetype-logistic-api\archetype-logistic-api-application\src\main\java\com\mdemanuel\archetype_logistic_api\application\domain\model\exception\SqlBadExecution.java">
+</file>
+<file name="Z:\workspace\Github-Mdr1983\archetype-logistic-api\archetype-logistic-api-application\src\main\java\com\mdemanuel\archetype_logistic_api\application\domain\model\util\DbTables.java">
+</file>
+<file name="Z:\workspace\Github-Mdr1983\archetype-logistic-api\archetype-logistic-api-application\src\main\java\com\mdemanuel\archetype_logistic_api\application\domain\ports\primary\config\AuditEntryFilter.java">
+</file>
+<file name="Z:\workspace\Github-Mdr1983\archetype-logistic-api\archetype-logistic-api-application\src\main\java\com\mdemanuel\archetype_logistic_api\application\domain\ports\primary\dto\request\DataTypeDto.java">
+</file>
+<file name="Z:\workspace\Github-Mdr1983\archetype-logistic-api\archetype-logistic-api-application\src\main\java\com\mdemanuel\archetype_logistic_api\application\domain\ports\primary\dto\response\controller\ApiExceptionResponseDto.java">
+</file>
+<file name="Z:\workspace\Github-Mdr1983\archetype-logistic-api\archetype-logistic-api-application\src\main\java\com\mdemanuel\archetype_logistic_api\application\domain\ports\primary\dto\response\controller\ApiResponseDto.java">
+</file>
+<file name="Z:\workspace\Github-Mdr1983\archetype-logistic-api\archetype-logistic-api-application\src\main\java\com\mdemanuel\archetype_logistic_api\application\domain\ports\primary\dto\response\controller\ExceptionErrorDto.java">
+</file>
+<file name="Z:\workspace\Github-Mdr1983\archetype-logistic-api\archetype-logistic-api-application\src\main\java\com\mdemanuel\archetype_logistic_api\application\domain\ports\secondary\repository\audit\AuditEntryRepository.java">
+</file>
+<file name="Z:\workspace\Github-Mdr1983\archetype-logistic-api\archetype-logistic-api-application\src\main\java\com\mdemanuel\archetype_logistic_api\application\domain\ports\secondary\repository\master\DataTypeRepository.java">
+</file>
+<file name="Z:\workspace\Github-Mdr1983\archetype-logistic-api\archetype-logistic-api-application\src\main\java\com\mdemanuel\archetype_logistic_api\application\domain\service\audit\AuditEntryService.java">
+</file>
+<file name="Z:\workspace\Github-Mdr1983\archetype-logistic-api\archetype-logistic-api-application\src\main\java\com\mdemanuel\archetype_logistic_api\application\domain\service\audit\AuditExitService.java">
+</file>
+<file name="Z:\workspace\Github-Mdr1983\archetype-logistic-api\archetype-logistic-api-application\src\main\java\com\mdemanuel\archetype_logistic_api\application\domain\service\audit\impl\AuditEntryServiceImpl.java">
+</file>
+<file name="Z:\workspace\Github-Mdr1983\archetype-logistic-api\archetype-logistic-api-application\src\main\java\com\mdemanuel\archetype_logistic_api\application\domain\service\cache\CacheService.java">
+</file>
+<file name="Z:\workspace\Github-Mdr1983\archetype-logistic-api\archetype-logistic-api-application\src\main\java\com\mdemanuel\archetype_logistic_api\application\domain\service\cache\impl\CacheServiceImpl.java">
+</file>
+<file name="Z:\workspace\Github-Mdr1983\archetype-logistic-api\archetype-logistic-api-application\src\main\java\com\mdemanuel\archetype_logistic_api\application\domain\service\exceptions\AdapterException.java">
+</file>
+<file name="Z:\workspace\Github-Mdr1983\archetype-logistic-api\archetype-logistic-api-application\src\main\java\com\mdemanuel\archetype_logistic_api\application\domain\service\exceptions\BadFormatException.java">
+</file>
+<file name="Z:\workspace\Github-Mdr1983\archetype-logistic-api\archetype-logistic-api-application\src\main\java\com\mdemanuel\archetype_logistic_api\application\domain\service\exceptions\DuplicatedItemException.java">
+</file>
+<file name="Z:\workspace\Github-Mdr1983\archetype-logistic-api\archetype-logistic-api-application\src\main\java\com\mdemanuel\archetype_logistic_api\application\domain\service\exceptions\ExceptionCode.java">
+</file>
+<file name="Z:\workspace\Github-Mdr1983\archetype-logistic-api\archetype-logistic-api-application\src\main\java\com\mdemanuel\archetype_logistic_api\application\domain\service\exceptions\ItemNotFoundException.java">
+</file>
+<file name="Z:\workspace\Github-Mdr1983\archetype-logistic-api\archetype-logistic-api-application\src\main\java\com\mdemanuel\archetype_logistic_api\application\domain\service\mapper\MasterDtoMapper.java">
+</file>
+<file name="Z:\workspace\Github-Mdr1983\archetype-logistic-api\archetype-logistic-api-application\src\main\java\com\mdemanuel\archetype_logistic_api\application\domain\service\master\impl\MasterServiceImpl.java">
+</file>
+<file name="Z:\workspace\Github-Mdr1983\archetype-logistic-api\archetype-logistic-api-application\src\main\java\com\mdemanuel\archetype_logistic_api\application\domain\service\master\MasterService.java">
+</file>
+<file name="Z:\workspace\Github-Mdr1983\archetype-logistic-api\archetype-logistic-api-application\src\main\java\com\mdemanuel\archetype_logistic_api\application\domain\service\util\CommonUtils.java">
+</file>
+<file name="Z:\workspace\Github-Mdr1983\archetype-logistic-api\archetype-logistic-api-application\src\main\java\com\mdemanuel\archetype_logistic_api\application\domain\service\util\ConstantsUtils.java">
+</file>
+<file name="Z:\workspace\Github-Mdr1983\archetype-logistic-api\archetype-logistic-api-application\src\main\java\com\mdemanuel\archetype_logistic_api\application\domain\service\util\DateUtils.java">
+</file>
+<file name="Z:\workspace\Github-Mdr1983\archetype-logistic-api\archetype-logistic-api-application\src\main\java\com\mdemanuel\archetype_logistic_api\application\domain\service\util\EntityService.java">
+</file>
+<file name="Z:\workspace\Github-Mdr1983\archetype-logistic-api\archetype-logistic-api-application\src\main\java\com\mdemanuel\archetype_logistic_api\application\util\aspect\LogExecution.java">
+</file>
+<file name="Z:\workspace\Github-Mdr1983\archetype-logistic-api\archetype-logistic-api-application\src\main\java\com\mdemanuel\archetype_logistic_api\application\util\aspect\LogExecutionAspect.java">
+</file>
+<file name="Z:\workspace\Github-Mdr1983\archetype-logistic-api\archetype-logistic-api-application\src\main\java\com\mdemanuel\archetype_logistic_api\application\util\Utils.java">
+</file>
+</checkstyle>
