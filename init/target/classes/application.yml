@@ -1,0 +1,104 @@
+logging:
+    level:
+      root: DEBUG
+    pattern:
+      level: '%5p [${spring.application.name:},%X{traceId:-},%X{spanId:-}]'
+
+server:
+  port: 8081
+  servlet:
+    context-path: /archetype-api-rest
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: beans,env,health,info,metrics,mappings,prometheus
+  endpoint:
+    health:
+      show-details: always
+  tracing:
+    enabled: true  # Habilita Micrometer Tracing
+    tracing:
+      sampling:
+        probability: 1.0  # Tasa de muestreo de trazas (1.0 para 100%)
+
+excludeAuditEntry: '/h2-console,/v3,/swagger-ui,/actuator/prometheus'
+
+springdoc:
+  swagger-ui:
+    groups-order: ASC
+    disable-swagger-default-url: true
+  enable-native-support: true
+
+spring:
+  cache:
+    type: redis
+    redis:
+      use-key-prefix: true
+      use-prefix: ${spring.application.name}
+      logger-active: true
+  data:
+    redis:
+      host: localhost
+      port: 6379
+      database: 0
+      timeout: 15000             # Tiempo de espera en milisegundos
+      connection-timeout: 30000  # Tiempo de espera en milisegundos
+      client-type: lettuce
+  #cloud:
+    #config:
+      #server:
+        #git:
+        #uri: https://github.com/Mdr1983/config.git
+      #default-label: master
+  jackson:
+    mapper:
+      accept_case_insensitive_properties: true
+  profiles:
+    active: ${SHORT_ENV}
+    include: server_h2
+  # BBDD embebida H2 en memoria
+  h2:
+    console:
+      enabled: true  # Habilitar la consola de H2
+      path: /h2-console  # Ruta de acceso a la consola
+      settings:
+        web-allow-others: true  # Permitir acceso a la consola desde otras IPs
+  # Datasources
+  #H2
+  #datasource:
+    #datasource-initializer-enabled: true
+    #jdbcUrl: jdbc:h2:mem:testdb;MODE=PostgreSQL;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE;DATABASE_TO_UPPER=false;
+    #username: sa
+    #password: password
+    #driverClassName: org.h2.Driver
+    #minimum-idle: 5
+    #maximum-pool-size: 20
+    #auto-commit: true
+    #idle-timeout: 600000
+    #max-lifetime: 1800000
+    #connection-timeout: 30000
+      #hikari:
+      #connection-test-query: SELECT 1
+    #poolName: HikariCP-Principal
+  datasource:
+    datasource-initializer-enabled: false
+    minimum-idle: 5
+    maximum-pool-size: 40
+    auto-commit: true
+    idle-timeout: 600000
+    max-lifetime: 1800000
+    connection-timeout: 30000
+    hikari:
+      connection-test-query: SELECT 1
+    jdbcUrl: jdbc:postgresql://localhost:15432/vas?useUnicode=true&characterEncoding=utf8
+    username: postgres
+    password: 'example'
+    driverClassName: org.postgresql.Driver
+    poolName: HikariCP-Principal
+  # Configuración JPA
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    show-sql: true  # Muestra las consultas SQL en la consola
+    open-in-view: false  # Evitar problemas de rendimiento en producción

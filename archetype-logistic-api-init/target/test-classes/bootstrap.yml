@@ -1,7 +1,0 @@
-spring:
-application:
-  name: archetype-logistic-api
-cloud:
-  config:
-    failFast: true
-    enabled: false
