@@ -6,7 +6,11 @@ public class DbTables {
 
   public static final String AUDIT_EXIT = " [audit_exit] ";
 
-  public static final String DATA_TYPE = " [data_type] ";
+  public static final String CATEGORY = " [category] ";
+
+  public static final String PURCHASE_ORDER = " [purchase_order] ";
+
+  public static final String PURCHASE_ORDER_LINE = " [purchase_order_line] ";
 
   private DbTables() {
     throw new IllegalStateException("Utility class");

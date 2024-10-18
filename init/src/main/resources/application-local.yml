@@ -1,0 +1,28 @@
+logging:
+  level:
+    root: DEBUG
+  pattern:
+    level: '%5p [${spring.application.name:},%X{traceId:-},%X{spanId:-}]'
+
+spring:
+  #Postgres
+  datasource:
+    datasource-initializer-enabled: false
+    minimum-idle: 5
+    maximum-pool-size: 20
+    auto-commit: true
+    idle-timeout: 600000
+    max-lifetime: 1800000
+    connection-timeout: 30000
+    hikari:
+      connection-test-query: SELECT 1
+    jdbcUrl: jdbc:postgresql://localhost:15432/archetype-api-rest?useUnicode=true&characterEncoding=utf8
+    username: postgres
+    password: 'example'
+    driverClassName: org.postgresql.Driver
+    poolName: HikariCP-Principal
+  # Configuración JPA
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    show-sql: true  # Muestra las consultas SQL en la consola
+    open-in-view: false  # Evitar problemas de rendimiento en producción

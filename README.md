@@ -1,6 +1,6 @@
-# Arquetipo Logística API
+# Arquetipo API REST
 
-Arquetipo para proyectos API Rest.
+Arquetipo para proyectos que exponen un API Rest.
 
 Sigue una arquitectura hexagonal.
 
@@ -12,13 +12,10 @@ graph TD;
     archetype-api-rest-->secadapter;
 ```
 
-## Comenzando 🚀
+## Pre-requisitos 📋
 
-Pasos a seguir para poder arracar el proyecto:
-
-1. Descargar el proyecto de github
-2. Descargar el proyecto de Docker de github
-3. Seguir las indicaciones de la sección [Instalación](#instalacion)  
+* Jdk21
+* Docker
 
 ## Dependencias
 
@@ -27,10 +24,27 @@ Pasos a seguir para poder arracar el proyecto:
 <!-- DEPENDENCIES_START -->
 ```
 
-## Pre-requisitos 📋
+## Comenzando 🚀
 
-* Jdk21
-* Docker
+Pasos a seguir para poder arracar el proyecto:
+
+1. Descargar el proyecto de docker desde github. https://github.com/Mdr1983/docker.git
+2. Descargar el proyecto de archetype-api-rest desde github. https://github.com/Mdr1983/archetype-api-rest.git
+3. Seguir las indicaciones de la sección [Instalación](#instalacion)  
+
+### Características
+
+Algunas de las características del proyecto son:
+
+1. Almacena auditoria de todas las peticiones entrantes y salientes (REST) en 2 tablas de la BBDD
+   1. Tabla audit_entry
+      1. Almacena la auditoria de las peticiones entrantes a la app
+   2. Tabla audit_exit
+      1. Almacen la auditoria de las peticiones salientes a otras app
+2. Envía las metricas de la aplicación usando la libreria micrometer
+   1. Éstas métricas se envían usando Prometheus
+3. Los logs se envían a elastic
+4. Se usa spring cloud sleuth para la trazabilidad de los microservicios
 
 ## Instalación 🔧 {#instalacion}
 
@@ -46,11 +60,12 @@ mvn clean install
 
 ### Arrancando docker
 
-Abrir un terminad cmd, situarse en la carpeta de "Docker" del proyecto y ejecutar el comando:
+Abrir un terminal cmd, situarse en la carpeta del proyecto de "docker" descargado y ejecutar el comando siguiente:
 
 ```
 docker-compose up
 ```
+
 Este comando iniciará las distintas apps necesarias para el funcionamiento de la aplicación.
 
 Estas aplicaciones son las siguientes:
@@ -75,36 +90,80 @@ Estas aplicaciones son las siguientes:
 
 #### Variables de entorno a configurar
 
+1. GITHUB
+   1. URL del repositorio de Git para el uso con el SCCS
+2. SCCS 
+   1. URL del servidor de SCCS
+3. PROFILE
+   1. Profiles a ejecutar
+      1. h2
+         1. Inicia la aplicación con una BBDD en meria en H2
+      2. local
+         1. Inicia la aplicación con la BBDD de postgres del Docker
+
 ```
 GITHUB=https://github.com/Mdr1983/config.git;
 SCCS=http://localhost:8889;
-SHORT_ENV=local;
+PROFILE=local;
 ```
 
 #### Si se inicia con el SCCS
 
+En el fichero bootstrap.yml esta definido el acceso a SCCS 
+
 ```
 spring:
-application:
-name: archetype-api-rest
-cloud:
-config:
-failFast: true
-enabled: true
-name: ${spring.application.name}
-profile: ${SHORT_ENV}
-uri: ${SCCS}
-server:
-git:
-search-paths: config
+  application:
+    name: archetype-api-rest
+  cloud:
+    config:
+      failFast: true
+      enabled: true
+      name: ${spring.application.name}
+      profile: ${PROFILE}
+      uri: ${SCCS}
+      server:
+        git:
+          search-paths: config
 logging:
-config: ${SCCS}/sccs/${spring.application.name}/${SHORT_ENV}/master/base_logback.xml
+  config: ${SCCS}/sccs/${spring.application.name}/${PROFILE}/master/base_logback.xml
+```
+
+#### Si no se inicia con el SCCS
+
+En el fichero bootstrap.yml esta definido el acceso a SCCS.
+
+Hay que comentar su contenido, excepto la parte de logging.
+
+```
+#spring:
+#  application:
+#    name: archetype-api-rest
+#  cloud:
+#    config:
+#      failFast: true
+#      enabled: true
+#      name: ${spring.application.name}
+#      profile: ${PROFILE}
+#      uri: ${SCCS}
+#      server:
+#        git:
+#          search-paths: config
+logging:
+  config: classpath:logback_conf.xml
 ```
 
 #### Iniciar aplicación
 
+##### Iniciar aplicación con profile local
+
 ```
-java -jar init/target/init.jar
+java -jar init/target/init.jar -Dspring-boot.run.profiles=local
+```
+
+##### Iniciar aplicación con profile h2
+```
+java -jar init/target/init.jar -Dspring-boot.run.profiles=h2
 ```
 
 ### Verificar arranque aplicación

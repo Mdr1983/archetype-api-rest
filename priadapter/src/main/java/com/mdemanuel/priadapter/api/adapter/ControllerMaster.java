@@ -1,6 +1,7 @@
 package com.mdemanuel.priadapter.api.adapter;
 
-import com.mdemanuel.application.domain.ports.primary.dto.request.DataTypeDto;
+import com.mdemanuel.application.domain.ports.primary.dto.request.CategoryDto;
+import com.mdemanuel.application.domain.ports.primary.dto.request.SearchCriteriaDto;
 import com.mdemanuel.application.domain.ports.primary.dto.response.controller.ApiExceptionResponseDto;
 import com.mdemanuel.application.domain.ports.primary.dto.response.controller.ApiResponseDto;
 import com.mdemanuel.application.domain.service.exceptions.BadFormatException;
@@ -39,9 +40,9 @@ public class ControllerMaster {
   @Autowired
   private MasterService masterService;
 
-  @GetMapping(value = "/dataType", produces = MediaType.APPLICATION_JSON_VALUE)
+  @GetMapping(value = "/category", produces = MediaType.APPLICATION_JSON_VALUE)
   @Operation(
-      description = "Get all data type",
+      description = "Get all category",
       responses = {
           @ApiResponse(
               responseCode = "200",
@@ -63,15 +64,16 @@ public class ControllerMaster {
   )
   @ResponseBody
   @LogExecution
-  public ResponseEntity<ApiResponseDto<List<DataTypeDto>>> getAllDataType(HttpServletRequest request) {
+  public ResponseEntity<ApiResponseDto<List<CategoryDto>>> getAllCategory(HttpServletRequest request) {
     return new ResponseEntity<>(
         new ApiResponseDto<>(HttpStatus.OK.value(), HttpStatus.OK.getReasonPhrase(), request.getRequestURI(),
-            masterService.getAllDataType()), HttpStatus.OK);
+            masterService.getAllCategory()), HttpStatus.OK);
   }
 
-  @GetMapping(value = "/dataType/{code}", produces = MediaType.APPLICATION_JSON_VALUE)
+  @PostMapping(value = "/category/filters", consumes = MediaType.APPLICATION_JSON_VALUE,
+      produces = MediaType.APPLICATION_JSON_VALUE)
   @Operation(
-      description = "Get data type",
+      description = "Get all category with filters",
       responses = {
           @ApiResponse(
               responseCode = "200",
@@ -93,17 +95,48 @@ public class ControllerMaster {
   )
   @ResponseBody
   @LogExecution
-  public ResponseEntity<ApiResponseDto<DataTypeDto>> getDataType(HttpServletRequest request, @PathVariable String code)
+  public ResponseEntity<ApiResponseDto<List<CategoryDto>>> getAllCategory(HttpServletRequest request,
+      @RequestBody @Valid @NotNull SearchCriteriaDto dto) {
+    return new ResponseEntity<>(
+        new ApiResponseDto<>(HttpStatus.OK.value(), HttpStatus.OK.getReasonPhrase(), request.getRequestURI(),
+            masterService.getAllCategory(dto)), HttpStatus.OK);
+  }
+
+  @GetMapping(value = "/category/{code}", produces = MediaType.APPLICATION_JSON_VALUE)
+  @Operation(
+      description = "Get category",
+      responses = {
+          @ApiResponse(
+              responseCode = "200",
+              description = "OK"
+          ),
+          @ApiResponse(
+              responseCode = "400",
+              description = "Bad Request",
+              content = @Content(mediaType = "application/json", schema = @Schema(implementation =
+                  ApiExceptionResponseDto.class))
+          ),
+          @ApiResponse(
+              responseCode = "500",
+              description = "Internal server error",
+              content = @Content(mediaType = "application/json", schema = @Schema(implementation =
+                  ApiExceptionResponseDto.class))
+          )
+      }
+  )
+  @ResponseBody
+  @LogExecution
+  public ResponseEntity<ApiResponseDto<CategoryDto>> getCategory(HttpServletRequest request, @PathVariable String code)
       throws ItemNotFoundException {
     return new ResponseEntity<>(
         new ApiResponseDto<>(HttpStatus.OK.value(), HttpStatus.OK.getReasonPhrase(), request.getRequestURI(),
-            masterService.getDataType(code)), HttpStatus.OK);
+            masterService.getCategory(code)), HttpStatus.OK);
   }
 
-  @PostMapping(value = "/dataType", consumes = MediaType.APPLICATION_JSON_VALUE,
+  @PostMapping(value = "/category", consumes = MediaType.APPLICATION_JSON_VALUE,
       produces = MediaType.APPLICATION_JSON_VALUE)
   @Operation(
-      description = "Add data type",
+      description = "Add category",
       responses = {
           @ApiResponse(
               responseCode = "201",
@@ -125,18 +158,18 @@ public class ControllerMaster {
   )
   @ResponseBody
   @LogExecution
-  public ResponseEntity<ApiResponseDto> addDataType(HttpServletRequest request,
-      @RequestBody @Valid @NotNull DataTypeDto dto)
+  public ResponseEntity<ApiResponseDto> addCategory(HttpServletRequest request,
+      @RequestBody @Valid @NotNull CategoryDto dto)
       throws DuplicatedItemException {
     return new ResponseEntity<>(
         new ApiResponseDto<>(HttpStatus.CREATED.value(), HttpStatus.CREATED.getReasonPhrase(), request.getRequestURI(),
-            masterService.addDataType(dto)), HttpStatus.CREATED);
+            masterService.addCategory(dto)), HttpStatus.CREATED);
   }
 
-  @PutMapping(value = "/dataType/{code}", consumes = MediaType.APPLICATION_JSON_VALUE,
+  @PutMapping(value = "/category/{code}", consumes = MediaType.APPLICATION_JSON_VALUE,
       produces = MediaType.APPLICATION_JSON_VALUE)
   @Operation(
-      description = "Update data type",
+      description = "Update category",
       responses = {
           @ApiResponse(
               responseCode = "200",
@@ -158,17 +191,17 @@ public class ControllerMaster {
   )
   @ResponseBody
   @LogExecution
-  public ResponseEntity<ApiResponseDto> updateDataType(HttpServletRequest request, @RequestBody DataTypeDto dto,
+  public ResponseEntity<ApiResponseDto> updateCategory(HttpServletRequest request, @RequestBody CategoryDto dto,
       @PathVariable String code)
       throws ItemNotFoundException, BadFormatException {
     return new ResponseEntity<>(
         new ApiResponseDto<>(HttpStatus.OK.value(), HttpStatus.OK.getReasonPhrase(), request.getRequestURI(),
-            masterService.updateDataType(dto, code)), HttpStatus.OK);
+            masterService.updateCategory(dto, code)), HttpStatus.OK);
   }
 
-  @DeleteMapping(value = "/dataType/{code}", produces = MediaType.APPLICATION_JSON_VALUE)
+  @DeleteMapping(value = "/category/{code}", produces = MediaType.APPLICATION_JSON_VALUE)
   @Operation(
-      description = "Delete data type",
+      description = "Delete category",
       responses = {
           @ApiResponse(
               responseCode = "204",
@@ -190,9 +223,9 @@ public class ControllerMaster {
   )
   @ResponseBody
   @LogExecution
-  public ResponseEntity<ApiResponseDto> deleteDataType(HttpServletRequest request, @PathVariable String code)
+  public ResponseEntity<ApiResponseDto> deleteCategory(HttpServletRequest request, @PathVariable String code)
       throws ItemNotFoundException {
-    masterService.deleteDataType(code);
+    masterService.deleteCategory(code);
 
     return new ResponseEntity<>(
         new ApiResponseDto<>(HttpStatus.NO_CONTENT.value(), HttpStatus.NO_CONTENT.getReasonPhrase(),

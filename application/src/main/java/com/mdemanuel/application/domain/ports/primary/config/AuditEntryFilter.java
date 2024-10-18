@@ -2,7 +2,8 @@ package com.mdemanuel.application.domain.ports.primary.config;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.mdemanuel.application.domain.model.domain.audit.AuditEntryEntity;
-import com.mdemanuel.application.domain.ports.primary.dto.request.DataTypeDto;
+import com.mdemanuel.application.domain.ports.primary.dto.request.CategoryDto;
+import com.mdemanuel.application.domain.ports.primary.dto.request.PurchaseOrderDto;
 import com.mdemanuel.application.domain.service.audit.AuditEntryService;
 import io.micrometer.tracing.Tracer;
 import jakarta.servlet.Filter;
@@ -35,7 +36,8 @@ public class AuditEntryFilter implements Filter {
 
   // Patrones de recursos a buscar
   private List<Pattern> baseResourcePatterns = Arrays.asList(
-      Pattern.compile("/archetype-api-rest/master/(dataType)/(.+)")
+      Pattern.compile("/archetype-api-rest/master/(category)/(.+)"),
+      Pattern.compile("/archetype-api-rest/order/(.+)")
   );
 
   @Value("${excludeAuditEntry}")
@@ -43,6 +45,8 @@ public class AuditEntryFilter implements Filter {
   @Value("${server.servlet.context-path}")
   private String contexPath;
 
+  @Autowired
+  private ObjectMapper objectMapper;
   @Autowired
   private Tracer tracer;
   @Autowired
@@ -155,10 +159,16 @@ public class AuditEntryFilter implements Filter {
         return url.substring(url.lastIndexOf("/") + 1);
       case "POST":
         if (body != null && !body.isEmpty()) {
-          ObjectMapper objectMapper = new ObjectMapper();
-          DataTypeDto dto = objectMapper.readValue(body, DataTypeDto.class);
+          switch (url.substring(url.lastIndexOf("/") + 1)) {
+            case "category":
+              return objectMapper.readValue(body, CategoryDto.class).getCategoryCode();
 
-          return dto.getDataTypeCode();
+            case "purchase_order":
+              return objectMapper.readValue(body, PurchaseOrderDto.class).getPurchaseOrderCode();
+
+            default:
+              return null;
+          }
         }
 
         return null;

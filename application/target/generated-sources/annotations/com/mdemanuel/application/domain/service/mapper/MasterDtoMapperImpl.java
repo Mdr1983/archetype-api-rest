@@ -1,7 +1,7 @@
 package com.mdemanuel.application.domain.service.mapper;
 
-import com.mdemanuel.application.domain.model.domain.master.DataTypeEntity;
-import com.mdemanuel.application.domain.ports.primary.dto.request.DataTypeDto;
+import com.mdemanuel.application.domain.model.domain.master.CategoryEntity;
+import com.mdemanuel.application.domain.ports.primary.dto.request.CategoryDto;
 import java.util.ArrayList;
 import java.util.List;
 import javax.annotation.processing.Generated;
@@ -14,56 +14,56 @@ import org.springframework.stereotype.Component;
 public class MasterDtoMapperImpl extends MasterDtoMapper {
 
     @Override
-    public DataTypeEntity toDataTypeEntity(DataTypeDto dto) {
+    public CategoryEntity toCategoryEntity(CategoryDto dto) {
         if ( dto == null ) {
             return null;
         }
 
-        DataTypeEntity.DataTypeEntityBuilder<?, ?> dataTypeEntity = DataTypeEntity.builder();
+        CategoryEntity.CategoryEntityBuilder<?, ?> categoryEntity = CategoryEntity.builder();
 
-        dataTypeEntity.dataTypeCode( dto.getDataTypeCode() );
-        dataTypeEntity.description( dto.getDescription() );
+        categoryEntity.categoryCode( dto.getCategoryCode() );
+        categoryEntity.description( dto.getDescription() );
 
-        return dataTypeEntity.build();
+        return categoryEntity.build();
     }
 
     @Override
-    public List<DataTypeEntity> toDataTypeEntityList(List<DataTypeDto> dto) {
+    public List<CategoryEntity> toCategoryEntityList(List<CategoryDto> dto) {
         if ( dto == null ) {
             return null;
         }
 
-        List<DataTypeEntity> list = new ArrayList<DataTypeEntity>( dto.size() );
-        for ( DataTypeDto dataTypeDto : dto ) {
-            list.add( toDataTypeEntity( dataTypeDto ) );
+        List<CategoryEntity> list = new ArrayList<CategoryEntity>( dto.size() );
+        for ( CategoryDto categoryDto : dto ) {
+            list.add( toCategoryEntity( categoryDto ) );
         }
 
         return list;
     }
 
     @Override
-    public DataTypeDto toDataTypeDto(DataTypeEntity entity) {
+    public CategoryDto toCategoryDto(CategoryEntity entity) {
         if ( entity == null ) {
             return null;
         }
 
-        DataTypeDto.DataTypeDtoBuilder<?, ?> dataTypeDto = DataTypeDto.builder();
+        CategoryDto.CategoryDtoBuilder<?, ?> categoryDto = CategoryDto.builder();
 
-        dataTypeDto.dataTypeCode( entity.getDataTypeCode() );
-        dataTypeDto.description( entity.getDescription() );
+        categoryDto.categoryCode( entity.getCategoryCode() );
+        categoryDto.description( entity.getDescription() );
 
-        return dataTypeDto.build();
+        return categoryDto.build();
     }
 
     @Override
-    public List<DataTypeDto> toDataTypeDtoList(List<DataTypeEntity> entity) {
+    public List<CategoryDto> toCategoryDtoList(List<CategoryEntity> entity) {
         if ( entity == null ) {
             return null;
         }
 
-        List<DataTypeDto> list = new ArrayList<DataTypeDto>( entity.size() );
-        for ( DataTypeEntity dataTypeEntity : entity ) {
-            list.add( toDataTypeDto( dataTypeEntity ) );
+        List<CategoryDto> list = new ArrayList<CategoryDto>( entity.size() );
+        for ( CategoryEntity categoryEntity : entity ) {
+            list.add( toCategoryDto( categoryEntity ) );
         }
 
         return list;

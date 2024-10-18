@@ -46,18 +46,17 @@ spring:
       timeout: 15000             # Tiempo de espera en milisegundos
       connection-timeout: 30000  # Tiempo de espera en milisegundos
       client-type: lettuce
-  cloud:
-    config:
-      server:
-        git:
-          uri: https://github.com/Mdr1983/config.git
-          default-label: master
+  #cloud:
+    #config:
+      #server:
+        #git:
+        #uri: https://github.com/Mdr1983/config.git
+      #default-label: master
   jackson:
     mapper:
       accept_case_insensitive_properties: true
   profiles:
-    active: ${SHORT_ENV}
-    include: server_h2
+    active: ${PROFILE}
   # BBDD embebida H2 en memoria
   h2:
     console:

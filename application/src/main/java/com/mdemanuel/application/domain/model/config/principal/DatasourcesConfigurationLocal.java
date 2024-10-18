@@ -20,7 +20,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
     basePackages = {"com.mdemanuel.application.domain.model.domain",
         "com.mdemanuel.application.domain.ports.secondary.repository"},
     entityManagerFactoryRef = "primaryEntityManagerFactory", transactionManagerRef = "primaryTransactionManager")
-@Profile("local")
+@Profile("h2")
 public class DatasourcesConfigurationLocal extends DatasourcesPrimaryConfiguration {
 
   @Value("file:init/src/test/resources/schema.sql")
@@ -42,7 +42,7 @@ public class DatasourcesConfigurationLocal extends DatasourcesPrimaryConfigurati
     if (Boolean.TRUE.equals(dataSourceInitializerEnabled)) {
       DataSourceInitializer dataSourceInitializer = new DataSourceInitializer();
       dataSourceInitializer.setDataSource(dataSource);
-      dataSourceInitializer.setDatabasePopulator(databasePopulator());
+      //dataSourceInitializer.setDatabasePopulator(databasePopulator());
       return dataSourceInitializer;
     } else {
       return null;

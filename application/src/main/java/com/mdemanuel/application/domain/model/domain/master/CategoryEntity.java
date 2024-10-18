@@ -17,7 +17,7 @@ import lombok.NoArgsConstructor;
 import lombok.ToString;
 import lombok.experimental.SuperBuilder;
 
-@Table(name = DbTables.DATA_TYPE)
+@Table(name = DbTables.CATEGORY)
 @Entity
 @Data
 @EqualsAndHashCode
@@ -25,18 +25,18 @@ import lombok.experimental.SuperBuilder;
 @SuperBuilder
 @AllArgsConstructor(access = AccessLevel.PRIVATE)
 @NoArgsConstructor(access = AccessLevel.PUBLIC)
-public class DataTypeEntity extends BaseEntity {
+public class CategoryEntity extends BaseEntity {
 
   private static final long serialVersionUID = 2360297234577476811L;
 
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
-  @Column(name = "data_type_id")
-  private Integer dataTypeId;
+  @Column(name = "category_id")
+  private Integer categoryId;
 
-  @Column(name = "data_type_code")
+  @Column(name = "category_code")
   @NotNull
-  private String dataTypeCode;
+  private String categoryCode;
 
   @Column(name = "description")
   @NotNull

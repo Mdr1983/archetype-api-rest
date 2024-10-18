@@ -3,7 +3,6 @@ package com.mdemanuel.application.domain.model.config;
 import javax.sql.DataSource;
 import lombok.NoArgsConstructor;
 import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.boot.orm.jpa.EntityManagerFactoryBuilder;
 import org.springframework.context.annotation.Bean;

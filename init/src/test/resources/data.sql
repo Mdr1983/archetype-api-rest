@@ -1,32 +1,19 @@
-DELETE FROM vas_type;
-INSERT INTO vas_type (vas_type_code, description)
-VALUES ('ORDER', 'VAS a nivel de order'),
-       ('ORDER_LINE', 'VAS a nivel de order line');
-
-DELETE FROM vas;
-INSERT INTO vas (vas_type_id, vas_code, description, priority, is_historical)
-VALUES (1, 'VAS_ORDER_TEST_1', 'VAS order test 1', 1, 0),
-       (1, 'VAS_ORDER_TEST_2', 'VAS order test 2', 2, 0),
-       (2, 'VAS_ORDER_LINE_TEST_1', 'VAS order line test 1', 1, 0),
-       (2, 'VAS_ORDER_LINE_TEST_2', 'VAS order line test 2', 2, 0);
-
-DELETE FROM data_type;
-INSERT INTO data_type (data_type_code, description)
-VALUES ('NUMBER', 'Número'),
-       ('DATE', 'Fecha'),
-       ('BOOLEAN', 'Boolean'),
-       ('STRING', 'Cadena de texto');
-
-DELETE FROM metadata_order;
-INSERT INTO metadata_order (metadata_order_code, description, data_type_id)
-VALUES ('CLIENT_CODE', 'Código del cliente', 4),
-       ('CHANNEL_TYPE', 'Tipo de canal de venta', 4),
-       ('STOCK_ORIGIN', 'Origen del stock', 4),
-       ('STOCK_ORIGIN_TYPE', 'Tipo del origen de stock', 4),
-       ('COUNTRY_ORIGIN', 'País del origen de stock', 4),
-       ('COUNTRY_DELIVERY', 'País del destino de stock', 4);
-
-DELETE FROM metadata_order_line;
-INSERT INTO metadata_order_line (metadata_order_line_code, description, data_type_id)
-VALUES ('FAMILY', 'Familia del item', 4),
-       ('SUBFAMILY', 'Subfamilia del item', 4);
+--DELETE FROM category;
+--INSERT INTO category (category_code, description)
+--VALUES ('BOLSO', 'Bolsos'),
+--       ('ZAPATO', 'Zapatos');
+--
+--DELETE FROM order;
+--INSERT INTO order (order_id, order_code, order_date)
+--VALUES (1, 'ORD-Test1', '2024-10-02T13:37:00Z'),
+--       (2, 'ORD-Test2', '2024-10-12T13:37:00Z'),
+--       (3, 'ORD-Test3', '2024-10-13T13:37:00Z'),
+--       (4, 'ORD-Test4', '2024-10-20T13:37:00Z');
+--
+--DELETE FROM order_line;
+--INSERT INTO order (order_line_id, order_id, item, description, category_id, quantity)
+--VALUES (1, 1, 'B-125789', 'Bolso cuero negro', 1, 1),
+--       (2, 2, 'B-125789', 'Bolso cuero negro', 1, 2),
+--       (3, 3, 'Z-125789', 'Zapatilla deportiva negro', 2, 1),
+--       (4, 3, 'Z-234545', 'Zapatilla suela alta negro', 2, 1),
+--       (5, 4, 'Z-234545', 'Zapatilla suela alta negro', 2, 1);

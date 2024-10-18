@@ -28,13 +28,13 @@ import org.springframework.data.redis.serializer.GenericJackson2JsonRedisSeriali
 @EnableRedisRepositories
 public class RedisConfig extends CachingConfigurerSupport {
 
-  private ObjectMapper redisCacheObjectMapper = new ObjectMapper();
-
   @Value("${spring.cache.redis.use-key-prefix:false}")
   private boolean useKeyPrefix;
   @Value("${spring.cache.redis.use-prefix}")
   private String usePrefix;
 
+  @Autowired
+  private ObjectMapper objectMapper;
   @Autowired
   private RedisProperties redisProperties;
 
@@ -45,7 +45,7 @@ public class RedisConfig extends CachingConfigurerSupport {
     RedisTemplate<String, Object> template = new RedisTemplate<>();
     template.setConnectionFactory(connectionFactory);
     template.setKeySerializer(new CustomKeyPrefixSerializer(getCacheApplicationKeyPrefix()));
-    template.setValueSerializer(new GenericJackson2JsonRedisSerializer(this.redisCacheObjectMapper));
+    template.setValueSerializer(new GenericJackson2JsonRedisSerializer(this.objectMapper));
     template.afterPropertiesSet();
 
     return template;

@@ -24,7 +24,11 @@
 </file>
 <file name="Z:\workspace\Github-Mdr1983\archetype-api-rest\application\src\main\java\com\mdemanuel\application\domain\model\domain\BaseEntity.java">
 </file>
-<file name="Z:\workspace\Github-Mdr1983\archetype-api-rest\application\src\main\java\com\mdemanuel\application\domain\model\domain\master\DataTypeEntity.java">
+<file name="Z:\workspace\Github-Mdr1983\archetype-api-rest\application\src\main\java\com\mdemanuel\application\domain\model\domain\master\CategoryEntity.java">
+</file>
+<file name="Z:\workspace\Github-Mdr1983\archetype-api-rest\application\src\main\java\com\mdemanuel\application\domain\model\domain\order\PurchaseOrderEntity.java">
+</file>
+<file name="Z:\workspace\Github-Mdr1983\archetype-api-rest\application\src\main\java\com\mdemanuel\application\domain\model\domain\order\PurchaseOrderLineEntity.java">
 </file>
 <file name="Z:\workspace\Github-Mdr1983\archetype-api-rest\application\src\main\java\com\mdemanuel\application\domain\model\exception\BadParamsException.java">
 </file>
@@ -44,7 +48,15 @@
 </file>
 <file name="Z:\workspace\Github-Mdr1983\archetype-api-rest\application\src\main\java\com\mdemanuel\application\domain\ports\primary\config\AuditEntryFilter.java">
 </file>
-<file name="Z:\workspace\Github-Mdr1983\archetype-api-rest\application\src\main\java\com\mdemanuel\application\domain\ports\primary\dto\request\DataTypeDto.java">
+<file name="Z:\workspace\Github-Mdr1983\archetype-api-rest\application\src\main\java\com\mdemanuel\application\domain\ports\primary\dto\request\CategoryDto.java">
+</file>
+<file name="Z:\workspace\Github-Mdr1983\archetype-api-rest\application\src\main\java\com\mdemanuel\application\domain\ports\primary\dto\request\pojo\OperatorsFilter.java">
+</file>
+<file name="Z:\workspace\Github-Mdr1983\archetype-api-rest\application\src\main\java\com\mdemanuel\application\domain\ports\primary\dto\request\PurchaseOrderDto.java">
+</file>
+<file name="Z:\workspace\Github-Mdr1983\archetype-api-rest\application\src\main\java\com\mdemanuel\application\domain\ports\primary\dto\request\PurchaseOrderLineDto.java">
+</file>
+<file name="Z:\workspace\Github-Mdr1983\archetype-api-rest\application\src\main\java\com\mdemanuel\application\domain\ports\primary\dto\request\SearchCriteriaDto.java">
 </file>
 <file name="Z:\workspace\Github-Mdr1983\archetype-api-rest\application\src\main\java\com\mdemanuel\application\domain\ports\primary\dto\response\controller\ApiExceptionResponseDto.java">
 </file>
@@ -54,7 +66,13 @@
 </file>
 <file name="Z:\workspace\Github-Mdr1983\archetype-api-rest\application\src\main\java\com\mdemanuel\application\domain\ports\secondary\repository\audit\AuditEntryRepository.java">
 </file>
-<file name="Z:\workspace\Github-Mdr1983\archetype-api-rest\application\src\main\java\com\mdemanuel\application\domain\ports\secondary\repository\master\DataTypeRepository.java">
+<file name="Z:\workspace\Github-Mdr1983\archetype-api-rest\application\src\main\java\com\mdemanuel\application\domain\ports\secondary\repository\EntitySpecification.java">
+</file>
+<file name="Z:\workspace\Github-Mdr1983\archetype-api-rest\application\src\main\java\com\mdemanuel\application\domain\ports\secondary\repository\master\CategoryRepository.java">
+</file>
+<file name="Z:\workspace\Github-Mdr1983\archetype-api-rest\application\src\main\java\com\mdemanuel\application\domain\ports\secondary\repository\purchase_order\PurchaseOrderLineRepository.java">
+</file>
+<file name="Z:\workspace\Github-Mdr1983\archetype-api-rest\application\src\main\java\com\mdemanuel\application\domain\ports\secondary\repository\purchase_order\PurchaseOrderRepository.java">
 </file>
 <file name="Z:\workspace\Github-Mdr1983\archetype-api-rest\application\src\main\java\com\mdemanuel\application\domain\service\audit\AuditEntryService.java">
 </file>
@@ -70,17 +88,29 @@
 </file>
 <file name="Z:\workspace\Github-Mdr1983\archetype-api-rest\application\src\main\java\com\mdemanuel\application\domain\service\exceptions\BadFormatException.java">
 </file>
+<file name="Z:\workspace\Github-Mdr1983\archetype-api-rest\application\src\main\java\com\mdemanuel\application\domain\service\exceptions\CriterianException.java">
+</file>
 <file name="Z:\workspace\Github-Mdr1983\archetype-api-rest\application\src\main\java\com\mdemanuel\application\domain\service\exceptions\DuplicatedItemException.java">
 </file>
 <file name="Z:\workspace\Github-Mdr1983\archetype-api-rest\application\src\main\java\com\mdemanuel\application\domain\service\exceptions\ExceptionCode.java">
 </file>
 <file name="Z:\workspace\Github-Mdr1983\archetype-api-rest\application\src\main\java\com\mdemanuel\application\domain\service\exceptions\ItemNotFoundException.java">
 </file>
+<file name="Z:\workspace\Github-Mdr1983\archetype-api-rest\application\src\main\java\com\mdemanuel\application\domain\service\exceptions\SqlExecutionException.java">
+</file>
 <file name="Z:\workspace\Github-Mdr1983\archetype-api-rest\application\src\main\java\com\mdemanuel\application\domain\service\mapper\MasterDtoMapper.java">
+</file>
+<file name="Z:\workspace\Github-Mdr1983\archetype-api-rest\application\src\main\java\com\mdemanuel\application\domain\service\mapper\PurchaseOrderDtoMapper.java">
 </file>
 <file name="Z:\workspace\Github-Mdr1983\archetype-api-rest\application\src\main\java\com\mdemanuel\application\domain\service\master\impl\MasterServiceImpl.java">
 </file>
 <file name="Z:\workspace\Github-Mdr1983\archetype-api-rest\application\src\main\java\com\mdemanuel\application\domain\service\master\MasterService.java">
+</file>
+<file name="Z:\workspace\Github-Mdr1983\archetype-api-rest\application\src\main\java\com\mdemanuel\application\domain\service\pojo\LogLevel.java">
+</file>
+<file name="Z:\workspace\Github-Mdr1983\archetype-api-rest\application\src\main\java\com\mdemanuel\application\domain\service\purchase_order\impl\PurchaseOrderServiceImpl.java">
+</file>
+<file name="Z:\workspace\Github-Mdr1983\archetype-api-rest\application\src\main\java\com\mdemanuel\application\domain\service\purchase_order\PurchaseOrderService.java">
 </file>
 <file name="Z:\workspace\Github-Mdr1983\archetype-api-rest\application\src\main\java\com\mdemanuel\application\domain\service\util\CommonUtils.java">
 </file>
@@ -90,9 +120,15 @@
 </file>
 <file name="Z:\workspace\Github-Mdr1983\archetype-api-rest\application\src\main\java\com\mdemanuel\application\domain\service\util\EntityService.java">
 </file>
+<file name="Z:\workspace\Github-Mdr1983\archetype-api-rest\application\src\main\java\com\mdemanuel\application\domain\service\util\SearchCriteriaDtoDeserializer.java">
+</file>
+<file name="Z:\workspace\Github-Mdr1983\archetype-api-rest\application\src\main\java\com\mdemanuel\application\domain\service\util\SearchCriteriaDtoSerializer.java">
+</file>
 <file name="Z:\workspace\Github-Mdr1983\archetype-api-rest\application\src\main\java\com\mdemanuel\application\util\aspect\LogExecution.java">
 </file>
 <file name="Z:\workspace\Github-Mdr1983\archetype-api-rest\application\src\main\java\com\mdemanuel\application\util\aspect\LogExecutionAspect.java">
+</file>
+<file name="Z:\workspace\Github-Mdr1983\archetype-api-rest\application\src\main\java\com\mdemanuel\application\util\SpringBeanUtil.java">
 </file>
 <file name="Z:\workspace\Github-Mdr1983\archetype-api-rest\application\src\main\java\com\mdemanuel\application\util\Utils.java">
 </file>

@@ -1,8 +1,8 @@
 DROP TABLE IF EXISTS audit_entry;
 CREATE TABLE audit_entry (
   audit_entry_id INT GENERATED ALWAYS AS IDENTITY,
-  trace_id VARCHAR(16) NOT NULL,
-  span_id VARCHAR(16) NOT NULL,
+  trace_id VARCHAR(32) NOT NULL,
+  span_id VARCHAR(32) NOT NULL,
   url VARCHAR(100) NOT NULL,
   http_method VARCHAR(10) NOT NULL,
   parameters VARCHAR(5000) NULL,
@@ -13,7 +13,7 @@ CREATE TABLE audit_entry (
   elapsed_time INT NULL DEFAULT NULL,
   created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
   updated_at TIMESTAMP DEFAULT NULL,
-  PRIMARY KEY (audit_entry_id),
+  PRIMARY KEY (audit_entry_id)
 );
 CREATE INDEX idx_audit_entry_trace_id ON audit_entry(trace_id);
 CREATE INDEX idx_audit_entry_url ON audit_entry(url);
@@ -24,17 +24,17 @@ CREATE INDEX idx_audit_entry_updated_at ON audit_entry(updated_at);
 
 DROP TABLE IF EXISTS audit_exit;
 CREATE TABLE audit_exit (
-	audit_exit_id INT GENERATED ALWAYS AS IDENTITY,
-	audit_entry_id INT NOT NULL,
-	trace_id VARCHAR(16)NOT NULL,
-	span_id VARCHAR(16) NOT NULL,
-	url VARCHAR(500) NOT NULL,
-	http_method VARCHAR(10) NOT NULL,
-	request_body JSONB NOT NULL,
-	response_body JSONB NOT NULL,
-	http_status SMALLINT NOT NULL,
-	elapsed_time INT NULL,
-	created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  audit_exit_id INT GENERATED ALWAYS AS IDENTITY,
+  audit_entry_id INT NOT NULL,
+  trace_id VARCHAR(32) NOT NULL,
+  span_id VARCHAR(32) NOT NULL,
+  url VARCHAR(500) NOT NULL,
+  http_method VARCHAR(10) NOT NULL,
+  request_body JSONB NOT NULL,
+  response_body JSONB NOT NULL,
+  http_status SMALLINT NOT NULL,
+  elapsed_time INT NULL,
+  created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
   updated_at TIMESTAMP DEFAULT NULL,
   PRIMARY KEY (audit_exit_id),
   FOREIGN KEY (audit_entry_id) REFERENCES audit_entry(audit_entry_id)
@@ -45,200 +45,39 @@ CREATE INDEX idx_audit_exit_status ON audit_exit(http_status);
 CREATE INDEX idx_audit_exit_created_at ON audit_exit(created_at);
 CREATE INDEX idx_audit_exit_updated_at ON audit_exit(updated_at);
 
-DROP TABLE IF EXISTS vas_type;
-CREATE TABLE vas_type
-(
-  vas_type_id INT GENERATED ALWAYS AS IDENTITY,
-  vas_type_code varchar(100) NOT NULL,
-  description varchar(150) NOT NULL,
+DROP TABLE IF EXISTS category;
+CREATE TABLE category (
+  category_id INT GENERATED ALWAYS AS IDENTITY,
+  category_code VARCHAR(100) NOT NULL,
+  description VARCHAR(150) NOT NULL,
   created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
   updated_at TIMESTAMP DEFAULT NULL,
-  PRIMARY KEY (vas_type_id),
-  CONSTRAINT idx_vas_type_vas_type_code UNIQUE (vas_type_code)
+  PRIMARY KEY (category_id)
 );
+CREATE UNIQUE INDEX idx_category_category_code ON category(category_code);
 
-DROP TABLE IF EXISTS vas;
-CREATE TABLE vas
-(
-  vas_id INT GENERATED ALWAYS AS IDENTITY,
-  vas_type_id INT NOT NULL,
-  vas_code varchar(100) NOT NULL,
-  description varchar(150) NOT NULL,
-  priority tinyint NOT NULL,
-  is_historical BIT NOT NULL DEFAULT 0,
+DROP TABLE IF EXISTS purchase_order;
+CREATE TABLE purchase_order (
+  purchase_order_id INT GENERATED ALWAYS AS IDENTITY,
+  purchase_order_code VARCHAR(100) NOT NULL,
+  purchase_order_date TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
   created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
   updated_at TIMESTAMP DEFAULT NULL,
-  PRIMARY KEY (vas_id),
-  CONSTRAINT idx_vas_vas_code UNIQUE (vas_code),
-  FOREIGN KEY (vas_type_id) REFERENCES vas_type(vas_type_id)
+  PRIMARY KEY (purchase_order_id)
 );
+CREATE UNIQUE INDEX idx_purchase_order_purchase_order_code ON purchase_order(purchase_order_code);
 
-DROP TABLE IF EXISTS data_type;
-CREATE TABLE data_type
-(
-  data_type_id INT GENERATED ALWAYS AS IDENTITY,
-  data_type_code varchar(100) NOT NULL,
-  description varchar(150) NOT NULL,
+DROP TABLE IF EXISTS purchase_order_line;
+CREATE TABLE purchase_order_line (
+  purchase_order_line_id INT GENERATED ALWAYS AS IDENTITY,
+  purchase_order_id INT NOT NULL,
+  item VARCHAR(100) NOT NULL,
+  description VARCHAR(150) NOT NULL,
+  category_id INT NOT NULL,
+  quantity SMALLINT NOT NULL,
   created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
   updated_at TIMESTAMP DEFAULT NULL,
-  PRIMARY KEY (data_type_id),
-  CONSTRAINT idx_data_type_data_type_code UNIQUE (data_type_code)
-);
-
-DROP TABLE IF EXISTS metadata_order;
-CREATE TABLE metadata_order
-(
-  metadata_order_id INT GENERATED ALWAYS AS IDENTITY,
-  metadata_order_code varchar(100) NOT NULL,
-  description varchar(150) NOT NULL,
-  data_type_id INT NOT NULL,
-  created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  updated_at TIMESTAMP DEFAULT NULL,
-  PRIMARY KEY (metadata_order_id),
-  CONSTRAINT idx_metadata_order_metadata_order_code UNIQUE (metadata_order_code),
-  FOREIGN KEY (data_type_id) REFERENCES data_type(data_type_id)
-);
-
-DROP TABLE IF EXISTS metadata_order_line;
-CREATE TABLE metadata_order_line
-(
-  metadata_order_line_id INT GENERATED ALWAYS AS IDENTITY,
-  metadata_order_line_code varchar(100) NOT NULL,
-  description varchar(150) NOT NULL,
-  data_type_id INT NOT NULL,
-  created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  updated_at TIMESTAMP DEFAULT NULL,
-  PRIMARY KEY (metadata_item_id),
-  CONSTRAINT idx_metadata_order_line_metadata_order_line_code UNIQUE (metadata_order_line_code),
-  FOREIGN KEY (data_type_id) REFERENCES data_type(data_type_id)
-);
-
-DROP TABLE IF EXISTS order;
-CREATE TABLE order
-(
-  order_id INT GENERATED ALWAYS AS IDENTITY,
-  order_code varchar(100) NOT NULL,
-  created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  updated_at TIMESTAMP DEFAULT NULL,
-  PRIMARY KEY (order_id),
-  CONSTRAINT idx_order_order_code UNIQUE (order_code)
-);
-
-DROP TABLE IF EXISTS order_line;
-CREATE TABLE order_line
-(
-  order_line_id INT GENERATED ALWAYS AS IDENTITY,
-  order_id INT NOT NULL,
-  order_line_number INT NOT NULL,
-  item varchar(100) NOT NULL,
-  quantity INT NOT NULL,
-  created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  updated_at TIMESTAMP DEFAULT NULL,
-  PRIMARY KEY (order_line_id),
-  FOREIGN KEY (order_id) REFERENCES order(order_id)
-);
-
-DROP TABLE IF EXISTS order_metadata_order;
-CREATE TABLE order_metadata_order
-(
-  order_id INT NOT NULL,
-  metadata_order_id INT NOT NULL,
-  key_value varchar(500) NOT NULL,
-  created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  updated_at TIMESTAMP DEFAULT NULL,
-  PRIMARY KEY (order_id, metadata_order_id)
-);
-
-DROP TABLE IF EXISTS order_line_metadata_order_line;
-CREATE TABLE order_metadata_order
-(
-  order_line_id INT NOT NULL,
-  metadata_order_line_id INT NOT NULL,
-  key_value varchar(500) NOT NULL,
-  created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  updated_at TIMESTAMP DEFAULT NULL,
-  PRIMARY KEY (order_line_id, metadata_order_line_id)
-);
-
-DROP TABLE IF EXISTS order_line_vas;
-CREATE TABLE order_line_vas
-(
-  order_line_id INT NOT NULL,
-  vas_id INT NOT NULL,
-  created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  updated_at TIMESTAMP DEFAULT NULL,
-  PRIMARY KEY (order_line_id, vas_id)
-);
-
-
-DROP TABLE IF EXISTS vas_selector_rule;
-CREATE TABLE vas_selector_rule
-(
-    vas_selector_rule_id INT GENERATED ALWAYS AS IDENTITY,
-    channel_type_id           INT               DEFAULT NULL,
-    source_document_type_id      INT               DEFAULT NULL,
-    shipment_origin_id        INT               DEFAULT NULL,
-    shipment_delivery_type_id INT               DEFAULT NULL,
-    season_id                 INT               DEFAULT NULL,
-    country_id                INT               DEFAULT NULL,
-    customer_id               INT               DEFAULT NULL,
-    shipment_delivery_id      INT               DEFAULT NULL,
-    group_id                  INT               DEFAULT NULL,
-    superfamily_id            INT               DEFAULT NULL,
-    department_id             INT               DEFAULT NULL,
-    store_clasification_id    INT               DEFAULT NULL,
-    is_check_ue               BIT               DEFAULT NULL,
-    is_gift                   BIT               DEFAULT NULL,
-    operation_origin_type_id  INT               DEFAULT NULL,
-    operation_origin_id       INT               DEFAULT NULL,
-    vas_id                    INT               DEFAULT NULL,
-    start_dt                  DATETIME NULL     DEFAULT NULL,
-    end_dt                    DATETIME NULL     DEFAULT NULL,
-    is_active                 BIT               DEFAULT NULL,
-    is_historical             BIT      NOT NULL DEFAULT 0,
-    created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    updated_at TIMESTAMP DEFAULT NULL
-);
-ALTER TABLE vas_selector_rule ALTER COLUMN vas_selector_rule_id RESTART WITH 1;
-
-DROP TABLE IF EXISTS container;
-CREATE TABLE container
-(
-    container_id    INT GENERATED ALWAYS AS IDENTITY,
-    container_code varchar(25) NOT NULL,
-    created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    updated_at TIMESTAMP DEFAULT NULL
-);
-
-DROP TABLE IF EXISTS container_order_line;
-CREATE TABLE container_order_line
-(
-    container_id  int      NOT NULL,
-    order_line_id smallint NOT NULL,
-    quantity      smallint NOT NULL,
-    created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    updated_at TIMESTAMP DEFAULT NULL,
-    PRIMARY KEY (container_id, order_line_id)
-);
-
-DROP TABLE IF EXISTS container_order_line_order_line_vas;
-CREATE TABLE container_order_line_order_line_vas
-(
-    container_id  int NOT NULL,
-    order_line_id int NOT NULL,
-    vas_id        int NOT NULL,
-    is_confirmed  bit NOT NULL,
-    created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    updated_at TIMESTAMP DEFAULT NULL,
-    PRIMARY KEY (container_id, order_line_id, vas_id)
-);
-
-DROP TABLE IF EXISTS vas_selector_rule_order_line;
-CREATE TABLE vas_selector_rule_order_line
-(
-    vas_selector_rule_id int NOT NULL,
-    order_line_id        int NOT NULL,
-    created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    updated_at TIMESTAMP DEFAULT NULL,
-    PRIMARY KEY (vas_selector_rule_id, order_line_id)
+  PRIMARY KEY (purchase_order_line_id),
+  FOREIGN KEY (purchase_order_id) REFERENCES purchase_order(purchase_order_id),
+  FOREIGN KEY (category_id) REFERENCES category(category_id)
 );

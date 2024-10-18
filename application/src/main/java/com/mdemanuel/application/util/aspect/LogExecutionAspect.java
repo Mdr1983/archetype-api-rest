@@ -12,14 +12,37 @@ import org.springframework.stereotype.Component;
 public class LogExecutionAspect {
 
   @Around("@annotation(LogExecution)")
-  public Object logExecution(ProceedingJoinPoint joinPoint)
+  public Object logExecution(ProceedingJoinPoint joinPoint, LogExecution logExecution)
       throws Throwable {
-    log.info("INIT - {}", joinPoint.getSignature());
+    log(logExecution, "INIT - " + joinPoint.getSignature());
 
     try {
       return joinPoint.proceed();
     } finally {
-      log.info("END - {}", joinPoint.getSignature());
+      log(logExecution, "END - " + joinPoint.getSignature());
+    }
+  }
+
+  private void log(LogExecution logExecution, String message) {
+    switch (logExecution.level()) {
+      case TRACE:
+        log.trace(message);
+        break;
+      case DEBUG:
+        log.debug(message);
+        break;
+      case INFO:
+        log.info(message);
+        break;
+      case WARN:
+        log.warn(message);
+        break;
+      case ERROR:
+        log.error(message);
+        break;
+      default:
+        log.info(message);
+        break;
     }
   }
 }

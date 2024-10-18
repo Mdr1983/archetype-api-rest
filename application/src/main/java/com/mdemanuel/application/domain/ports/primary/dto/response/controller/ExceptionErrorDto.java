@@ -17,6 +17,6 @@ public class ExceptionErrorDto implements Serializable {
   private String errorCode;
   @Schema(name = "errorName", example = "Not found item", required = true)
   private String errorName;
-  @Schema(name = "errorDescription", example = " Not exists DataTypeEntity for Id: 1", required = true)
+  @Schema(name = "errorDescription", example = " Not exists CategoryEntity for Id: 1", required = true)
   private String errorDescription;
 }

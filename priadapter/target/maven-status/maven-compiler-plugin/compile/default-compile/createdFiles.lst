@@ -3,6 +3,7 @@ com\mdemanuel\priadapter\api\adapter\ControllerMaster.class
 com\mdemanuel\priadapter\api\config\KeyExtractor.class
 com\mdemanuel\priadapter\api\adapter\CustomRestExceptionHandler.class
 com\mdemanuel\priadapter\api\config\CorsConfig$1.class
+com\mdemanuel\priadapter\api\adapter\ControllerPurchaseOrder.class
 com\mdemanuel\priadapter\api\config\CorsConfig.class
 com\mdemanuel\priadapter\api\adapter\ControllerRestCache.class
 com\mdemanuel\priadapter\api\config\CustomJdbcAspect.class

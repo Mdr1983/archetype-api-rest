@@ -12,7 +12,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
     basePackages = {"com.mdemanuel.application.domain.model.domain",
         "com.mdemanuel.application.domain.ports.secondary.repository"},
     entityManagerFactoryRef = "primaryEntityManagerFactory", transactionManagerRef = "primaryTransactionManager")
-@Profile("!local")
+@Profile("!h2")
 public class DatasourcesConfiguration extends DatasourcesPrimaryConfiguration {
 
   public DatasourcesConfiguration() {

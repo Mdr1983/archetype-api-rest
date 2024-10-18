@@ -50,7 +50,6 @@ com.mdemanuel:priadapter:jar:0.0.1-SNAPSHOT
 |  +- jakarta.transaction:jakarta.transaction-api:jar:2.0.1:compile
 |  +- jakarta.servlet:jakarta.servlet-api:jar:6.0.0:compile
 |  +- com.fasterxml.jackson.datatype:jackson-datatype-jdk8:jar:2.17.2:compile
-|  |  \- com.fasterxml.jackson.core:jackson-databind:jar:2.17.2:compile
 |  +- com.fasterxml.jackson.module:jackson-module-parameter-names:jar:2.17.2:compile
 |  \- com.h2database:h2:jar:2.3.232:runtime
 +- org.springframework.boot:spring-boot-configuration-processor:jar:3.3.3:compile
@@ -92,12 +91,10 @@ com.mdemanuel:priadapter:jar:0.0.1-SNAPSHOT
 |  |  +- net.jodah:typetools:jar:0.6.2:compile
 |  |  +- org.springframework.cloud:spring-cloud-function-core:jar:4.1.3:compile
 |  |  \- org.json:json:jar:20240303:compile
-|  +- org.jetbrains.kotlin:kotlin-stdlib-jdk8:jar:1.9.25:compile
-|  |  +- org.jetbrains.kotlin:kotlin-stdlib:jar:1.9.25:compile
-|  |  |  \- org.jetbrains:annotations:jar:13.0:compile
-|  |  \- org.jetbrains.kotlin:kotlin-stdlib-jdk7:jar:1.9.25:compile
-|  \- com.fasterxml.jackson.datatype:jackson-datatype-jsr310:jar:2.17.2:compile
-|     \- com.fasterxml.jackson.core:jackson-annotations:jar:2.17.2:compile
+|  \- org.jetbrains.kotlin:kotlin-stdlib-jdk8:jar:1.9.25:compile
+|     +- org.jetbrains.kotlin:kotlin-stdlib:jar:1.9.25:compile
+|     |  \- org.jetbrains:annotations:jar:13.0:compile
+|     \- org.jetbrains.kotlin:kotlin-stdlib-jdk7:jar:1.9.25:compile
 +- org.springframework.boot:spring-boot-starter-data-redis:jar:3.3.4:compile
 |  +- io.lettuce:lettuce-core:jar:6.3.2.RELEASE:compile
 |  |  +- io.netty:netty-common:jar:4.1.112.Final:compile
@@ -138,5 +135,8 @@ com.mdemanuel:priadapter:jar:0.0.1-SNAPSHOT
 +- org.mapstruct:mapstruct:jar:1.6.0:compile
 +- org.projectlombok:lombok-mapstruct-binding:jar:0.2.0:compile
 +- org.apache.commons:commons-collections4:jar:4.5.0-M2:compile
-\- com.internetitem:logback-elasticsearch-appender:jar:1.6:compile
-   \- com.fasterxml.jackson.core:jackson-core:jar:2.17.2:compile
++- com.internetitem:logback-elasticsearch-appender:jar:1.6:compile
+|  \- com.fasterxml.jackson.core:jackson-core:jar:2.17.2:compile
+\- com.fasterxml.jackson.datatype:jackson-datatype-jsr310:jar:2.18.0:compile
+   +- com.fasterxml.jackson.core:jackson-annotations:jar:2.17.2:compile
+   \- com.fasterxml.jackson.core:jackson-databind:jar:2.17.2:compile

@@ -2,6 +2,8 @@
 <checkstyle version="10.18.0">
 <file name="Z:\workspace\Github-Mdr1983\archetype-api-rest\priadapter\src\main\java\com\mdemanuel\priadapter\api\adapter\ControllerMaster.java">
 </file>
+<file name="Z:\workspace\Github-Mdr1983\archetype-api-rest\priadapter\src\main\java\com\mdemanuel\priadapter\api\adapter\ControllerPurchaseOrder.java">
+</file>
 <file name="Z:\workspace\Github-Mdr1983\archetype-api-rest\priadapter\src\main\java\com\mdemanuel\priadapter\api\adapter\ControllerRestCache.java">
 </file>
 <file name="Z:\workspace\Github-Mdr1983\archetype-api-rest\priadapter\src\main\java\com\mdemanuel\priadapter\api\adapter\ControllerUtils.java">

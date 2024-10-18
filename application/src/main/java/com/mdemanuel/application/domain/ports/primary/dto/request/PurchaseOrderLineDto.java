@@ -2,6 +2,7 @@ package com.mdemanuel.application.domain.ports.primary.dto.request;
 
 import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import java.io.Serializable;
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
@@ -15,19 +16,32 @@ import lombok.experimental.SuperBuilder;
 @SuperBuilder(toBuilder = true)
 @AllArgsConstructor(access = AccessLevel.PRIVATE)
 @NoArgsConstructor(access = AccessLevel.PUBLIC)
-public class DataTypeDto implements Serializable {
+public class PurchaseOrderLineDto implements Serializable {
 
-  private static final long serialVersionUID = 1200297234577476811L;
+  private static final long serialVersionUID = 2300297234577472211L;
 
-  @Schema(description = "Data type code",
+  @Schema(description = "Item",
       required = true,
-      example = "STRING")
+      example = "B-125789")
   @NotBlank
-  private String dataTypeCode;
+  private String item;
 
   @Schema(description = "Description",
       required = true,
-      example = "Cadena de texto")
+      example = "Bolso cuero negro")
   @NotBlank
   private String description;
+
+  @Schema(description = "Category",
+      required = true,
+      example = "BOLSO")
+  @NotBlank
+  private String categoryCode;
+
+  @Schema(description = "Quantity",
+      required = true,
+      example = "1")
+  @NotNull
+  private int quantity;
+
 }

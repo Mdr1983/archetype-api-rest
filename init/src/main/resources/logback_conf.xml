@@ -12,6 +12,8 @@
   <logger name="org.springframework.cache" level="DEBUG"/>
   <logger name="sun.net.www.protocol.http.HttpURLConnection" level="INFO"/>
   <logger name="brave.Tracer" level="INFO"/>
+  <logger name="com.zaxxer.hikari.pool.HikariPool" level="INFO"/>
+  <logger name="io.lettuce" level="INFO"/>
 
   <appender name="ELASTIC" class="com.mdemanuel.application.config.LogbackCompatibilityWrapper4ElasticsearchAppender">
     <url>${url-elastic}</url>
@@ -92,7 +94,7 @@
 
   <!--<include resource="logback_conf.xml" />-->
 
-  <if condition='property("profile") == "test" || property("profile") == "local"'>
+  <if condition='property("profile") == "test" || property("profile") == "h2"'>
     <then>
       <root level="INFO">
         <appender-ref ref="CONSOLE"/>
