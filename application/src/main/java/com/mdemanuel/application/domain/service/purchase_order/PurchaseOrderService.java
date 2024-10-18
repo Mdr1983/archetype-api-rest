@@ -6,12 +6,13 @@ import com.mdemanuel.application.domain.service.exceptions.BadFormatException;
 import com.mdemanuel.application.domain.service.exceptions.DuplicatedItemException;
 import com.mdemanuel.application.domain.service.exceptions.ItemNotFoundException;
 import java.util.List;
+import org.springframework.data.domain.Page;
 
 public interface PurchaseOrderService {
 
   List<PurchaseOrderDto> getAllPurchaseOrder();
 
-  List<PurchaseOrderDto> getAllPurchaseOrder(SearchCriteriaDto dto);
+  Page<PurchaseOrderDto> getAllPurchaseOrder(SearchCriteriaDto dto);
 
   PurchaseOrderDto getPurchaseOrder(String code)
       throws ItemNotFoundException;

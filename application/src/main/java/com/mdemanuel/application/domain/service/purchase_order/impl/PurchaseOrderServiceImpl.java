@@ -4,6 +4,7 @@ import com.mdemanuel.application.domain.model.domain.order.PurchaseOrderEntity;
 import com.mdemanuel.application.domain.model.domain.order.PurchaseOrderLineEntity;
 import com.mdemanuel.application.domain.ports.primary.dto.request.PurchaseOrderDto;
 import com.mdemanuel.application.domain.ports.primary.dto.request.SearchCriteriaDto;
+import com.mdemanuel.application.domain.ports.secondary.repository.RepositoryUtils;
 import com.mdemanuel.application.domain.ports.secondary.repository.purchase_order.PurchaseOrderLineRepository;
 import com.mdemanuel.application.domain.ports.secondary.repository.purchase_order.PurchaseOrderRepository;
 import com.mdemanuel.application.domain.service.mapper.PurchaseOrderDtoMapper;
@@ -14,6 +15,7 @@ import java.util.Collection;
 import java.util.List;
 import lombok.SneakyThrows;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -36,10 +38,11 @@ public class PurchaseOrderServiceImpl implements PurchaseOrderService {
   }
 
   @Override
-  public List<PurchaseOrderDto> getAllPurchaseOrder(SearchCriteriaDto dto) {
-    return purchaseOrderDtoMapper.toPurchaseOrderDtoList(
-        new ArrayList<>((Collection) purchaseOrderRepository.findAll(entityService.getEntitySpecification(
-            PurchaseOrderEntity.class, dto))));
+  public Page<PurchaseOrderDto> getAllPurchaseOrder(SearchCriteriaDto dto) {
+    Page<PurchaseOrderEntity> result =  purchaseOrderRepository.findAll(entityService.getEntitySpecification(
+        PurchaseOrderEntity.class, dto), RepositoryUtils.getPageable(dto));
+
+    return result.map(purchaseOrderDtoMapper::toPurchaseOrderDto);
   }
 
   @SneakyThrows

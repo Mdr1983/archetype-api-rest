@@ -4,6 +4,7 @@ import com.mdemanuel.application.domain.model.domain.BaseEntity;
 import com.mdemanuel.application.domain.model.util.DbTables;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -46,6 +47,6 @@ public class PurchaseOrderEntity extends BaseEntity {
   @NotNull
   private Instant purchaseOrderDate;
 
-  @OneToMany(mappedBy = "purchaseOrder")
+  @OneToMany(mappedBy = "purchaseOrder", fetch = FetchType.EAGER)
   private List<PurchaseOrderLineEntity> purchaseOrderLines = new ArrayList<>();
 }

@@ -6,12 +6,13 @@ import com.mdemanuel.application.domain.service.exceptions.BadFormatException;
 import com.mdemanuel.application.domain.service.exceptions.DuplicatedItemException;
 import com.mdemanuel.application.domain.service.exceptions.ItemNotFoundException;
 import java.util.List;
+import org.springframework.data.domain.Page;
 
 public interface MasterService {
 
   List<CategoryDto> getAllCategory();
 
-  List<CategoryDto> getAllCategory(SearchCriteriaDto dto);
+  Page<CategoryDto> getAllCategory(SearchCriteriaDto dto);
 
   CategoryDto getCategory(String code)
       throws ItemNotFoundException;

@@ -3,6 +3,7 @@ package com.mdemanuel.application.domain.service.master.impl;
 import com.mdemanuel.application.domain.model.domain.master.CategoryEntity;
 import com.mdemanuel.application.domain.ports.primary.dto.request.CategoryDto;
 import com.mdemanuel.application.domain.ports.primary.dto.request.SearchCriteriaDto;
+import com.mdemanuel.application.domain.ports.secondary.repository.RepositoryUtils;
 import com.mdemanuel.application.domain.ports.secondary.repository.master.CategoryRepository;
 import com.mdemanuel.application.domain.service.mapper.MasterDtoMapper;
 import com.mdemanuel.application.domain.service.master.MasterService;
@@ -12,6 +13,7 @@ import java.util.Collection;
 import java.util.List;
 import lombok.SneakyThrows;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -31,10 +33,11 @@ public class MasterServiceImpl implements MasterService {
   }
 
   @Override
-  public List<CategoryDto> getAllCategory(SearchCriteriaDto dto) {
-    return masterDtoMapper.toCategoryDtoList(
-        new ArrayList<>(
-            (Collection) categoryRepository.findAll(entityService.getEntitySpecification(CategoryEntity.class, dto))));
+  public Page<CategoryDto> getAllCategory(SearchCriteriaDto dto) {
+    Page<CategoryEntity> result = categoryRepository.findAll(entityService.getEntitySpecification(CategoryEntity.class, dto),
+        RepositoryUtils.getPageable(dto));
+
+    return result.map(masterDtoMapper::toCategoryDto);
   }
 
   @SneakyThrows

@@ -12,14 +12,13 @@ public class SearchCriteriaDtoSerializer extends JsonSerializer<SearchCriteriaDt
   public void serialize(SearchCriteriaDto value, JsonGenerator gen, SerializerProvider provider)
       throws IOException {
     gen.writeStartObject();
-    gen.writeStringField("attribute", value.getAttribute());
-    gen.writeStringField("operator", value.getOperator().name());
-    gen.writeObjectField("valueList", value.getValueList());
+    gen.writeNumberField("size", value.getSize());
+    gen.writeNumberField("page", value.getPage());
+    gen.writeStringField("sortDirection", value.getSortDirection().toString());
+    gen.writeStringField("sortField", value.getSortField());
 
-    // Serializar childrenCriteriaGroups sin recursividad
-    if (value.getChildrenCriteriaGroups() != null && value.getChildrenCriteriaGroups().getCriteria() != null
-        && !value.getChildrenCriteriaGroups().getCriteria().isEmpty()) {
-      gen.writeObjectField("childrenCriteriaGroups", value.getChildrenCriteriaGroups());
+    if (value.getSearchCriteriaGroup() != null) {
+      gen.writeObjectField("searchCriteriaGroup", value.getSearchCriteriaGroup());
     }
 
     gen.writeEndObject();

@@ -19,6 +19,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -95,7 +96,7 @@ public class ControllerPurchaseOrder {
   )
   @ResponseBody
   @LogExecution
-  public ResponseEntity<ApiResponseDto<List<PurchaseOrderDto>>> getAllPurchaseOrder(
+  public ResponseEntity<ApiResponseDto<Page<PurchaseOrderDto>>> getAllPurchaseOrder(
       @RequestBody @Valid @NotNull SearchCriteriaDto dto, HttpServletRequest request) {
     return new ResponseEntity<>(
         new ApiResponseDto<>(HttpStatus.OK.value(), HttpStatus.OK.getReasonPhrase(), request.getRequestURI(),

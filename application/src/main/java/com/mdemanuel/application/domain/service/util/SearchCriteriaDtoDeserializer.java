@@ -6,11 +6,9 @@ import com.fasterxml.jackson.databind.JsonDeserializer;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.mdemanuel.application.domain.ports.primary.dto.request.SearchCriteriaDto;
-import com.mdemanuel.application.domain.ports.primary.dto.request.SearchCriteriaDto.CriteriaGroup;
-import com.mdemanuel.application.domain.ports.primary.dto.request.pojo.OperatorsFilter;
+import com.mdemanuel.application.domain.ports.primary.dto.request.SearchCriteriaDto.SearchCriteriaGroupDto;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
+import org.springframework.data.domain.Sort.Direction;
 
 public class SearchCriteriaDtoDeserializer extends JsonDeserializer<SearchCriteriaDto> {
 
@@ -23,33 +21,35 @@ public class SearchCriteriaDtoDeserializer extends JsonDeserializer<SearchCriter
     // Crear una nueva instancia de SearchCriteriaDto
     SearchCriteriaDto searchCriteriaDto = new SearchCriteriaDto();
 
-    // Leer y establecer el campo "attribute"
-    JsonNode attributeNode = node.get("attribute");
-    if (attributeNode != null) {
-      searchCriteriaDto.setAttribute(attributeNode.asText());
+    // Leer y establecer el campo "size"
+    JsonNode sizeNode = node.get("size");
+    if (sizeNode != null) {
+      searchCriteriaDto.setSize(sizeNode.asInt());
     }
 
-    // Leer y establecer el campo "operator"
-    JsonNode operatorNode = node.get("operator");
-    if (operatorNode != null) {
-      searchCriteriaDto.setOperator(OperatorsFilter.valueOf(operatorNode.asText()));
+    // Leer y establecer el campo "page"
+    JsonNode pageNode = node.get("page");
+    if (pageNode != null) {
+      searchCriteriaDto.setPage(pageNode.asInt());
     }
 
-    // Leer y establecer el campo "valueList"
-    JsonNode valueListNode = node.get("valueList");
-    if (valueListNode != null && valueListNode.isArray()) {
-      List<String> valueList = new ArrayList<>();
-      for (JsonNode valueNode : valueListNode) {
-        valueList.add(valueNode.asText());
-      }
-      searchCriteriaDto.setValueList(valueList);
+    // Leer y establecer el campo "sortDirection"
+    JsonNode sortDirectionNode = node.get("sortDirection");
+    if (sortDirectionNode != null) {
+      searchCriteriaDto.setSortDirection(Direction.valueOf(sortDirectionNode.asText()));
     }
 
-    // Leer y establecer el campo "childrenCriteriaGroups" sin recursividad
-    JsonNode childrenCriteriaGroupsNode = node.get("childrenCriteriaGroups");
-    if (childrenCriteriaGroupsNode != null) {
-      CriteriaGroup childrenCriteriaGroups = mapper.treeToValue(childrenCriteriaGroupsNode, CriteriaGroup.class);
-      searchCriteriaDto.setChildrenCriteriaGroups(childrenCriteriaGroups);
+    // Leer y establecer el campo "sortField"
+    JsonNode sortField = node.get("sortField");
+    if (sortField != null) {
+      searchCriteriaDto.setSortField(sortField.asText());
+    }
+
+    // Leer y establecer el campo "searchCriteriaGroup" sin recursividad
+    JsonNode searchCriteriaGroupNode = node.get("searchCriteriaGroup");
+    if (searchCriteriaGroupNode != null) {
+      SearchCriteriaGroupDto searchCriteriaGroup = mapper.treeToValue(searchCriteriaGroupNode, SearchCriteriaGroupDto.class);
+      searchCriteriaDto.setSearchCriteriaGroup(searchCriteriaGroup);
     }
 
     return searchCriteriaDto;

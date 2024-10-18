@@ -1,6 +1,7 @@
 package com.mdemanuel.application.domain.ports.secondary.repository;
 
 import com.mdemanuel.application.domain.ports.primary.dto.request.SearchCriteriaDto;
+import com.mdemanuel.application.domain.ports.primary.dto.request.SearchCriteriaDto.SearchCriteriaGroupDto;
 import com.mdemanuel.application.domain.ports.primary.dto.request.pojo.OperatorsFilter;
 import jakarta.persistence.criteria.CriteriaBuilder;
 import jakarta.persistence.criteria.CriteriaQuery;
@@ -18,13 +19,14 @@ public class EntitySpecification<T> implements Specification<T> {
 
   @Override
   public Predicate toPredicate(Root<T> root, CriteriaQuery<?> query, CriteriaBuilder builder) {
-    return toPredicate(root, query, builder, criteria);
+    return toPredicate(root, query, builder, criteria.getSearchCriteriaGroup());
   }
 
   private Predicate toPredicate(Root<T> root, CriteriaQuery<?> query, CriteriaBuilder builder,
-      SearchCriteriaDto criteria) {
-    if (criteria.getChildrenCriteriaGroups() != null && !criteria.getChildrenCriteriaGroups().getCriteria().isEmpty()) {
-      List<Predicate> predicates = criteria.getChildrenCriteriaGroups().getCriteria().stream()
+      SearchCriteriaGroupDto criteria) {
+    if (criteria.getCriteriaGroup() != null && !criteria.getCriteriaGroup().getSearchCriteriaGroup().isEmpty()) {
+      List<Predicate> predicates = criteria.getCriteriaGroup().getSearchCriteriaGroup()
+          .stream()
           .map(child -> toPredicate(root, query, builder, child))
           .collect(Collectors.toList());
 
@@ -41,7 +43,7 @@ public class EntitySpecification<T> implements Specification<T> {
   }
 
   private Predicate toPredicateSimple(Root<T> root, CriteriaQuery<?> query, CriteriaBuilder builder,
-      SearchCriteriaDto criteria) {
+      SearchCriteriaGroupDto criteria) {
     if (criteria.getOperator().equals(OperatorsFilter.GREATER_THAN)) {
       return builder.greaterThan(root.<String>get(criteria.getAttribute()), criteria.getValueList().get(0));
     } else if (criteria.getOperator().equals(OperatorsFilter.LESS_THAN)) {
