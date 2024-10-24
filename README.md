@@ -45,6 +45,9 @@ Algunas de las características del proyecto son:
    1. Éstas métricas se envían usando Prometheus
 3. Los logs se envían a elastic
 4. Se usa spring cloud sleuth para la trazabilidad de los microservicios
+5. Se usa la librería spy para monitorizar el rendmiento de las sql a BBDD.
+   6. La configuración se hace en el fichero spy.properties
+   6. Por defecto esta configurado a que loguee todas las sql que superen los 3s.
 
 ## Instalación 🔧 {#instalacion}
 
@@ -88,25 +91,6 @@ Estas aplicaciones son las siguientes:
 
 ### Arrancar aplicación
 
-#### Variables de entorno a configurar
-
-1. GITHUB
-   1. URL del repositorio de Git para el uso con el SCCS
-2. SCCS 
-   1. URL del servidor de SCCS
-3. PROFILE
-   1. Profiles a ejecutar
-      1. h2
-         1. Inicia la aplicación con una BBDD en meria en H2
-      2. local
-         1. Inicia la aplicación con la BBDD de postgres del Docker
-
-```
-GITHUB=https://github.com/Mdr1983/config.git;
-SCCS=http://localhost:8889;
-PROFILE=local;
-```
-
 #### Si se inicia con el SCCS
 
 En el fichero bootstrap.yml esta definido el acceso a SCCS 
@@ -127,6 +111,25 @@ spring:
           search-paths: config
 logging:
   config: ${SCCS}/sccs/${spring.application.name}/${PROFILE}/master/base_logback.xml
+```
+
+##### Variables de entorno a configurar para el SCCS
+
+1. GITHUB
+    1. URL del repositorio de Git para el uso con el SCCS
+2. SCCS
+    1. URL del servidor de SCCS
+3. PROFILE
+    1. Profiles a ejecutar
+        1. h2
+            1. Inicia la aplicación con una BBDD en meria en H2
+        2. local
+            1. Inicia la aplicación con la BBDD de postgres del Docker
+
+```
+GITHUB=https://github.com/Mdr1983/config.git;
+SCCS=http://localhost:8889;
+PROFILE=local;
 ```
 
 #### Si no se inicia con el SCCS
@@ -222,7 +225,7 @@ Puedes encontrar mucho más de cómo utilizar este proyecto en nuestra [Wiki](ht
 
 ## Versionado 📌
 
-Usamos [SemVer](http://semver.org/) para el versionado. 
+Se utiliza [SemVer](http://semver.org/) para el versionado. 
 
 Para todas las versiones disponibles, mira los [tags](https://github.com/Mdr1983/archetype-api-rest/tags).
 

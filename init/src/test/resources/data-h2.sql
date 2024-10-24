@@ -1,0 +1,19 @@
+--DELETE FROM category;
+--INSERT INTO category (category_code, description)
+--VALUES ('BOLSO', 'Bolsos'),
+--       ('ZAPATO', 'Zapatos');
+--
+--DELETE FROM order;
+--INSERT INTO order (order_id, order_code, order_date)
+--VALUES (1, 'ORD-Test1', '2024-10-02T13:37:00Z'),
+--       (2, 'ORD-Test2', '2024-10-12T13:37:00Z'),
+--       (3, 'ORD-Test3', '2024-10-13T13:37:00Z'),
+--       (4, 'ORD-Test4', '2024-10-20T13:37:00Z');
+--
+--DELETE FROM order_line;
+--INSERT INTO order (order_line_id, order_id, item, description, category_id, quantity)
+--VALUES (1, 1, 'B-125789', 'Bolso cuero negro', 1, 1),
+--       (2, 2, 'B-125789', 'Bolso cuero negro', 1, 2),
+--       (3, 3, 'Z-125789', 'Zapatilla deportiva negro', 2, 1),
+--       (4, 3, 'Z-234545', 'Zapatilla suela alta negro', 2, 1),
+--       (5, 4, 'Z-234545', 'Zapatilla suela alta negro', 2, 1);

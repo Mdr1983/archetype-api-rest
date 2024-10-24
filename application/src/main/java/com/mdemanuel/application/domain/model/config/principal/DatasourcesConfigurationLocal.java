@@ -42,7 +42,7 @@ public class DatasourcesConfigurationLocal extends DatasourcesPrimaryConfigurati
     if (Boolean.TRUE.equals(dataSourceInitializerEnabled)) {
       DataSourceInitializer dataSourceInitializer = new DataSourceInitializer();
       dataSourceInitializer.setDataSource(dataSource);
-      //dataSourceInitializer.setDatabasePopulator(databasePopulator());
+      dataSourceInitializer.setDatabasePopulator(databasePopulator());
       return dataSourceInitializer;
     } else {
       return null;

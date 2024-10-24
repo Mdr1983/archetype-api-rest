@@ -92,8 +92,6 @@
     <appender-ref ref="ELASTIC"/>
   </logger>
 
-  <!--<include resource="logback_conf.xml" />-->
-
   <if condition='property("profile") == "test" || property("profile") == "h2"'>
     <then>
       <root level="INFO">
