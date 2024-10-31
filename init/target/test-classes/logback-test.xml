@@ -4,7 +4,7 @@
 
   <contextName>@project.artifactId@-@project.version@_@build.timestamp@</contextName>
 
-  <if condition='property("profile").contains("test") || property("profile").contains("local")'>
+  <if condition='property("profile").contains("test") || property("profile").contains("h2")'>
     <then>
       <root level="INFO">
         <appender-ref ref="CONSOLE"/>

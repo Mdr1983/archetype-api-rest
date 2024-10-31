@@ -15,7 +15,7 @@
   <logger name="com.zaxxer.hikari.pool.HikariPool" level="INFO"/>
   <logger name="io.lettuce" level="INFO"/>
 
-  <appender name="ELASTIC" class="com.mdemanuel.application.config.LogbackCompatibilityWrapper4ElasticsearchAppender">
+  <appender name="ELASTIC" class="com.mdemanuel.application.util.elastic.LogbackCompatibilityWrapper4ElasticsearchAppender">
     <url>${url-elastic}</url>
     <index>${appName}</index>
     <loggerName>es-logger</loggerName> <!-- optional -->

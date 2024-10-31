@@ -17,4 +17,8 @@ public class CacheServiceImpl implements CacheService {
   public void evictAll() {
     cacheManager.getCacheNames().stream().forEach(n -> cacheManager.getCache(n).clear());
   }
+
+  public void evict(String cacheName, String key) {
+    cacheManager.getCache(cacheName).evict(key);
+  }
 }

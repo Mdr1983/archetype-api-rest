@@ -28,8 +28,18 @@ graph TD;
 
 Pasos a seguir para poder arracar el proyecto:
 
-1. Descargar el proyecto de docker desde github. https://github.com/Mdr1983/docker.git
-2. Descargar el proyecto de archetype-api-rest desde github. https://github.com/Mdr1983/archetype-api-rest.git
+1. Descargar el proyecto de docker desde github.
+
+```
+git clone https://github.com/Mdr1983/docker.git
+```
+
+2. Descargar el proyecto de archetype-api-rest desde github.
+
+```
+git clone https://github.com/Mdr1983/archetype-api-rest.git
+```
+
 3. Seguir las indicaciones de la sección [Instalación](#instalacion)  
 
 ### Características
@@ -40,7 +50,7 @@ Algunas de las características del proyecto son:
    1. Tabla audit_entry
       1. Almacena la auditoria de las peticiones entrantes a la app
    2. Tabla audit_exit
-      1. Almacen la auditoria de las peticiones salientes a otras app
+      1. Almacena la auditoria de las peticiones salientes a otras app
 2. Envía las metricas de la aplicación usando la libreria micrometer
    1. Éstas métricas se envían usando Prometheus
 3. Los logs se envían a elastic
@@ -48,6 +58,8 @@ Algunas de las características del proyecto son:
 5. Se usa la librería spy para monitorizar el rendmiento de las sql a BBDD.
    6. La configuración se hace en el fichero spy.properties
    6. Por defecto esta configurado a que loguee todas las sql que superen los 3s.
+7. Todas las entradas de json al API realizan una validación contra json schemas usando las librerias jackson y networknt
+   8. La clase que engloba estas validaciones es JsonValidationSchema.java
 
 ## Instalación 🔧 {#instalacion}
 
@@ -75,6 +87,8 @@ Estas aplicaciones son las siguientes:
 
 * Postgres
   * Arranca en el puerto 15432 
+* Mongo
+    * Arranca en el puerto 27017 
 * Grafana
     * http://localhost:3000/
 * Prometheus
@@ -207,7 +221,8 @@ _Herramientas usadas_
 
 * [Spring](https://spring.io/) - Framework web
 * [Maven](https://maven.apache.org/) - Manejador de dependencias
-* [Postgres](https://www.postgresql.org/) - BBDD
+* [Postgres](https://www.postgresql.org/) - BBDD relacional
+* [Mongo](https://www.postgresql.org/) - BBDD No relacional
 * [Grafana](https://grafana.com/) - Monitorización
 * [Prometheus](https://prometheus.io/) - Monitorización
 * [Elastic](https://www.elastic.co/es/) - Logs

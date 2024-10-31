@@ -1,12 +1,13 @@
 package com.mdemanuel.application.domain.service.purchase_order.impl;
 
-import com.mdemanuel.application.domain.model.domain.order.PurchaseOrderEntity;
-import com.mdemanuel.application.domain.model.domain.order.PurchaseOrderLineEntity;
+import com.mdemanuel.application.domain.model.domain.postgres.purchase_order.PurchaseOrderEntity;
+import com.mdemanuel.application.domain.model.domain.postgres.purchase_order.PurchaseOrderLineEntity;
 import com.mdemanuel.application.domain.ports.primary.dto.request.PurchaseOrderDto;
 import com.mdemanuel.application.domain.ports.primary.dto.request.SearchCriteriaDto;
 import com.mdemanuel.application.domain.ports.secondary.repository.RepositoryUtils;
-import com.mdemanuel.application.domain.ports.secondary.repository.purchase_order.PurchaseOrderLineRepository;
-import com.mdemanuel.application.domain.ports.secondary.repository.purchase_order.PurchaseOrderRepository;
+import com.mdemanuel.application.domain.ports.secondary.repository.postgres.purchase_order.PurchaseOrderLineRepository;
+import com.mdemanuel.application.domain.ports.secondary.repository.postgres.purchase_order.PurchaseOrderRepository;
+import com.mdemanuel.application.domain.service.cache.CacheService;
 import com.mdemanuel.application.domain.service.mapper.PurchaseOrderDtoMapper;
 import com.mdemanuel.application.domain.service.purchase_order.PurchaseOrderService;
 import com.mdemanuel.application.domain.service.util.EntityService;
@@ -30,6 +31,8 @@ public class PurchaseOrderServiceImpl implements PurchaseOrderService {
   private PurchaseOrderDtoMapper purchaseOrderDtoMapper;
   @Autowired
   private EntityService entityService;
+  @Autowired
+  private CacheService cacheService;
 
   @Override
   public List<PurchaseOrderDto> getAllPurchaseOrder() {
@@ -39,7 +42,7 @@ public class PurchaseOrderServiceImpl implements PurchaseOrderService {
 
   @Override
   public Page<PurchaseOrderDto> getAllPurchaseOrder(SearchCriteriaDto dto) {
-    Page<PurchaseOrderEntity> result =  purchaseOrderRepository.findAll(entityService.getEntitySpecification(
+    Page<PurchaseOrderEntity> result = purchaseOrderRepository.findAll(entityService.getEntitySpecification(
         PurchaseOrderEntity.class, dto), RepositoryUtils.getPageable(dto));
 
     return result.map(purchaseOrderDtoMapper::toPurchaseOrderDto);
@@ -56,7 +59,7 @@ public class PurchaseOrderServiceImpl implements PurchaseOrderService {
   @Override
   @Transactional(rollbackFor = Exception.class)
   public PurchaseOrderDto addPurchaseOrder(PurchaseOrderDto dto) {
-    entityService.getEntityByCode(dto.getPurchaseOrderCode(), PurchaseOrderEntity.class, false, true);
+    entityService.getEntityByCode(dto.getData().getCode(), PurchaseOrderEntity.class, false, true);
 
     PurchaseOrderEntity entity = purchaseOrderRepository.save(purchaseOrderDtoMapper.toPurchaseOrderEntity(dto));
 
@@ -75,26 +78,41 @@ public class PurchaseOrderServiceImpl implements PurchaseOrderService {
   public PurchaseOrderDto updatePurchaseOrder(PurchaseOrderDto dto, String code) {
     PurchaseOrderEntity entity = entityService.getEntityByCode(code, PurchaseOrderEntity.class, true, false);
 
-    if (!code.equals(dto.getPurchaseOrderCode())) {
-      entityService.getEntityByCode(dto.getPurchaseOrderCode(), PurchaseOrderEntity.class, false, true);
+    if (!code.equals(dto.getData().getCode())) {
+      entityService.getEntityByCode(dto.getData().getCode(), PurchaseOrderEntity.class, false, true);
     }
 
-    PurchaseOrderEntity newEntity = purchaseOrderRepository.save(purchaseOrderDtoMapper.toPurchaseOrderEntity(dto));
-    newEntity.setPurchaseOrderId(entity.getPurchaseOrderId());
+    PurchaseOrderEntity newEntity = purchaseOrderDtoMapper.toPurchaseOrderEntity(dto);
+    newEntity.setId(entity.getId());
 
     for (PurchaseOrderLineEntity item : newEntity.getPurchaseOrderLines()) {
       item.setPurchaseOrder(newEntity);
     }
 
+    purchaseOrderLineRepository.deleteByPurchaseOrderId(entity.getId());
+
     purchaseOrderLineRepository.saveAll(newEntity.getPurchaseOrderLines());
+
+    newEntity = purchaseOrderRepository.save(newEntity);
+
+    if (!newEntity.getCode().equals(code)) {
+      // Invalidar cache por si cambia el code, porque no es posible hacerlo en el repository
+      String key = "findByCode," + code;
+
+      cacheService.evict("purchaseOrder", key);
+    }
 
     return dto;
   }
 
   @SneakyThrows
   @Override
+  @Transactional(rollbackFor = Exception.class)
   public void deletePurchaseOrder(String code) {
-    purchaseOrderRepository.deleteById(
-        entityService.getEntityByCode(code, PurchaseOrderEntity.class, true, false).getPurchaseOrderId());
+    Integer id = entityService.getEntityByCode(code, PurchaseOrderEntity.class, true, false).getId();
+
+    purchaseOrderLineRepository.deleteByPurchaseOrderId(id);
+
+    purchaseOrderRepository.deleteById(id);
   }
 }

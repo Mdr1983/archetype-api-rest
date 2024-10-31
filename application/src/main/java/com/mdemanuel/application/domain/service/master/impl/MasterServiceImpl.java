@@ -1,10 +1,11 @@
 package com.mdemanuel.application.domain.service.master.impl;
 
-import com.mdemanuel.application.domain.model.domain.master.CategoryEntity;
+import com.mdemanuel.application.domain.model.domain.postgres.master.CategoryEntity;
 import com.mdemanuel.application.domain.ports.primary.dto.request.CategoryDto;
 import com.mdemanuel.application.domain.ports.primary.dto.request.SearchCriteriaDto;
 import com.mdemanuel.application.domain.ports.secondary.repository.RepositoryUtils;
-import com.mdemanuel.application.domain.ports.secondary.repository.master.CategoryRepository;
+import com.mdemanuel.application.domain.ports.secondary.repository.postgres.master.CategoryRepository;
+import com.mdemanuel.application.domain.service.cache.CacheService;
 import com.mdemanuel.application.domain.service.mapper.MasterDtoMapper;
 import com.mdemanuel.application.domain.service.master.MasterService;
 import com.mdemanuel.application.domain.service.util.EntityService;
@@ -26,6 +27,8 @@ public class MasterServiceImpl implements MasterService {
   private MasterDtoMapper masterDtoMapper;
   @Autowired
   private EntityService entityService;
+  @Autowired
+  private CacheService cacheService;
 
   @Override
   public List<CategoryDto> getAllCategory() {
@@ -34,8 +37,8 @@ public class MasterServiceImpl implements MasterService {
 
   @Override
   public Page<CategoryDto> getAllCategory(SearchCriteriaDto dto) {
-    Page<CategoryEntity> result = categoryRepository.findAll(entityService.getEntitySpecification(CategoryEntity.class, dto),
-        RepositoryUtils.getPageable(dto));
+    Page<CategoryEntity> result = categoryRepository.findAll(
+        entityService.getEntitySpecification(CategoryEntity.class, dto), RepositoryUtils.getPageable(dto));
 
     return result.map(masterDtoMapper::toCategoryDto);
   }
@@ -50,7 +53,7 @@ public class MasterServiceImpl implements MasterService {
   @Override
   @Transactional(rollbackFor = Exception.class)
   public CategoryDto addCategory(CategoryDto dto) {
-    entityService.getEntityByCode(dto.getCategoryCode(), CategoryEntity.class, false, true);
+    entityService.getEntityByCode(dto.getData().getCode(), CategoryEntity.class, false, true);
 
     categoryRepository.save(masterDtoMapper.toCategoryEntity(dto));
 
@@ -63,22 +66,30 @@ public class MasterServiceImpl implements MasterService {
   public CategoryDto updateCategory(CategoryDto dto, String code) {
     CategoryEntity entity = entityService.getEntityByCode(code, CategoryEntity.class, true, false);
 
-    if (!code.equals(dto.getCategoryCode())) {
-      entityService.getEntityByCode(dto.getCategoryCode(), CategoryEntity.class, false, true);
+    if (!code.equals(dto.getData().getCode())) {
+      entityService.getEntityByCode(dto.getData().getCode(), CategoryEntity.class, false, true);
     }
 
     CategoryEntity newEntity = masterDtoMapper.toCategoryEntity(dto);
-    newEntity.setCategoryId(entity.getCategoryId());
+    newEntity.setId(entity.getId());
 
     categoryRepository.save(newEntity);
+
+    if (!newEntity.getCode().equals(code)) {
+      // Invalidar cache por si cambia el code, porque no es posible hacerlo en el repository
+      String key = "findByCode," + code;
+
+      cacheService.evict("category", key);
+    }
 
     return dto;
   }
 
   @SneakyThrows
   @Override
+  @Transactional(rollbackFor = Exception.class)
   public void deleteCategory(String code) {
     categoryRepository.deleteById(
-        entityService.getEntityByCode(code, CategoryEntity.class, true, false).getCategoryId());
+        entityService.getEntityByCode(code, CategoryEntity.class, true, false).getId());
   }
 }

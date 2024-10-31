@@ -1,0 +1,42 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "size": {
+      "type": "integer"
+    },
+    "page": {
+      "type": "integer"
+    },
+    "sortDirection": {
+      "type": "string"
+    },
+    "sortField": {
+      "type": "string"
+    },
+    "searchCriteriaGroup": {
+      "type": "object",
+      "properties": {
+        "attribute": {
+          "type": "string"
+        },
+        "operator": {
+          "type": "string"
+        },
+        "valueList": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "criteriaGroup": {
+          "type": "array",
+          "items": {
+            "$ref": "#"
+          }
+        }
+      },
+      "required": ["operator"]
+    }
+  }
+}

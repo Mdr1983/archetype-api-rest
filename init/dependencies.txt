@@ -14,6 +14,12 @@ com.mdemanuel:init:jar:0.0.1-SNAPSHOT
 |  |  \- org.springframework.data:spring-data-jdbc:jar:3.3.3:compile
 |  |     +- org.springframework.data:spring-data-relational:jar:3.3.3:compile
 |  |     \- org.springframework.data:spring-data-commons:jar:3.3.3:compile
+|  +- org.springframework.boot:spring-boot-starter-data-mongodb:jar:3.3.3:compile
+|  |  +- org.mongodb:mongodb-driver-sync:jar:5.0.1:compile
+|  |  |  +- org.mongodb:bson:jar:5.0.1:compile
+|  |  |  \- org.mongodb:mongodb-driver-core:jar:5.0.1:compile
+|  |  |     \- org.mongodb:bson-record-codec:jar:5.0.1:runtime
+|  |  \- org.springframework.data:spring-data-mongodb:jar:4.3.3:compile
 |  +- org.springframework.boot:spring-boot-starter-data-jpa:jar:3.3.3:compile
 |  |  +- org.springframework.boot:spring-boot-starter-aop:jar:3.3.3:compile
 |  |  |  \- org.aspectj:aspectjweaver:jar:1.9.22.1:compile
@@ -38,8 +44,7 @@ com.mdemanuel:init:jar:0.0.1-SNAPSHOT
 |  |  |     \- io.swagger.core.v3:swagger-core-jakarta:jar:2.2.22:compile
 |  |  |        +- org.apache.commons:commons-lang3:jar:3.14.0:compile
 |  |  |        +- io.swagger.core.v3:swagger-annotations-jakarta:jar:2.2.22:compile
-|  |  |        +- io.swagger.core.v3:swagger-models-jakarta:jar:2.2.22:compile
-|  |  |        \- com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:jar:2.17.2:compile
+|  |  |        \- io.swagger.core.v3:swagger-models-jakarta:jar:2.2.22:compile
 |  |  \- org.webjars:swagger-ui:jar:5.17.14:compile
 |  +- jakarta.persistence:jakarta.persistence-api:jar:3.1.0:compile
 |  +- jakarta.validation:jakarta.validation-api:jar:3.0.2:compile
@@ -47,7 +52,8 @@ com.mdemanuel:init:jar:0.0.1-SNAPSHOT
 |  +- jakarta.servlet:jakarta.servlet-api:jar:6.0.0:compile
 |  +- com.fasterxml.jackson.datatype:jackson-datatype-jdk8:jar:2.17.2:compile
 |  +- com.fasterxml.jackson.module:jackson-module-parameter-names:jar:2.17.2:compile
-|  \- com.h2database:h2:jar:2.3.232:runtime
+|  +- com.h2database:h2:jar:2.3.232:runtime
+|  \- io.swagger:swagger-annotations:jar:1.6.14:compile
 +- com.mdemanuel:priadapter:jar:0.0.1-SNAPSHOT:compile
 |  +- org.springframework.boot:spring-boot-configuration-processor:jar:3.3.3:compile
 |  \- org.springframework.boot:spring-boot-starter-actuator:jar:3.3.3:compile
@@ -182,6 +188,11 @@ com.mdemanuel:init:jar:0.0.1-SNAPSHOT
 +- org.apache.commons:commons-collections4:jar:4.5.0-M2:compile
 +- com.internetitem:logback-elasticsearch-appender:jar:1.6:compile
 |  \- com.fasterxml.jackson.core:jackson-core:jar:2.17.2:compile
-\- com.fasterxml.jackson.datatype:jackson-datatype-jsr310:jar:2.18.0:compile
-   +- com.fasterxml.jackson.core:jackson-annotations:jar:2.17.2:compile
-   \- com.fasterxml.jackson.core:jackson-databind:jar:2.17.2:compile
++- com.fasterxml.jackson.datatype:jackson-datatype-jsr310:jar:2.18.0:compile
+|  +- com.fasterxml.jackson.core:jackson-annotations:jar:2.17.2:compile
+|  \- com.fasterxml.jackson.core:jackson-databind:jar:2.17.2:compile
++- com.networknt:json-schema-validator:jar:1.5.2:compile
+|  +- com.ethlo.time:itu:jar:1.10.2:compile
+|  \- com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:jar:2.17.2:compile
+\- com.vladmihalcea:hibernate-types-60:jar:2.21.1:compile
+   \- javax.xml.bind:jaxb-api:jar:2.3.0:compile

@@ -1,9 +1,11 @@
 package com.mdemanuel.application.domain.ports.primary.config;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.mdemanuel.application.domain.model.domain.audit.AuditEntryEntity;
+import com.mdemanuel.application.domain.model.domain.mongo.audit.AuditEntryDocument;
+import com.mdemanuel.application.domain.model.domain.postgres.audit.AuditEntryEntity;
 import com.mdemanuel.application.domain.ports.primary.dto.request.CategoryDto;
 import com.mdemanuel.application.domain.ports.primary.dto.request.PurchaseOrderDto;
+import com.mdemanuel.application.domain.service.audit.AuditEntryDocumentService;
 import com.mdemanuel.application.domain.service.audit.AuditEntryService;
 import io.micrometer.tracing.Tracer;
 import jakarta.servlet.Filter;
@@ -18,6 +20,7 @@ import java.nio.charset.StandardCharsets;
 import java.time.Instant;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Map;
 import java.util.Objects;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -37,7 +40,11 @@ public class AuditEntryFilter implements Filter {
   // Patrones de recursos a buscar
   private List<Pattern> baseResourcePatterns = Arrays.asList(
       Pattern.compile("/archetype-api-rest/master/(category)/(.+)"),
-      Pattern.compile("/archetype-api-rest/order/(.+)")
+      Pattern.compile("/archetype-api-rest/purchase_order/(.+)"),
+      Pattern.compile("/archetype-api-rest/mongo/master/(category)/(.+)"),
+      Pattern.compile("/archetype-api-rest/mongo/purchase_order/(.+)"),
+      Pattern.compile("/archetype-api-rest/mongo/master/generic/(category)/(.+)"),
+      Pattern.compile("/archetype-api-rest/mongo/master/purchase_order/(.+)")
   );
 
   @Value("${excludeAuditEntry}")
@@ -51,6 +58,8 @@ public class AuditEntryFilter implements Filter {
   private Tracer tracer;
   @Autowired
   private AuditEntryService auditEntryService;
+  @Autowired
+  private AuditEntryDocumentService auditEntryDocumentService;
 
   @Override
   public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain)
@@ -99,21 +108,50 @@ public class AuditEntryFilter implements Filter {
       responseBody = responseBody == null || responseBody.isEmpty() ? "{}" : responseBody;
 
       if (!excludeAuditEntry(url)) {
-        AuditEntryEntity auditEntryEntity =
-            AuditEntryEntity.builder().traceId(Objects.requireNonNull(tracer.currentTraceContext().context()).traceId())
-                .spanId(Objects.requireNonNull(tracer.currentTraceContext().context()).spanId())
-                .url(url)
-                .httpMethod(reqWrapper.getMethod())
-                .keyValue(getKey(url, method, requestBody))
-                .parameters(getParams(reqWrapper))
-                .requestBody(requestBody)
-                .responseBody(responseBody)
-                .httpStatus(httpStatus)
-                .elapsedTime(elapsedTime)
-                .createdAt(Instant.ofEpochMilli(init))
-                .build();
+        Map<String, Object> mapRequestBody = objectMapper.readValue(requestBody, Map.class);
+        Map<String, Object> mapResponseBody = objectMapper.readValue(responseBody, Map.class);
 
-        auditEntryService.save(auditEntryEntity);
+        try {
+          AuditEntryEntity auditEntryEntity =
+              AuditEntryEntity.builder()
+                  .traceId(Objects.requireNonNull(tracer.currentTraceContext().context()).traceId())
+                  .spanId(Objects.requireNonNull(tracer.currentTraceContext().context()).spanId())
+                  .url(url)
+                  .httpMethod(reqWrapper.getMethod())
+                  .keyValue(getKey(url, method, requestBody))
+                  .parameters(getParams(reqWrapper))
+                  .requestBody(mapRequestBody)
+                  .responseBody(mapResponseBody)
+                  .httpStatus(httpStatus)
+                  .elapsedTime(elapsedTime)
+                  .createdAt(Instant.ofEpochMilli(init))
+                  .build();
+
+          auditEntryService.save(auditEntryEntity);
+        } catch (Exception e) {
+          log.warn("Error on save audit entry in Postgres", e);
+        }
+
+        try {
+          AuditEntryDocument auditEntryDocument =
+              AuditEntryDocument.builder()
+                  .traceId(Objects.requireNonNull(tracer.currentTraceContext().context()).traceId())
+                  .spanId(Objects.requireNonNull(tracer.currentTraceContext().context()).spanId())
+                  .url(url)
+                  .httpMethod(reqWrapper.getMethod())
+                  .keyValue(getKey(url, method, requestBody))
+                  .parameters(getParams(reqWrapper))
+                  .requestBody(requestBody)
+                  .responseBody(responseBody)
+                  .httpStatus(httpStatus)
+                  .elapsedTime(elapsedTime)
+                  .createdAt(Instant.ofEpochMilli(init))
+                  .build();
+
+          auditEntryDocumentService.save(auditEntryDocument);
+        } catch (Exception e) {
+          log.warn("Error on save audit entry in Mongo", e);
+        }
       }
 
       resWrapper.copyBodyToResponse();
@@ -127,7 +165,6 @@ public class AuditEntryFilter implements Filter {
 
     return request.getContextPath() + request.getServletPath();
   }
-
 
   private String getParams(ContentCachingRequestWrapper reqWrapper) {
     return reqWrapper.getQueryString();
@@ -161,10 +198,10 @@ public class AuditEntryFilter implements Filter {
         if (body != null && !body.isEmpty()) {
           switch (url.substring(url.lastIndexOf("/") + 1)) {
             case "category":
-              return objectMapper.readValue(body, CategoryDto.class).getCategoryCode();
+              return objectMapper.readValue(body, CategoryDto.class).getData().getCode();
 
             case "purchase_order":
-              return objectMapper.readValue(body, PurchaseOrderDto.class).getPurchaseOrderCode();
+              return objectMapper.readValue(body, PurchaseOrderDto.class).getData().getCode();
 
             default:
               return null;

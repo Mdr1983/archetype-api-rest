@@ -7,8 +7,11 @@ import com.mdemanuel.application.domain.ports.primary.dto.response.controller.Ap
 import com.mdemanuel.application.domain.service.exceptions.BadFormatException;
 import com.mdemanuel.application.domain.service.exceptions.DuplicatedItemException;
 import com.mdemanuel.application.domain.service.exceptions.ItemNotFoundException;
+import com.mdemanuel.application.domain.service.exceptions.ValidateJsonException;
 import com.mdemanuel.application.domain.service.purchase_order.PurchaseOrderService;
 import com.mdemanuel.application.util.aspect.LogExecution;
+import com.mdemanuel.application.util.json.JsonValidationSchema;
+import com.mdemanuel.application.util.json.JsonValidationSchema.TypeSchema;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.Schema;
@@ -17,6 +20,7 @@ import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import java.io.IOException;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -39,11 +43,13 @@ import org.springframework.web.bind.annotation.RestController;
 public class ControllerPurchaseOrder {
 
   @Autowired
+  private JsonValidationSchema jsonValidationSchema;
+  @Autowired
   private PurchaseOrderService purchaseOrderService;
 
   @GetMapping(value = "", produces = MediaType.APPLICATION_JSON_VALUE)
   @Operation(
-      description = "Get all purchase order",
+      description = "Get all purchase purchase_order",
       responses = {
           @ApiResponse(
               responseCode = "200",
@@ -74,7 +80,7 @@ public class ControllerPurchaseOrder {
   @PostMapping(value = "/filters", consumes = MediaType.APPLICATION_JSON_VALUE,
       produces = MediaType.APPLICATION_JSON_VALUE)
   @Operation(
-      description = "Get all purchase order with filters",
+      description = "Get all purchase purchase_order with filters",
       responses = {
           @ApiResponse(
               responseCode = "200",
@@ -96,8 +102,11 @@ public class ControllerPurchaseOrder {
   )
   @ResponseBody
   @LogExecution
-  public ResponseEntity<ApiResponseDto<Page<PurchaseOrderDto>>> getAllPurchaseOrder(
-      @RequestBody @Valid @NotNull SearchCriteriaDto dto, HttpServletRequest request) {
+  public ResponseEntity<ApiResponseDto<Page<PurchaseOrderDto>>> getAllPurchaseOrder(HttpServletRequest request,
+      @RequestBody @Valid @NotNull SearchCriteriaDto dto)
+      throws IOException, ValidateJsonException {
+    jsonValidationSchema.validateJson(TypeSchema.SEARCH_CRITERIA, dto);
+
     return new ResponseEntity<>(
         new ApiResponseDto<>(HttpStatus.OK.value(), HttpStatus.OK.getReasonPhrase(), request.getRequestURI(),
             purchaseOrderService.getAllPurchaseOrder(dto)), HttpStatus.OK);
@@ -105,7 +114,7 @@ public class ControllerPurchaseOrder {
 
   @GetMapping(value = "/{code}", produces = MediaType.APPLICATION_JSON_VALUE)
   @Operation(
-      description = "Get purchase order",
+      description = "Get purchase purchase_order",
       responses = {
           @ApiResponse(
               responseCode = "200",
@@ -138,7 +147,7 @@ public class ControllerPurchaseOrder {
   @PostMapping(value = "", consumes = MediaType.APPLICATION_JSON_VALUE,
       produces = MediaType.APPLICATION_JSON_VALUE)
   @Operation(
-      description = "Add purchase order",
+      description = "Add purchase purchase_order",
       responses = {
           @ApiResponse(
               responseCode = "201",
@@ -162,7 +171,9 @@ public class ControllerPurchaseOrder {
   @LogExecution
   public ResponseEntity<ApiResponseDto> addPurchaseOrder(HttpServletRequest request,
       @RequestBody @Valid @NotNull PurchaseOrderDto dto)
-      throws DuplicatedItemException {
+      throws DuplicatedItemException, IOException, ValidateJsonException {
+    jsonValidationSchema.validateJson(TypeSchema.PURCHASE_ORDER, dto);
+
     return new ResponseEntity<>(
         new ApiResponseDto<>(HttpStatus.CREATED.value(), HttpStatus.CREATED.getReasonPhrase(), request.getRequestURI(),
             purchaseOrderService.addPurchaseOrder(dto)), HttpStatus.CREATED);
@@ -171,7 +182,7 @@ public class ControllerPurchaseOrder {
   @PutMapping(value = "/{code}", consumes = MediaType.APPLICATION_JSON_VALUE,
       produces = MediaType.APPLICATION_JSON_VALUE)
   @Operation(
-      description = "Update purchase order",
+      description = "Update purchase purchase_order",
       responses = {
           @ApiResponse(
               responseCode = "200",
@@ -194,9 +205,10 @@ public class ControllerPurchaseOrder {
   @ResponseBody
   @LogExecution
   public ResponseEntity<ApiResponseDto> updatePurchaseOrder(HttpServletRequest request,
-      @RequestBody PurchaseOrderDto dto,
-      @PathVariable String code)
-      throws ItemNotFoundException, BadFormatException {
+      @RequestBody @Valid @NotNull PurchaseOrderDto dto, @PathVariable String code)
+      throws ItemNotFoundException, BadFormatException, IOException, ValidateJsonException {
+    jsonValidationSchema.validateJson(TypeSchema.PURCHASE_ORDER, dto);
+
     return new ResponseEntity<>(
         new ApiResponseDto<>(HttpStatus.OK.value(), HttpStatus.OK.getReasonPhrase(), request.getRequestURI(),
             purchaseOrderService.updatePurchaseOrder(dto, code)), HttpStatus.OK);
@@ -204,7 +216,7 @@ public class ControllerPurchaseOrder {
 
   @DeleteMapping(value = "/{code}", produces = MediaType.APPLICATION_JSON_VALUE)
   @Operation(
-      description = "Delete purchase order",
+      description = "Delete purchase purchase_order",
       responses = {
           @ApiResponse(
               responseCode = "204",

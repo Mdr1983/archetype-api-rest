@@ -12,6 +12,7 @@ public class SearchCriteriaDtoSerializer extends JsonSerializer<SearchCriteriaDt
   public void serialize(SearchCriteriaDto value, JsonGenerator gen, SerializerProvider provider)
       throws IOException {
     gen.writeStartObject();
+
     gen.writeNumberField("size", value.getSize());
     gen.writeNumberField("page", value.getPage());
     gen.writeStringField("sortDirection", value.getSortDirection().toString());

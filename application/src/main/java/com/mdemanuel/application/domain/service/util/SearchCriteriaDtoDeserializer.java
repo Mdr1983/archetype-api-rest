@@ -48,7 +48,8 @@ public class SearchCriteriaDtoDeserializer extends JsonDeserializer<SearchCriter
     // Leer y establecer el campo "searchCriteriaGroup" sin recursividad
     JsonNode searchCriteriaGroupNode = node.get("searchCriteriaGroup");
     if (searchCriteriaGroupNode != null) {
-      SearchCriteriaGroupDto searchCriteriaGroup = mapper.treeToValue(searchCriteriaGroupNode, SearchCriteriaGroupDto.class);
+      SearchCriteriaGroupDto searchCriteriaGroup = mapper.treeToValue(searchCriteriaGroupNode,
+          SearchCriteriaGroupDto.class);
       searchCriteriaDto.setSearchCriteriaGroup(searchCriteriaGroup);
     }
 

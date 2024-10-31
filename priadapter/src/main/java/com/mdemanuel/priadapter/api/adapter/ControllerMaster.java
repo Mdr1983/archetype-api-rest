@@ -7,8 +7,11 @@ import com.mdemanuel.application.domain.ports.primary.dto.response.controller.Ap
 import com.mdemanuel.application.domain.service.exceptions.BadFormatException;
 import com.mdemanuel.application.domain.service.exceptions.DuplicatedItemException;
 import com.mdemanuel.application.domain.service.exceptions.ItemNotFoundException;
+import com.mdemanuel.application.domain.service.exceptions.ValidateJsonException;
 import com.mdemanuel.application.domain.service.master.MasterService;
 import com.mdemanuel.application.util.aspect.LogExecution;
+import com.mdemanuel.application.util.json.JsonValidationSchema;
+import com.mdemanuel.application.util.json.JsonValidationSchema.TypeSchema;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.Schema;
@@ -17,6 +20,7 @@ import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import java.io.IOException;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -38,6 +42,8 @@ import org.springframework.web.bind.annotation.RestController;
 @Tag(name = "Master")
 public class ControllerMaster {
 
+  @Autowired
+  private JsonValidationSchema jsonValidationSchema;
   @Autowired
   private MasterService masterService;
 
@@ -97,7 +103,10 @@ public class ControllerMaster {
   @ResponseBody
   @LogExecution
   public ResponseEntity<ApiResponseDto<Page<CategoryDto>>> getAllCategory(HttpServletRequest request,
-      @RequestBody @Valid @NotNull SearchCriteriaDto dto) {
+      @RequestBody @Valid @NotNull SearchCriteriaDto dto)
+      throws IOException, ValidateJsonException {
+    jsonValidationSchema.validateJson(TypeSchema.SEARCH_CRITERIA, dto);
+
     return new ResponseEntity<>(
         new ApiResponseDto<>(HttpStatus.OK.value(), HttpStatus.OK.getReasonPhrase(), request.getRequestURI(),
             masterService.getAllCategory(dto)), HttpStatus.OK);
@@ -161,7 +170,9 @@ public class ControllerMaster {
   @LogExecution
   public ResponseEntity<ApiResponseDto> addCategory(HttpServletRequest request,
       @RequestBody @Valid @NotNull CategoryDto dto)
-      throws DuplicatedItemException {
+      throws DuplicatedItemException, IOException, ValidateJsonException {
+    jsonValidationSchema.validateJson(TypeSchema.CATEGORY, dto);
+
     return new ResponseEntity<>(
         new ApiResponseDto<>(HttpStatus.CREATED.value(), HttpStatus.CREATED.getReasonPhrase(), request.getRequestURI(),
             masterService.addCategory(dto)), HttpStatus.CREATED);
@@ -192,9 +203,11 @@ public class ControllerMaster {
   )
   @ResponseBody
   @LogExecution
-  public ResponseEntity<ApiResponseDto> updateCategory(HttpServletRequest request, @RequestBody CategoryDto dto,
-      @PathVariable String code)
-      throws ItemNotFoundException, BadFormatException {
+  public ResponseEntity<ApiResponseDto> updateCategory(HttpServletRequest request,
+      @RequestBody @Valid @NotNull CategoryDto dto, @PathVariable String code)
+      throws ItemNotFoundException, BadFormatException, IOException, ValidateJsonException {
+    jsonValidationSchema.validateJson(TypeSchema.CATEGORY, dto);
+
     return new ResponseEntity<>(
         new ApiResponseDto<>(HttpStatus.OK.value(), HttpStatus.OK.getReasonPhrase(), request.getRequestURI(),
             masterService.updateCategory(dto, code)), HttpStatus.OK);

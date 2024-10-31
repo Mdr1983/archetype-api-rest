@@ -1,6 +1,10 @@
-#Fri Oct 18 15:20:21 CEST 2024
-Z\:\\workspace\\Github-Mdr1983\\archetype-api-rest\\priadapter\\src\\main\\java\\com\\mdemanuel\\priadapter\\api\\adapter\\ControllerMaster.java=1729115697649
-Z\:\\workspace\\Github-Mdr1983\\archetype-api-rest\\priadapter\\src\\main\\java\\com\\mdemanuel\\priadapter\\api\\adapter\\ControllerPurchaseOrder.java=1729112895795
+#Thu Oct 31 11:06:06 CET 2024
+Z\:\\workspace\\Github-Mdr1983\\archetype-api-rest\\priadapter\\src\\main\\java\\com\\mdemanuel\\priadapter\\api\\adapter\\ControllerMaster.java=1730223268463
+Z\:\\workspace\\Github-Mdr1983\\archetype-api-rest\\priadapter\\src\\main\\java\\com\\mdemanuel\\priadapter\\api\\adapter\\ControllerMongoMaster.java=1730223296354
+Z\:\\workspace\\Github-Mdr1983\\archetype-api-rest\\priadapter\\src\\main\\java\\com\\mdemanuel\\priadapter\\api\\adapter\\ControllerMongoMasterGeneric.java=1730223324035
+Z\:\\workspace\\Github-Mdr1983\\archetype-api-rest\\priadapter\\src\\main\\java\\com\\mdemanuel\\priadapter\\api\\adapter\\ControllerMongoPurchaseOrder.java=1730224891116
+Z\:\\workspace\\Github-Mdr1983\\archetype-api-rest\\priadapter\\src\\main\\java\\com\\mdemanuel\\priadapter\\api\\adapter\\ControllerMongoPurchaseOrderGeneric.java=1730224891135
+Z\:\\workspace\\Github-Mdr1983\\archetype-api-rest\\priadapter\\src\\main\\java\\com\\mdemanuel\\priadapter\\api\\adapter\\ControllerPurchaseOrder.java=1730224918269
 Z\:\\workspace\\Github-Mdr1983\\archetype-api-rest\\priadapter\\src\\main\\java\\com\\mdemanuel\\priadapter\\api\\adapter\\ControllerRestCache.java=1728125644354
 Z\:\\workspace\\Github-Mdr1983\\archetype-api-rest\\priadapter\\src\\main\\java\\com\\mdemanuel\\priadapter\\api\\adapter\\ControllerUtils.java=1728125644156
 Z\:\\workspace\\Github-Mdr1983\\archetype-api-rest\\priadapter\\src\\main\\java\\com\\mdemanuel\\priadapter\\api\\adapter\\CustomRestExceptionHandler.java=1728664421815

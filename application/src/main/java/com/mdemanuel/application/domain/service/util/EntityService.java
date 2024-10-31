@@ -1,11 +1,11 @@
 package com.mdemanuel.application.domain.service.util;
 
-import com.mdemanuel.application.domain.model.domain.master.CategoryEntity;
-import com.mdemanuel.application.domain.model.domain.order.PurchaseOrderEntity;
+import com.mdemanuel.application.domain.model.domain.postgres.master.CategoryEntity;
+import com.mdemanuel.application.domain.model.domain.postgres.purchase_order.PurchaseOrderEntity;
 import com.mdemanuel.application.domain.ports.primary.dto.request.SearchCriteriaDto;
 import com.mdemanuel.application.domain.ports.secondary.repository.EntitySpecification;
-import com.mdemanuel.application.domain.ports.secondary.repository.master.CategoryRepository;
-import com.mdemanuel.application.domain.ports.secondary.repository.purchase_order.PurchaseOrderRepository;
+import com.mdemanuel.application.domain.ports.secondary.repository.postgres.master.CategoryRepository;
+import com.mdemanuel.application.domain.ports.secondary.repository.postgres.purchase_order.PurchaseOrderRepository;
 import com.mdemanuel.application.domain.service.exceptions.DuplicatedItemException;
 import com.mdemanuel.application.domain.service.exceptions.ItemNotFoundException;
 import lombok.SneakyThrows;
@@ -58,9 +58,9 @@ public class EntityService {
 
     Object entity = null;
     if (clazz == CategoryEntity.class) {
-      entity = categoryRepository.findByCategoryCode(code);
+      entity = categoryRepository.findByCode(code);
     } else if (clazz == PurchaseOrderEntity.class) {
-      entity = purchaseOrderRepository.findByPurchaseOrderCode(code);
+      entity = purchaseOrderRepository.findByCode(code);
     } else {
       throw new IllegalArgumentException("Invalid entity class: " + clazz.getSimpleName());
     }

@@ -1,6 +1,7 @@
 package com.mdemanuel.application.config;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.mdemanuel.application.util.redis.CustomKeyPrefixSerializer;
 import java.util.HashMap;
 import java.util.Map;
 import lombok.extern.slf4j.Slf4j;

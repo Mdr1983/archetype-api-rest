@@ -1,6 +1,7 @@
 package com.mdemanuel.application.domain.service.mapper;
 
-import com.mdemanuel.application.domain.model.domain.master.CategoryEntity;
+import com.mdemanuel.application.domain.model.domain.postgres.master.CategoryEntity;
+import com.mdemanuel.application.domain.ports.primary.dto.request.CategoryDataDto;
 import com.mdemanuel.application.domain.ports.primary.dto.request.CategoryDto;
 import java.util.ArrayList;
 import java.util.List;
@@ -21,21 +22,21 @@ public class MasterDtoMapperImpl extends MasterDtoMapper {
 
         CategoryEntity.CategoryEntityBuilder<?, ?> categoryEntity = CategoryEntity.builder();
 
-        categoryEntity.categoryCode( dto.getCategoryCode() );
-        categoryEntity.description( dto.getDescription() );
+        categoryEntity.code( dtoDataCode( dto ) );
+        categoryEntity.description( dtoDataDescription( dto ) );
 
         return categoryEntity.build();
     }
 
     @Override
-    public List<CategoryEntity> toCategoryEntityList(List<CategoryDto> dto) {
+    public List<CategoryEntity> toCategoryEntityList(List<CategoryDataDto> dto) {
         if ( dto == null ) {
             return null;
         }
 
         List<CategoryEntity> list = new ArrayList<CategoryEntity>( dto.size() );
-        for ( CategoryDto categoryDto : dto ) {
-            list.add( toCategoryEntity( categoryDto ) );
+        for ( CategoryDataDto categoryDataDto : dto ) {
+            list.add( categoryDataDtoToCategoryEntity( categoryDataDto ) );
         }
 
         return list;
@@ -49,8 +50,7 @@ public class MasterDtoMapperImpl extends MasterDtoMapper {
 
         CategoryDto.CategoryDtoBuilder<?, ?> categoryDto = CategoryDto.builder();
 
-        categoryDto.categoryCode( entity.getCategoryCode() );
-        categoryDto.description( entity.getDescription() );
+        categoryDto.data( categoryEntityToCategoryDataDto( entity ) );
 
         return categoryDto.build();
     }
@@ -67,5 +67,47 @@ public class MasterDtoMapperImpl extends MasterDtoMapper {
         }
 
         return list;
+    }
+
+    private String dtoDataCode(CategoryDto categoryDto) {
+        CategoryDataDto data = categoryDto.getData();
+        if ( data == null ) {
+            return null;
+        }
+        return data.getCode();
+    }
+
+    private String dtoDataDescription(CategoryDto categoryDto) {
+        CategoryDataDto data = categoryDto.getData();
+        if ( data == null ) {
+            return null;
+        }
+        return data.getDescription();
+    }
+
+    protected CategoryEntity categoryDataDtoToCategoryEntity(CategoryDataDto categoryDataDto) {
+        if ( categoryDataDto == null ) {
+            return null;
+        }
+
+        CategoryEntity.CategoryEntityBuilder<?, ?> categoryEntity = CategoryEntity.builder();
+
+        categoryEntity.code( categoryDataDto.getCode() );
+        categoryEntity.description( categoryDataDto.getDescription() );
+
+        return categoryEntity.build();
+    }
+
+    protected CategoryDataDto categoryEntityToCategoryDataDto(CategoryEntity categoryEntity) {
+        if ( categoryEntity == null ) {
+            return null;
+        }
+
+        CategoryDataDto.CategoryDataDtoBuilder<?, ?> categoryDataDto = CategoryDataDto.builder();
+
+        categoryDataDto.code( categoryEntity.getCode() );
+        categoryDataDto.description( categoryEntity.getDescription() );
+
+        return categoryDataDto.build();
     }
 }

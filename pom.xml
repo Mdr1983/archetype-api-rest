@@ -52,6 +52,8 @@
     <commons-collections4.version>4.5.0-M2</commons-collections4.version>
     <logback-elasticsearch-appender.version>1.6</logback-elasticsearch-appender.version>
     <jackson-datatype-jsr310.version>2.18.0</jackson-datatype-jsr310.version>
+    <json-schema-validator.version>1.5.2</json-schema-validator.version>
+    <hibernate-types-60.version>2.21.1</hibernate-types-60.version>
 
     <postgresql.version>42.7.4</postgresql.version>
 
@@ -172,6 +174,18 @@
       <groupId>com.fasterxml.jackson.datatype</groupId>
       <artifactId>jackson-datatype-jsr310</artifactId>
       <version>${jackson-datatype-jsr310.version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>com.networknt</groupId>
+      <artifactId>json-schema-validator</artifactId>
+      <version>${json-schema-validator.version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>com.vladmihalcea</groupId>
+      <artifactId>hibernate-types-60</artifactId>
+      <version>${hibernate-types-60.version}</version>
     </dependency>
   </dependencies>
 

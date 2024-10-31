@@ -1,10 +1,10 @@
 DELETE FROM category;
-INSERT INTO category (category_code, description)
+INSERT INTO category (code, description)
 VALUES ('BOLSO', 'Bolsos'),
        ('ZAPATO', 'Zapatos');
 
 DELETE FROM purchase_order;
-INSERT INTO purchase_order (purchase_order_code, purchase_order_date)
+INSERT INTO purchase_order (code, purchase_order_date)
 VALUES ('ORD-Test1', '2024-10-02T13:37:00Z'),
        ('ORD-Test2', '2024-10-12T13:37:00Z'),
        ('ORD-Test3', '2024-10-13T13:37:00Z'),

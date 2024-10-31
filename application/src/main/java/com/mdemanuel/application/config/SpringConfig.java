@@ -14,6 +14,7 @@ import com.mdemanuel.application.domain.service.util.SearchCriteriaDtoDeserializ
 import com.mdemanuel.application.domain.service.util.SearchCriteriaDtoSerializer;
 import com.mdemanuel.application.domain.service.util.SearchCriteriaGroupDtoDeserializer;
 import com.mdemanuel.application.domain.service.util.SearchCriteriaGroupDtoSerializer;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
@@ -25,22 +26,23 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 @EnableScheduling
 @EnableAsync
 @EnableAspectJAutoProxy
+@EnableAutoConfiguration
 public class SpringConfig {
 
   @Bean
   @Primary
   public ObjectMapper primaryObjectMapper() {
-    SimpleModule module = new SimpleModule("SearchCriteriaDtoModule");
-    module.addSerializer(SearchCriteriaDto.class, new SearchCriteriaDtoSerializer());
-    module.addDeserializer(SearchCriteriaDto.class, new SearchCriteriaDtoDeserializer());
-    module.addSerializer(SearchCriteriaGroupDto.class, new SearchCriteriaGroupDtoSerializer());
-    module.addDeserializer(SearchCriteriaGroupDto.class, new SearchCriteriaGroupDtoDeserializer());
+    SimpleModule moduleSearchCriteriaDto = new SimpleModule("SearchCriteriaDtoModule");
+    moduleSearchCriteriaDto.addSerializer(SearchCriteriaDto.class, new SearchCriteriaDtoSerializer());
+    moduleSearchCriteriaDto.addDeserializer(SearchCriteriaDto.class, new SearchCriteriaDtoDeserializer());
+    moduleSearchCriteriaDto.addSerializer(SearchCriteriaGroupDto.class, new SearchCriteriaGroupDtoSerializer());
+    moduleSearchCriteriaDto.addDeserializer(SearchCriteriaGroupDto.class, new SearchCriteriaGroupDtoDeserializer());
 
     return (new ObjectMapper())
         .registerModule(new ParameterNamesModule(Mode.DEFAULT))
         .registerModule(new Jdk8Module())
         .registerModule(new JavaTimeModule())
-        .registerModule(module)
+        .registerModule(moduleSearchCriteriaDto)
         .configure(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS, false)
         .configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
   }

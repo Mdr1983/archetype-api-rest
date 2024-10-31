@@ -1,6 +1,6 @@
 DROP TABLE IF EXISTS audit_entry;
 CREATE TABLE audit_entry (
-  audit_entry_id INT GENERATED ALWAYS AS IDENTITY,
+  id INT GENERATED ALWAYS AS IDENTITY,
   trace_id VARCHAR(32) NOT NULL,
   span_id VARCHAR(32) NOT NULL,
   url VARCHAR(100) NOT NULL,
@@ -13,7 +13,7 @@ CREATE TABLE audit_entry (
   elapsed_time INT NULL DEFAULT NULL,
   created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
   updated_at TIMESTAMP DEFAULT NULL,
-  PRIMARY KEY (audit_entry_id)
+  PRIMARY KEY (id)
 );
 CREATE INDEX idx_audit_entry_trace_id ON audit_entry(trace_id);
 CREATE INDEX idx_audit_entry_url ON audit_entry(url);
@@ -24,20 +24,20 @@ CREATE INDEX idx_audit_entry_updated_at ON audit_entry(updated_at);
 
 DROP TABLE IF EXISTS audit_exit;
 CREATE TABLE audit_exit (
-  audit_exit_id INT GENERATED ALWAYS AS IDENTITY,
+  id INT GENERATED ALWAYS AS IDENTITY,
   audit_entry_id INT NOT NULL,
   trace_id VARCHAR(32) NOT NULL,
   span_id VARCHAR(32) NOT NULL,
   url VARCHAR(500) NOT NULL,
   http_method VARCHAR(10) NOT NULL,
-  request_body JSONB NOT NULL,
-  response_body JSONB NOT NULL,
+  request_body BYTEA NOT NULL,
+  response_body BYTEA NOT NULL,
   http_status SMALLINT NOT NULL,
   elapsed_time INT NULL,
   created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
   updated_at TIMESTAMP DEFAULT NULL,
-  PRIMARY KEY (audit_exit_id),
-  FOREIGN KEY (audit_entry_id) REFERENCES audit_entry(audit_entry_id)
+  PRIMARY KEY (id),
+  FOREIGN KEY (audit_entry_id) REFERENCES audit_entry(id)
 );
 CREATE INDEX idx_audit_exit_trace_id ON audit_exit(trace_id);
 CREATE INDEX idx_audit_exit_url ON audit_exit(url);
@@ -47,29 +47,29 @@ CREATE INDEX idx_audit_exit_updated_at ON audit_exit(updated_at);
 
 DROP TABLE IF EXISTS category;
 CREATE TABLE category (
-  category_id INT GENERATED ALWAYS AS IDENTITY,
-  category_code VARCHAR(100) NOT NULL,
+  id INT GENERATED ALWAYS AS IDENTITY,
+  code VARCHAR(100) NOT NULL,
   description VARCHAR(150) NOT NULL,
   created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
   updated_at TIMESTAMP DEFAULT NULL,
-  PRIMARY KEY (category_id)
+  PRIMARY KEY (id)
 );
-CREATE UNIQUE INDEX idx_category_category_code ON category(category_code);
+CREATE UNIQUE INDEX idx_category_code ON category(code);
 
 DROP TABLE IF EXISTS purchase_order;
 CREATE TABLE purchase_order (
-  purchase_order_id INT GENERATED ALWAYS AS IDENTITY,
-  purchase_order_code VARCHAR(100) NOT NULL,
+  id INT GENERATED ALWAYS AS IDENTITY,
+  code VARCHAR(100) NOT NULL,
   purchase_order_date TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
   created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
   updated_at TIMESTAMP DEFAULT NULL,
-  PRIMARY KEY (purchase_order_id)
+  PRIMARY KEY (id)
 );
-CREATE UNIQUE INDEX idx_purchase_order_purchase_order_code ON purchase_order(purchase_order_code);
+CREATE UNIQUE INDEX idx_purchase_order_code ON purchase_order(code);
 
 DROP TABLE IF EXISTS purchase_order_line;
 CREATE TABLE purchase_order_line (
-  purchase_order_line_id INT GENERATED ALWAYS AS IDENTITY,
+  id INT GENERATED ALWAYS AS IDENTITY,
   purchase_order_id INT NOT NULL,
   item VARCHAR(100) NOT NULL,
   description VARCHAR(150) NOT NULL,
@@ -77,7 +77,8 @@ CREATE TABLE purchase_order_line (
   quantity SMALLINT NOT NULL,
   created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
   updated_at TIMESTAMP DEFAULT NULL,
-  PRIMARY KEY (purchase_order_line_id),
-  FOREIGN KEY (purchase_order_id) REFERENCES purchase_order(purchase_order_id),
+  PRIMARY KEY (id),
+  FOREIGN KEY (purchase_order_id) REFERENCES purchase_order(id),
   FOREIGN KEY (category_id) REFERENCES category(category_id)
 );
+CREATE INDEX idx_purchase_order_line_item ON purchase_order_line(item);

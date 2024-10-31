@@ -21,7 +21,8 @@ public enum ExceptionCode {
   VAS_SELECTOR_RULE_NOT_VALID("009", "Vas Selector Rule not valid"),
   INVALID_CODE("010", "Invalid Code"),
   VAS_ERROR("011", "Vas Error"),
-  DUPLICATED_VAS_MATCHED_VAS_RULES("012", "Duplicated Vas in matched Vas rules");
+  DUPLICATED_VAS_MATCHED_VAS_RULES("012", "Duplicated Vas in matched Vas rules"),
+  ITEM_IN_USE("013", "Item in use");
 
   private final String code;
   private final String name;

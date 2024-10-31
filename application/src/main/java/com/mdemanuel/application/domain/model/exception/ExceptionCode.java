@@ -14,7 +14,8 @@ public enum ExceptionCode {
   ITEM_NOT_FOUND("0005", "Not found item"),
   ITEM_VALUE_ERROR("0006", "Item value not valid"),
   GENERIC_ADAPTER_EXCEPTION("0007", "Generic Adapter Exception"),
-  CRITERIAN_EXCEPTION("0008", "Criterian paameters is not valid");
+  CRITERIAN_EXCEPTION("0008", "Criterian paameters is not valid"),
+  VALIDATE_JSON_EXCEPTION("0009", "Json schema is not valid");
 
   private final String code;
   private final String name;

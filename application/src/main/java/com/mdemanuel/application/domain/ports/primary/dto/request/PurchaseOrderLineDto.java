@@ -32,7 +32,7 @@ public class PurchaseOrderLineDto implements Serializable {
   @NotBlank
   private String description;
 
-  @Schema(description = "Category",
+  @Schema(description = "Category code",
       required = true,
       example = "BOLSO")
   @NotBlank

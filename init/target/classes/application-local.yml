@@ -26,3 +26,16 @@ spring:
     database-platform: org.hibernate.dialect.PostgreSQLDialect
     show-sql: true  # Muestra las consultas SQL en la consola
     open-in-view: false  # Evitar problemas de rendimiento en producción
+  #Mongodb
+  data:
+    mongodb:
+      #uri: mongodb://localhost:27017/archetype-api-rest
+      uri: mongodb://root:example@localhost:27017/archetype-api-rest?authSource=admin
+      database: archetype-api-rest
+      username: root
+      password: example
+      authentication-database: admin
+      connection-timeout: 1000
+      socket-timeout: 3000
+      #ssl: true
+      #replica-set: nombreReplicaSet

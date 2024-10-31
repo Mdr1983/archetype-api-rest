@@ -12,6 +12,7 @@ public class SearchCriteriaGroupDtoSerializer extends JsonSerializer<SearchCrite
   public void serialize(SearchCriteriaGroupDto value, JsonGenerator gen, SerializerProvider provider)
       throws IOException {
     gen.writeStartObject();
+
     gen.writeStringField("attribute", value.getAttribute());
     gen.writeStringField("attribute", value.getAttribute());
     gen.writeStringField("operator", value.getOperator().name());

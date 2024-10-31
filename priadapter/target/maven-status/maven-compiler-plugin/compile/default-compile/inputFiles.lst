@@ -1,4 +1,8 @@
 Z:\workspace\Github-Mdr1983\archetype-api-rest\priadapter\src\main\java\com\mdemanuel\priadapter\api\adapter\ControllerMaster.java
+Z:\workspace\Github-Mdr1983\archetype-api-rest\priadapter\src\main\java\com\mdemanuel\priadapter\api\adapter\ControllerMongoMaster.java
+Z:\workspace\Github-Mdr1983\archetype-api-rest\priadapter\src\main\java\com\mdemanuel\priadapter\api\adapter\ControllerMongoMasterGeneric.java
+Z:\workspace\Github-Mdr1983\archetype-api-rest\priadapter\src\main\java\com\mdemanuel\priadapter\api\adapter\ControllerMongoPurchaseOrder.java
+Z:\workspace\Github-Mdr1983\archetype-api-rest\priadapter\src\main\java\com\mdemanuel\priadapter\api\adapter\ControllerMongoPurchaseOrderGeneric.java
 Z:\workspace\Github-Mdr1983\archetype-api-rest\priadapter\src\main\java\com\mdemanuel\priadapter\api\adapter\ControllerPurchaseOrder.java
 Z:\workspace\Github-Mdr1983\archetype-api-rest\priadapter\src\main\java\com\mdemanuel\priadapter\api\adapter\ControllerRestCache.java
 Z:\workspace\Github-Mdr1983\archetype-api-rest\priadapter\src\main\java\com\mdemanuel\priadapter\api\adapter\ControllerUtils.java
