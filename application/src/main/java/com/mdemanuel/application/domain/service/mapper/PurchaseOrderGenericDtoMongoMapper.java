@@ -1,6 +1,5 @@
 package com.mdemanuel.application.domain.service.mapper;
 
-import com.mdemanuel.application.domain.model.domain.mongo.purchase_order.PurchaseOrderDocument;
 import com.mdemanuel.application.domain.model.domain.mongo.purchase_order.PurchaseOrderGenericDocument;
 import com.mdemanuel.application.domain.model.domain.mongo.purchase_order.PurchaseOrderLineDocument;
 import com.mdemanuel.application.domain.ports.primary.dto.request.GenericDto;

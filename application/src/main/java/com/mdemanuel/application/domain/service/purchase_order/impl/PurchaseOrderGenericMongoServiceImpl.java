@@ -4,7 +4,7 @@ import com.mdemanuel.application.domain.model.domain.mongo.purchase_order.Purcha
 import com.mdemanuel.application.domain.ports.primary.dto.request.GenericDto;
 import com.mdemanuel.application.domain.ports.primary.dto.request.SearchCriteriaDto;
 import com.mdemanuel.application.domain.ports.secondary.repository.RepositoryUtils;
-import com.mdemanuel.application.domain.ports.secondary.repository.mongo.purchase_order.impl.CustomPurchaseOrderGenericDocumentRepositoryImpl;
+import com.mdemanuel.application.domain.ports.secondary.repository.mongo.GenericDocumentRepository;
 import com.mdemanuel.application.domain.service.cache.CacheService;
 import com.mdemanuel.application.domain.service.mapper.PurchaseOrderGenericDtoMongoMapper;
 import com.mdemanuel.application.domain.service.purchase_order.PurchaseOrderGenericMongoService;
@@ -22,7 +22,7 @@ import org.springframework.transaction.annotation.Transactional;
 public class PurchaseOrderGenericMongoServiceImpl implements PurchaseOrderGenericMongoService {
 
   @Autowired
-  private CustomPurchaseOrderGenericDocumentRepositoryImpl customPurchaseOrderGenericDocumentRepositoryImpl;
+  private GenericDocumentRepository<PurchaseOrderGenericDocument> purchaseOrderGenericDocumentRepository;
   @Autowired
   private PurchaseOrderGenericDtoMongoMapper purchaseOrderGenericDtoMongoMapper;
   @Autowired
@@ -33,12 +33,12 @@ public class PurchaseOrderGenericMongoServiceImpl implements PurchaseOrderGeneri
   @Override
   public List<GenericDto> getAllPurchaseOrder() {
     return purchaseOrderGenericDtoMongoMapper.toGenericDtoList(
-        new ArrayList<>((Collection) customPurchaseOrderGenericDocumentRepositoryImpl.findAll()));
+        new ArrayList<>((Collection) purchaseOrderGenericDocumentRepository.findAll()));
   }
 
   @Override
   public Page<GenericDto> getAllPurchaseOrder(SearchCriteriaDto dto) {
-    Page<PurchaseOrderGenericDocument> result = customPurchaseOrderGenericDocumentRepositoryImpl.findAll(
+    Page<PurchaseOrderGenericDocument> result = purchaseOrderGenericDocumentRepository.findAll(
         documentMongoService.getDocumentMongoSpecification(PurchaseOrderGenericDocument.class, dto),
         RepositoryUtils.getPageable(dto));
 
@@ -59,7 +59,7 @@ public class PurchaseOrderGenericMongoServiceImpl implements PurchaseOrderGeneri
     documentMongoService.getDocumentByCode(dto.getData().get("code").toString(), PurchaseOrderGenericDocument.class,
         false, true);
 
-    customPurchaseOrderGenericDocumentRepositoryImpl.save(
+    purchaseOrderGenericDocumentRepository.save(
         purchaseOrderGenericDtoMongoMapper.toPurchaseOrderDocument(dto));
 
     return dto;
@@ -80,7 +80,7 @@ public class PurchaseOrderGenericMongoServiceImpl implements PurchaseOrderGeneri
     PurchaseOrderGenericDocument newDocument = purchaseOrderGenericDtoMongoMapper.toPurchaseOrderDocument(dto);
     newDocument.setId(document.getId());
 
-    customPurchaseOrderGenericDocumentRepositoryImpl.save(newDocument);
+    purchaseOrderGenericDocumentRepository.save(newDocument);
 
     if (!newDocument.getData().get("code").equals(code)) {
       // Invalidar cache por si cambia el code, porque no es posible hacerlo en el repository
@@ -96,7 +96,7 @@ public class PurchaseOrderGenericMongoServiceImpl implements PurchaseOrderGeneri
   @Override
   @Transactional(rollbackFor = Exception.class)
   public void deletePurchaseOrder(String code) {
-    customPurchaseOrderGenericDocumentRepositoryImpl.deleteById(
+    purchaseOrderGenericDocumentRepository.deleteById(
         documentMongoService.getDocumentByCode(code, PurchaseOrderGenericDocument.class, true, false).getId());
   }
 }

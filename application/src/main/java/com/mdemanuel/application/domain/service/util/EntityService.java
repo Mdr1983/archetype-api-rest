@@ -31,7 +31,7 @@ public class EntityService {
 
     Object entity = null;
     if (clazz == CategoryEntity.class) {
-      entity = categoryRepository.findById(id.intValue()).orElse(null);
+      entity = categoryRepository.findById(id.intValue());
     } else if (clazz == PurchaseOrderEntity.class) {
       entity = purchaseOrderRepository.findById(id.intValue());
     } else {

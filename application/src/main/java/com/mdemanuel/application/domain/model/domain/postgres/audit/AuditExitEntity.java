@@ -3,7 +3,6 @@ package com.mdemanuel.application.domain.model.domain.postgres.audit;
 import com.mdemanuel.application.domain.model.domain.BaseEntity;
 import com.mdemanuel.application.domain.model.util.DbTables;
 import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -16,7 +15,6 @@ import lombok.NoArgsConstructor;
 import lombok.ToString;
 import lombok.experimental.SuperBuilder;
 
-@Entity
 @Table(name = DbTables.AUDIT_EXIT)
 @Data
 @EqualsAndHashCode
@@ -31,10 +29,10 @@ public class AuditExitEntity extends BaseEntity {
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   @Column(name = "id")
-  private Long id;
+  private Integer id;
 
   @Column(name = "audit_entry_id")
-  private Long auditEntryId;
+  private Integer auditEntryId;
 
   @Column(name = "trace_id")
   private String traceId;
@@ -54,8 +52,8 @@ public class AuditExitEntity extends BaseEntity {
   @Column(name = "response_body")
   private byte[] responseBody;
 
-  @Column(name = "status")
-  private int status;
+  @Column(name = "http_status")
+  private int httpStatus;
 
   @Column(name = "elapsed_time")
   private long elapsedTime;

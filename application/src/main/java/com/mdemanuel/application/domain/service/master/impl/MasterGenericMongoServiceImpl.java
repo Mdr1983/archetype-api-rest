@@ -2,11 +2,12 @@ package com.mdemanuel.application.domain.service.master.impl;
 
 import com.mdemanuel.application.domain.model.domain.mongo.master.CategoryDocument;
 import com.mdemanuel.application.domain.model.domain.mongo.master.CategoryGenericDocument;
+import com.mdemanuel.application.domain.model.domain.mongo.purchase_order.PurchaseOrderGenericDocument;
 import com.mdemanuel.application.domain.ports.primary.dto.request.GenericDto;
 import com.mdemanuel.application.domain.ports.primary.dto.request.SearchCriteriaDto;
 import com.mdemanuel.application.domain.ports.secondary.repository.RepositoryUtils;
-import com.mdemanuel.application.domain.ports.secondary.repository.mongo.master.impl.CustomCategoryGenericDocumentRepositoryImpl;
-import com.mdemanuel.application.domain.ports.secondary.repository.mongo.purchase_order.impl.CustomPurchaseOrderGenericDocumentRepositoryImpl;
+import com.mdemanuel.application.domain.ports.secondary.repository.mongo.GenericDocumentRepository;
+import com.mdemanuel.application.domain.ports.secondary.repository.mongo.purchase_order.CustomPurchaseOrderGenericDocumentRepository;
 import com.mdemanuel.application.domain.service.cache.CacheService;
 import com.mdemanuel.application.domain.service.exceptions.ItemInUseException;
 import com.mdemanuel.application.domain.service.mapper.MasterGenericDtoMongoMapper;
@@ -25,9 +26,11 @@ import org.springframework.transaction.annotation.Transactional;
 public class MasterGenericMongoServiceImpl implements MasterGenericMongoService {
 
   @Autowired
-  private CustomCategoryGenericDocumentRepositoryImpl customCategoryGenericDocumentRepositoryImpl;
+  private GenericDocumentRepository<CategoryGenericDocument> categoryGenericDocumentRepository;
   @Autowired
-  private CustomPurchaseOrderGenericDocumentRepositoryImpl customPurchaseOrderGenericDocumentRepositoryImpl;
+  private GenericDocumentRepository<PurchaseOrderGenericDocument> purchaseOrderGenericDocumentRepository;
+  @Autowired
+  private CustomPurchaseOrderGenericDocumentRepository customPurchaseOrderGenericDocumentRepository;
   @Autowired
   private MasterGenericDtoMongoMapper masterGenericDtoMongoMapper;
   @Autowired
@@ -38,12 +41,12 @@ public class MasterGenericMongoServiceImpl implements MasterGenericMongoService 
   @Override
   public List<GenericDto> getAllCategory() {
     return masterGenericDtoMongoMapper.toGenericDtoList(
-        new ArrayList<>((Collection) customCategoryGenericDocumentRepositoryImpl.findAll()));
+        new ArrayList<>((Collection) categoryGenericDocumentRepository.findAll()));
   }
 
   @Override
   public Page<GenericDto> getAllCategory(SearchCriteriaDto dto) {
-    Page<CategoryGenericDocument> result = customCategoryGenericDocumentRepositoryImpl.findAll(
+    Page<CategoryGenericDocument> result = categoryGenericDocumentRepository.findAll(
         documentMongoService.getDocumentMongoSpecification(CategoryGenericDocument.class, dto),
         RepositoryUtils.getPageable(dto));
 
@@ -64,7 +67,7 @@ public class MasterGenericMongoServiceImpl implements MasterGenericMongoService 
     documentMongoService.getDocumentByCode(dto.getData().get("code").toString(), CategoryGenericDocument.class, false,
         true);
 
-    customCategoryGenericDocumentRepositoryImpl.save(masterGenericDtoMongoMapper.toCategoryGenericDocument(dto));
+    categoryGenericDocumentRepository.save(masterGenericDtoMongoMapper.toCategoryGenericDocument(dto));
 
     return dto;
   }
@@ -84,7 +87,7 @@ public class MasterGenericMongoServiceImpl implements MasterGenericMongoService 
     CategoryGenericDocument newDocument = masterGenericDtoMongoMapper.toCategoryGenericDocument(dto);
     newDocument.setId(categoryGenericDocument.getId());
 
-    customCategoryGenericDocumentRepositoryImpl.save(newDocument);
+    categoryGenericDocumentRepository.save(newDocument);
 
     if (!newDocument.getData().get("code").equals(code)) {
       // Invalidar cache por si cambia el code, porque no es posible hacerlo en el repository
@@ -104,10 +107,10 @@ public class MasterGenericMongoServiceImpl implements MasterGenericMongoService 
         .getId();
 
     // Validación: Verificar si la categoría está siendo utilizada
-    if (customPurchaseOrderGenericDocumentRepositoryImpl.getCategoryRelated(code) > 0) {
+    if (customPurchaseOrderGenericDocumentRepository.getCategoryRelated(code) > 0) {
       throw new ItemInUseException(CategoryDocument.class.getSimpleName(), "Code", code);
     }
 
-    customCategoryGenericDocumentRepositoryImpl.deleteById(categoryId);
+    categoryGenericDocumentRepository.deleteById(categoryId);
   }
 }

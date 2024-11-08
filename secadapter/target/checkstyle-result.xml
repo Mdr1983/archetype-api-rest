@@ -1,3 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <checkstyle version="10.18.0">
+<file name="Z:\workspace\Github-Mdr1983\archetype-api-rest\secadapter\src\main\java\com\mdemanuel\secadapter\repository\extractor\PurchaseOrderListServiceResultSetExtractor.java">
+</file>
+<file name="Z:\workspace\Github-Mdr1983\archetype-api-rest\secadapter\src\main\java\com\mdemanuel\secadapter\repository\extractor\PurchaseOrderServiceResultSetExtractor.java">
+</file>
+<file name="Z:\workspace\Github-Mdr1983\archetype-api-rest\secadapter\src\main\java\com\mdemanuel\secadapter\repository\mongo\master\CategoryGenericDocumentRepository.java">
+</file>
+<file name="Z:\workspace\Github-Mdr1983\archetype-api-rest\secadapter\src\main\java\com\mdemanuel\secadapter\repository\mongo\master\CustomCategoryDocumentRepository.java">
+</file>
+<file name="Z:\workspace\Github-Mdr1983\archetype-api-rest\secadapter\src\main\java\com\mdemanuel\secadapter\repository\mongo\purchase_order\CustomPurchaseOrderDocumentRepositoryImpl.java">
+</file>
+<file name="Z:\workspace\Github-Mdr1983\archetype-api-rest\secadapter\src\main\java\com\mdemanuel\secadapter\repository\mongo\purchase_order\CustomPurchaseOrderGenericDocumentRepositoryImpl.java">
+</file>
+<file name="Z:\workspace\Github-Mdr1983\archetype-api-rest\secadapter\src\main\java\com\mdemanuel\secadapter\repository\mongo\purchase_order\PurchaseOrderGenericDocumentRepository.java">
+</file>
+<file name="Z:\workspace\Github-Mdr1983\archetype-api-rest\secadapter\src\main\java\com\mdemanuel\secadapter\repository\postgres\audit\AuditEntryRepositoryImpl.java">
+</file>
+<file name="Z:\workspace\Github-Mdr1983\archetype-api-rest\secadapter\src\main\java\com\mdemanuel\secadapter\repository\postgres\audit\AuditExitRepositoryImpl.java">
+</file>
+<file name="Z:\workspace\Github-Mdr1983\archetype-api-rest\secadapter\src\main\java\com\mdemanuel\secadapter\repository\postgres\master\CategoryRepositoryImpl.java">
+</file>
+<file name="Z:\workspace\Github-Mdr1983\archetype-api-rest\secadapter\src\main\java\com\mdemanuel\secadapter\repository\purchase_order\PurchaseOrderRepositoryImpl.java">
+</file>
 </checkstyle>

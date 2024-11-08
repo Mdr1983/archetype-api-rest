@@ -19,7 +19,6 @@ import lombok.ToString;
 import lombok.experimental.SuperBuilder;
 import org.hibernate.annotations.Type;
 
-@Entity
 @Table(name = DbTables.AUDIT_ENTRY)
 @Data
 @EqualsAndHashCode
@@ -34,7 +33,7 @@ public class AuditEntryEntity extends BaseEntity {
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   @Column(name = "id")
-  private Long id;
+  private Integer id;
 
   @Column(name = "trace_id")
   private String traceId;

@@ -47,7 +47,7 @@ public abstract class MasterDtoMapper {
   public String getCategoryCode(Integer id)
       throws EntityMappingException {
     if (id != null) {
-      CategoryEntity categoryEntity = categoryRepository.findById(id).orElse(null);
+      CategoryEntity categoryEntity = categoryRepository.findById(id);
       if (categoryEntity == null) {
         throw new EntityMappingException("CategoryEntity not found");
       }

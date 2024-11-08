@@ -6,7 +6,7 @@
 
   <if condition='property("profile").contains("test") || property("profile").contains("h2")'>
     <then>
-      <root level="INFO">
+      <root level="DEBUG">
         <appender-ref ref="CONSOLE"/>
       </root>
     </then>

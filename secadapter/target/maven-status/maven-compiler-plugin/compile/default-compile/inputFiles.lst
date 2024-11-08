@@ -1,0 +1,11 @@
+Z:\workspace\Github-Mdr1983\archetype-api-rest\secadapter\src\main\java\com\mdemanuel\secadapter\repository\extractor\PurchaseOrderListServiceResultSetExtractor.java
+Z:\workspace\Github-Mdr1983\archetype-api-rest\secadapter\src\main\java\com\mdemanuel\secadapter\repository\extractor\PurchaseOrderServiceResultSetExtractor.java
+Z:\workspace\Github-Mdr1983\archetype-api-rest\secadapter\src\main\java\com\mdemanuel\secadapter\repository\mongo\master\CategoryGenericDocumentRepository.java
+Z:\workspace\Github-Mdr1983\archetype-api-rest\secadapter\src\main\java\com\mdemanuel\secadapter\repository\mongo\master\CustomCategoryDocumentRepository.java
+Z:\workspace\Github-Mdr1983\archetype-api-rest\secadapter\src\main\java\com\mdemanuel\secadapter\repository\mongo\purchase_order\CustomPurchaseOrderDocumentRepositoryImpl.java
+Z:\workspace\Github-Mdr1983\archetype-api-rest\secadapter\src\main\java\com\mdemanuel\secadapter\repository\mongo\purchase_order\CustomPurchaseOrderGenericDocumentRepositoryImpl.java
+Z:\workspace\Github-Mdr1983\archetype-api-rest\secadapter\src\main\java\com\mdemanuel\secadapter\repository\mongo\purchase_order\PurchaseOrderGenericDocumentRepository.java
+Z:\workspace\Github-Mdr1983\archetype-api-rest\secadapter\src\main\java\com\mdemanuel\secadapter\repository\postgres\audit\AuditEntryRepositoryImpl.java
+Z:\workspace\Github-Mdr1983\archetype-api-rest\secadapter\src\main\java\com\mdemanuel\secadapter\repository\postgres\audit\AuditExitRepositoryImpl.java
+Z:\workspace\Github-Mdr1983\archetype-api-rest\secadapter\src\main\java\com\mdemanuel\secadapter\repository\postgres\master\CategoryRepositoryImpl.java
+Z:\workspace\Github-Mdr1983\archetype-api-rest\secadapter\src\main\java\com\mdemanuel\secadapter\repository\purchase_order\PurchaseOrderRepositoryImpl.java

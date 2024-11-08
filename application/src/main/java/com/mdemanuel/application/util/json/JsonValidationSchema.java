@@ -12,12 +12,14 @@ import java.io.InputStream;
 import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
+import lombok.Data;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Slf4j
 @Component
+@Data
 public class JsonValidationSchema {
 
   private final Map<TypeSchema, JsonSchema> schemas = new ConcurrentHashMap<>();

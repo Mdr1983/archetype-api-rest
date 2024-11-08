@@ -1,7 +1,6 @@
 package com.mdemanuel.application.domain.model.domain.mongo.purchase_order;
 
 import com.mdemanuel.application.domain.model.domain.BaseDocument;
-import com.mdemanuel.application.domain.model.domain.BaseEntity;
 import jakarta.validation.constraints.NotNull;
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;

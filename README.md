@@ -63,7 +63,7 @@ Algunas de las características del proyecto son:
 
 ## Instalación 🔧 {#instalacion}
 
-Por defecto la aplicación se inicia en el puerto 8081.
+Por defecto la aplicación se inicia en el puerto **8081**.
 
 El API de entrada de swagger sería http://localhost:8081/archetype-api-rest/swagger-ui/index.html#/ 
 
@@ -136,7 +136,7 @@ logging:
 3. PROFILE
     1. Profiles a ejecutar
         1. h2
-            1. Inicia la aplicación con una BBDD en meria en H2
+            1. Inicia la aplicación con una BBDD en memoria en H2
         2. local
             1. Inicia la aplicación con la BBDD de postgres del Docker
 
@@ -168,6 +168,19 @@ Hay que comentar su contenido, excepto la parte de logging.
 #          search-paths: config
 logging:
   config: classpath:logback_conf.xml
+```
+
+##### Variables de entorno a configurar sin el SCCS
+
+1. PROFILE
+    1. Profiles a ejecutar
+        1. h2
+            1. Inicia la aplicación con una BBDD en memoria en H2
+        2. local
+            1. Inicia la aplicación con la BBDD de postgres del Docker
+
+```
+PROFILE=local;
 ```
 
 #### Iniciar aplicación

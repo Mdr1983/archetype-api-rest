@@ -1,7 +1,6 @@
 package com.mdemanuel.application.domain.model.domain.mongo.purchase_order;
 
 import com.mdemanuel.application.domain.model.domain.BaseDocument;
-import com.mdemanuel.application.domain.model.domain.BaseEntity;
 import com.mdemanuel.application.domain.model.util.DbDocuments;
 import jakarta.persistence.Id;
 import jakarta.validation.constraints.NotNull;

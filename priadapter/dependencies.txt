@@ -54,8 +54,7 @@ com.mdemanuel:priadapter:jar:0.0.1-SNAPSHOT
 |  +- jakarta.servlet:jakarta.servlet-api:jar:6.0.0:compile
 |  +- com.fasterxml.jackson.datatype:jackson-datatype-jdk8:jar:2.17.2:compile
 |  +- com.fasterxml.jackson.module:jackson-module-parameter-names:jar:2.17.2:compile
-|  +- com.h2database:h2:jar:2.3.232:runtime
-|  \- io.swagger:swagger-annotations:jar:1.6.14:compile
+|  \- com.h2database:h2:jar:2.3.232:runtime
 +- org.springframework.boot:spring-boot-configuration-processor:jar:3.3.3:compile
 +- org.springframework.boot:spring-boot-starter-actuator:jar:3.3.3:compile
 |  +- org.springframework.boot:spring-boot-actuator-autoconfigure:jar:3.3.3:compile

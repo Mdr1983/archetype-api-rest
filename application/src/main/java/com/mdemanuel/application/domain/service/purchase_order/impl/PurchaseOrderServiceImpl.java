@@ -1,11 +1,9 @@
 package com.mdemanuel.application.domain.service.purchase_order.impl;
 
 import com.mdemanuel.application.domain.model.domain.postgres.purchase_order.PurchaseOrderEntity;
-import com.mdemanuel.application.domain.model.domain.postgres.purchase_order.PurchaseOrderLineEntity;
 import com.mdemanuel.application.domain.ports.primary.dto.request.PurchaseOrderDto;
 import com.mdemanuel.application.domain.ports.primary.dto.request.SearchCriteriaDto;
 import com.mdemanuel.application.domain.ports.secondary.repository.RepositoryUtils;
-import com.mdemanuel.application.domain.ports.secondary.repository.postgres.purchase_order.PurchaseOrderLineRepository;
 import com.mdemanuel.application.domain.ports.secondary.repository.postgres.purchase_order.PurchaseOrderRepository;
 import com.mdemanuel.application.domain.service.cache.CacheService;
 import com.mdemanuel.application.domain.service.mapper.PurchaseOrderDtoMapper;
@@ -25,8 +23,6 @@ public class PurchaseOrderServiceImpl implements PurchaseOrderService {
 
   @Autowired
   private PurchaseOrderRepository purchaseOrderRepository;
-  @Autowired
-  private PurchaseOrderLineRepository purchaseOrderLineRepository;
   @Autowired
   private PurchaseOrderDtoMapper purchaseOrderDtoMapper;
   @Autowired
@@ -63,12 +59,6 @@ public class PurchaseOrderServiceImpl implements PurchaseOrderService {
 
     PurchaseOrderEntity entity = purchaseOrderRepository.save(purchaseOrderDtoMapper.toPurchaseOrderEntity(dto));
 
-    for (PurchaseOrderLineEntity item : entity.getPurchaseOrderLines()) {
-      item.setPurchaseOrder(entity);
-    }
-
-    purchaseOrderLineRepository.saveAll(entity.getPurchaseOrderLines());
-
     return dto;
   }
 
@@ -84,14 +74,6 @@ public class PurchaseOrderServiceImpl implements PurchaseOrderService {
 
     PurchaseOrderEntity newEntity = purchaseOrderDtoMapper.toPurchaseOrderEntity(dto);
     newEntity.setId(entity.getId());
-
-    for (PurchaseOrderLineEntity item : newEntity.getPurchaseOrderLines()) {
-      item.setPurchaseOrder(newEntity);
-    }
-
-    purchaseOrderLineRepository.deleteByPurchaseOrderId(entity.getId());
-
-    purchaseOrderLineRepository.saveAll(newEntity.getPurchaseOrderLines());
 
     newEntity = purchaseOrderRepository.save(newEntity);
 
@@ -110,8 +92,6 @@ public class PurchaseOrderServiceImpl implements PurchaseOrderService {
   @Transactional(rollbackFor = Exception.class)
   public void deletePurchaseOrder(String code) {
     Integer id = entityService.getEntityByCode(code, PurchaseOrderEntity.class, true, false).getId();
-
-    purchaseOrderLineRepository.deleteByPurchaseOrderId(id);
 
     purchaseOrderRepository.deleteById(id);
   }

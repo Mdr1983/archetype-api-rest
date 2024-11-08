@@ -3,17 +3,13 @@ package com.mdemanuel.application.domain.model.domain.postgres.purchase_order;
 import com.mdemanuel.application.domain.model.domain.BaseEntity;
 import com.mdemanuel.application.domain.model.util.DbTables;
 import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import jakarta.validation.constraints.NotNull;
 import java.io.Serializable;
 import java.time.Instant;
-import java.util.ArrayList;
 import java.util.List;
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
@@ -24,7 +20,6 @@ import lombok.ToString;
 import lombok.experimental.SuperBuilder;
 
 @Table(name = DbTables.PURCHASE_ORDER)
-@Entity
 @Data
 @EqualsAndHashCode
 @ToString
@@ -48,6 +43,5 @@ public class PurchaseOrderEntity extends BaseEntity implements Serializable {
   @NotNull
   private Instant purchaseOrderDate;
 
-  @OneToMany(mappedBy = "purchaseOrder", fetch = FetchType.EAGER)
-  private List<PurchaseOrderLineEntity> purchaseOrderLines = new ArrayList<>();
+  private List<PurchaseOrderLineEntity> purchaseOrderLines;
 }

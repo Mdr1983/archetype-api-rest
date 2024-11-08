@@ -1,7 +1,6 @@
 package com.mdemanuel.application.domain.service.purchase_order;
 
 import com.mdemanuel.application.domain.ports.primary.dto.request.GenericDto;
-import com.mdemanuel.application.domain.ports.primary.dto.request.PurchaseOrderDto;
 import com.mdemanuel.application.domain.ports.primary.dto.request.SearchCriteriaDto;
 import com.mdemanuel.application.domain.service.exceptions.BadFormatException;
 import com.mdemanuel.application.domain.service.exceptions.DuplicatedItemException;

@@ -6,9 +6,8 @@ import com.mdemanuel.application.domain.model.domain.mongo.purchase_order.Purcha
 import com.mdemanuel.application.domain.model.domain.mongo.purchase_order.PurchaseOrderGenericDocument;
 import com.mdemanuel.application.domain.ports.primary.dto.request.SearchCriteriaDto;
 import com.mdemanuel.application.domain.ports.secondary.repository.DocumentMongoSpecification;
+import com.mdemanuel.application.domain.ports.secondary.repository.mongo.GenericDocumentRepository;
 import com.mdemanuel.application.domain.ports.secondary.repository.mongo.master.CategoryDocumentRepository;
-import com.mdemanuel.application.domain.ports.secondary.repository.mongo.master.impl.CustomCategoryGenericDocumentRepositoryImpl;
-import com.mdemanuel.application.domain.ports.secondary.repository.mongo.purchase_order.impl.CustomPurchaseOrderGenericDocumentRepositoryImpl;
 import com.mdemanuel.application.domain.ports.secondary.repository.mongo.purchase_order.PurchaseOrderDocumentRepository;
 import com.mdemanuel.application.domain.service.exceptions.DuplicatedItemException;
 import com.mdemanuel.application.domain.service.exceptions.ItemNotFoundException;
@@ -25,11 +24,11 @@ public class DocumentMongoService {
   @Autowired
   private CategoryDocumentRepository categoryDocumentRepository;
   @Autowired
-  private CustomCategoryGenericDocumentRepositoryImpl customCategoryGenericDocumentRepositoryImpl;
+  private GenericDocumentRepository<CategoryGenericDocument> categoryGenericDocumentRepository;
   @Autowired
   private PurchaseOrderDocumentRepository purchaseOrderDocumentRepository;
   @Autowired
-  private CustomPurchaseOrderGenericDocumentRepositoryImpl customPurchaseOrderGenericDocumentRepositoryImpl;
+  private GenericDocumentRepository<PurchaseOrderGenericDocument> purchaseOrderGenericDocumentRepository;
 
   @SneakyThrows
   public <T> T getDocumentById(String id, Class<T> clazz, boolean throwExceptionWithItemNotFound,
@@ -42,11 +41,11 @@ public class DocumentMongoService {
     if (clazz == CategoryDocument.class) {
       document = categoryDocumentRepository.findById(id).orElse(null);
     } else if (clazz == CategoryGenericDocument.class) {
-      document = customCategoryGenericDocumentRepositoryImpl.findById(id).orElse(null);
+      document = categoryGenericDocumentRepository.findById(id).orElse(null);
     } else if (clazz == PurchaseOrderDocument.class) {
       document = purchaseOrderDocumentRepository.findById(id);
     } else if (clazz == PurchaseOrderGenericDocument.class) {
-      document = customPurchaseOrderGenericDocumentRepositoryImpl.findById(id);
+      document = purchaseOrderGenericDocumentRepository.findById(id);
     } else {
       throw new IllegalArgumentException("Invalid document class: " + clazz.getName());
     }
@@ -73,11 +72,11 @@ public class DocumentMongoService {
     if (clazz == CategoryDocument.class) {
       document = categoryDocumentRepository.findByCode(code);
     } else if (clazz == CategoryGenericDocument.class) {
-      document = customCategoryGenericDocumentRepositoryImpl.findByCode(code);
+      document = categoryGenericDocumentRepository.findByCode(code);
     } else if (clazz == PurchaseOrderDocument.class) {
       document = purchaseOrderDocumentRepository.findByCode(code);
     } else if (clazz == PurchaseOrderGenericDocument.class) {
-      document = customPurchaseOrderGenericDocumentRepositoryImpl.findByCode(code);
+      document = purchaseOrderGenericDocumentRepository.findByCode(code);
     } else {
       throw new IllegalArgumentException("Invalid document class: " + clazz.getSimpleName());
     }

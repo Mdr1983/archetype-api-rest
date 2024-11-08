@@ -1,6 +1,5 @@
 package com.mdemanuel.application.domain.service.mapper;
 
-import com.mdemanuel.application.domain.model.domain.mongo.purchase_order.PurchaseOrderLineDocument;
 import com.mdemanuel.application.domain.model.domain.postgres.purchase_order.PurchaseOrderEntity;
 import com.mdemanuel.application.domain.model.domain.postgres.purchase_order.PurchaseOrderLineEntity;
 import com.mdemanuel.application.domain.ports.primary.dto.request.PurchaseOrderDataDto;

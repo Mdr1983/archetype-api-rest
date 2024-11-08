@@ -1,6 +1,6 @@
-package com.mdemanuel.application.domain.ports.secondary.repository.mongo.purchase_order.impl;
+package com.mdemanuel.secadapter.repository.mongo.master;
 
-import com.mdemanuel.application.domain.model.domain.mongo.purchase_order.PurchaseOrderGenericDocument;
+import com.mdemanuel.application.domain.model.domain.mongo.master.CategoryGenericDocument;
 import com.mdemanuel.application.domain.ports.secondary.repository.DocumentMongoSpecification;
 import com.mdemanuel.application.domain.ports.secondary.repository.MongoCriteriaPageableQuery;
 import com.mdemanuel.application.domain.ports.secondary.repository.mongo.GenericDocumentRepository;
@@ -21,8 +21,7 @@ import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public class CustomPurchaseOrderGenericDocumentRepositoryImpl implements
-    GenericDocumentRepository<PurchaseOrderGenericDocument> {
+public class CategoryGenericDocumentRepository implements GenericDocumentRepository<CategoryGenericDocument> {
 
   @Autowired
   private MongoTemplate mongoTemplate;
@@ -31,90 +30,84 @@ public class CustomPurchaseOrderGenericDocumentRepositoryImpl implements
   private MongoCriteriaPageableQuery mongoCriteriaPageableQuery;
 
   @Override
-  @Cacheable(cacheNames = "purchaseOrderGenericDocument",
+  @Cacheable(cacheNames = "categoryGenericDocument",
       key = "{ #root.methodName, #code }",
       unless = "#result == null")
-  public PurchaseOrderGenericDocument findByCode(String code) {
+  public CategoryGenericDocument findByCode(String code) {
     Query query = new Query();
     query.addCriteria(Criteria.where("data.code").is(code));
 
-    return mongoTemplate.findOne(query, PurchaseOrderGenericDocument.class);
+    return mongoTemplate.findOne(query, CategoryGenericDocument.class);
   }
 
   @Override
-  @Cacheable(cacheNames = "purchaseOrderGenericDocument",
+  @Cacheable(cacheNames = "categoryGenericDocument",
       key = "{ #root.methodName, #id }",
       unless = "#result == null")
-  public Optional<PurchaseOrderGenericDocument> findById(String id) {
-    return Optional.ofNullable(mongoTemplate.findById(id, PurchaseOrderGenericDocument.class));
+  public Optional<CategoryGenericDocument> findById(String id) {
+    return Optional.ofNullable(mongoTemplate.findById(id, CategoryGenericDocument.class));
   }
 
   @Override
-  @Cacheable(cacheNames = "purchaseOrderGenericDocument",
+  @Cacheable(cacheNames = "categoryGenericDocument",
       key = "{ #root.methodName}",
       unless = "#result == null")
-  public List<PurchaseOrderGenericDocument> findAll() {
-    return mongoTemplate.findAll(PurchaseOrderGenericDocument.class);
+  public List<CategoryGenericDocument> findAll() {
+    return mongoTemplate.findAll(CategoryGenericDocument.class);
   }
 
   @Override
-  public Page<PurchaseOrderGenericDocument> findAll(DocumentMongoSpecification documentMongoSpecification,
+  public Page<CategoryGenericDocument> findAll(DocumentMongoSpecification documentMongoSpecification,
       Pageable pageable) {
     return mongoCriteriaPageableQuery.find(documentMongoSpecification, pageable);
   }
 
   @Override
   @Caching(put = {
-      @CachePut(cacheNames = "purchaseOrderGenericDocument",
+      @CachePut(cacheNames = "categoryGenericDocument",
           key = "{ 'findByCode', #result.getData().get('code') }",
           unless = "#result == null"),
-      @CachePut(cacheNames = "purchaseOrderGenericDocument",
+      @CachePut(cacheNames = "categoryGenericDocument",
           key = "{ 'findById', #result.id }",
           unless = "#result == null")},
       evict = {
-          @CacheEvict(cacheNames = "purchaseOrderGenericDocument", key = "{ 'findAll' }")})
-  public <S extends PurchaseOrderGenericDocument> S save(S entity) {
+          @CacheEvict(cacheNames = "categoryGenericDocument", key = "{ 'findAll' }")})
+  public <S extends CategoryGenericDocument> S save(S entity) {
     return mongoTemplate.save(entity);
   }
 
   @Override
   @Caching(evict = {
-      @CacheEvict(cacheNames = "purchaseOrderGenericDocument",
+      @CacheEvict(cacheNames = "categoryGenericDocument",
           key = "{ 'findByCode', #entity.getData().get('code') }"),
-      @CacheEvict(cacheNames = "purchaseOrderGenericDocument",
+      @CacheEvict(cacheNames = "categoryGenericDocument",
           key = "{ 'findById', #entity.id }"),
-      @CacheEvict(cacheNames = "purchaseOrderGenericDocument", key = "{ 'findAll' }")
+      @CacheEvict(cacheNames = "categoryGenericDocument", key = "{ 'findAll' }")
   })
-  public void delete(PurchaseOrderGenericDocument entity) {
+  public void delete(CategoryGenericDocument entity) {
     Query query = new Query();
     query.addCriteria(Criteria.where("id").is(entity.getId()));
 
-    mongoTemplate.remove(query, PurchaseOrderGenericDocument.class);
+    mongoTemplate.remove(query, CategoryGenericDocument.class);
   }
 
   @Override
   public void deleteById(String id) {
-    CustomPurchaseOrderGenericDocumentRepositoryImpl service = SpringBeanUtil.getInstance()
-        .getBean(CustomPurchaseOrderGenericDocumentRepositoryImpl.class);
+    CategoryGenericDocumentRepository service = SpringBeanUtil.getInstance()
+        .getBean(CategoryGenericDocumentRepository.class);
 
-    Optional<PurchaseOrderGenericDocument> entity = findById(id);
+    Optional<CategoryGenericDocument> entity = findById(id);
     if (entity.isPresent()) {
       service.delete(entity.get());
     } else {
       throw new EntityNotFoundException(
-          String.format("Not exists %s: %s", PurchaseOrderGenericDocument.class.getSimpleName(), id));
+          String.format("Not exists %s: %s", CategoryGenericDocument.class.getSimpleName(), id));
     }
   }
 
   @Override
-  @CacheEvict(cacheNames = "purchaseOrderGenericDocument", allEntries = true)
+  @CacheEvict(cacheNames = "categoryGenericDocument", allEntries = true)
   public void deleteAll() {
-    mongoTemplate.remove(new Query(), PurchaseOrderGenericDocument.class);
-  }
-
-  public long getCategoryRelated(String categoryCode) {
-    Query query = new Query(Criteria.where("data.purchaseOrderLines.categoryCode").is(categoryCode));
-
-    return mongoTemplate.count(query, PurchaseOrderGenericDocument.class);
+    mongoTemplate.remove(new Query(), CategoryGenericDocument.class);
   }
 }

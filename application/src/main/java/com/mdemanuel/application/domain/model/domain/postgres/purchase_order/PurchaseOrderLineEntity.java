@@ -3,12 +3,9 @@ package com.mdemanuel.application.domain.model.domain.postgres.purchase_order;
 import com.mdemanuel.application.domain.model.domain.BaseEntity;
 import com.mdemanuel.application.domain.model.util.DbTables;
 import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import jakarta.validation.constraints.NotNull;
 import lombok.AccessLevel;
@@ -20,7 +17,6 @@ import lombok.ToString;
 import lombok.experimental.SuperBuilder;
 
 @Table(name = DbTables.PURCHASE_ORDER_LINE)
-@Entity
 @Data
 @EqualsAndHashCode
 @ToString
@@ -51,8 +47,4 @@ public class PurchaseOrderLineEntity extends BaseEntity {
   @Column(name = "quantity")
   @NotNull
   private int quantity;
-
-  @ManyToOne
-  @JoinColumn(name = "purchase_order_id", nullable = false)
-  private PurchaseOrderEntity purchaseOrder;
 }

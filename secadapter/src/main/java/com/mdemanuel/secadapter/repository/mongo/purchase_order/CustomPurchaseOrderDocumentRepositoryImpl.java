@@ -1,4 +1,4 @@
-package com.mdemanuel.application.domain.ports.secondary.repository.mongo.purchase_order.impl;
+package com.mdemanuel.secadapter.repository.mongo.purchase_order;
 
 import com.mdemanuel.application.domain.model.domain.mongo.purchase_order.PurchaseOrderDocument;
 import com.mdemanuel.application.domain.ports.secondary.repository.DocumentMongoSpecification;

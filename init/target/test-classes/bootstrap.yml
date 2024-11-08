@@ -1,6 +1,6 @@
 spring:
-application:
-  name: archetype-api-rest
+  application:
+    name: archetype-api-rest
 cloud:
   config:
     failFast: true
