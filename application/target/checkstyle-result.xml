@@ -98,12 +98,6 @@
 </file>
 <file name="Z:\workspace\Github-Mdr1983\archetype-api-rest\application\src\main\java\com\mdemanuel\application\domain\ports\secondary\repository\mongo\master\CategoryDocumentRepository.java">
 </file>
-<file name="Z:\workspace\Github-Mdr1983\archetype-api-rest\application\src\main\java\com\mdemanuel\application\domain\ports\secondary\repository\mongo\master\CustomCategoryDocumentRepository.java">
-</file>
-<file name="Z:\workspace\Github-Mdr1983\archetype-api-rest\application\src\main\java\com\mdemanuel\application\domain\ports\secondary\repository\mongo\purchase_order\CustomPurchaseOrderDocumentRepository.java">
-</file>
-<file name="Z:\workspace\Github-Mdr1983\archetype-api-rest\application\src\main\java\com\mdemanuel\application\domain\ports\secondary\repository\mongo\purchase_order\CustomPurchaseOrderGenericDocumentRepository.java">
-</file>
 <file name="Z:\workspace\Github-Mdr1983\archetype-api-rest\application\src\main\java\com\mdemanuel\application\domain\ports\secondary\repository\mongo\purchase_order\PurchaseOrderDocumentRepository.java">
 </file>
 <file name="Z:\workspace\Github-Mdr1983\archetype-api-rest\application\src\main\java\com\mdemanuel\application\domain\ports\secondary\repository\MongoCriteriaPageableQuery.java">

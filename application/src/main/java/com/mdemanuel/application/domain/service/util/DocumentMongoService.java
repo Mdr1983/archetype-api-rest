@@ -39,9 +39,9 @@ public class DocumentMongoService {
 
     Object document = null;
     if (clazz == CategoryDocument.class) {
-      document = categoryDocumentRepository.findById(id).orElse(null);
+      document = categoryDocumentRepository.findById(id);
     } else if (clazz == CategoryGenericDocument.class) {
-      document = categoryGenericDocumentRepository.findById(id).orElse(null);
+      document = categoryGenericDocumentRepository.findById(id);
     } else if (clazz == PurchaseOrderDocument.class) {
       document = purchaseOrderDocumentRepository.findById(id);
     } else if (clazz == PurchaseOrderGenericDocument.class) {

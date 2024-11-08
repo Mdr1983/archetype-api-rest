@@ -1,5 +1,6 @@
 package com.mdemanuel.secadapter.repository.mongo.purchase_order;
 
+import com.mdemanuel.application.domain.model.domain.mongo.purchase_order.PurchaseOrderDocument;
 import com.mdemanuel.application.domain.model.domain.mongo.purchase_order.PurchaseOrderGenericDocument;
 import com.mdemanuel.application.domain.ports.secondary.repository.DocumentMongoSpecification;
 import com.mdemanuel.application.domain.ports.secondary.repository.MongoCriteriaPageableQuery;
@@ -7,7 +8,6 @@ import com.mdemanuel.application.domain.ports.secondary.repository.mongo.Generic
 import com.mdemanuel.application.util.SpringBeanUtil;
 import jakarta.persistence.EntityNotFoundException;
 import java.util.List;
-import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.cache.annotation.CachePut;
@@ -21,11 +21,11 @@ import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public class PurchaseOrderGenericDocumentRepository implements
-    GenericDocumentRepository<PurchaseOrderGenericDocument> {
+public class PurchaseOrderGenericDocumentRepository implements GenericDocumentRepository<PurchaseOrderGenericDocument> {
 
   @Autowired
   private MongoTemplate mongoTemplate;
+
   @Autowired
   private MongoCriteriaPageableQuery mongoCriteriaPageableQuery;
 
@@ -44,8 +44,8 @@ public class PurchaseOrderGenericDocumentRepository implements
   @Cacheable(cacheNames = "purchaseOrderGenericDocument",
       key = "{ #root.methodName, #id }",
       unless = "#result == null")
-  public Optional<PurchaseOrderGenericDocument> findById(String id) {
-    return Optional.ofNullable(mongoTemplate.findById(id, PurchaseOrderGenericDocument.class));
+  public PurchaseOrderGenericDocument findById(String id) {
+    return mongoTemplate.findById(id, PurchaseOrderGenericDocument.class);
   }
 
   @Override
@@ -96,12 +96,12 @@ public class PurchaseOrderGenericDocumentRepository implements
     PurchaseOrderGenericDocumentRepository service = SpringBeanUtil.getInstance()
         .getBean(PurchaseOrderGenericDocumentRepository.class);
 
-    Optional<PurchaseOrderGenericDocument> entity = findById(id);
-    if (entity.isPresent()) {
-      service.delete(entity.get());
+    PurchaseOrderGenericDocument entity = findById(id);
+    if (entity != null) {
+      service.delete(entity);
     } else {
       throw new EntityNotFoundException(
-          String.format("Not exists %s: %s", PurchaseOrderGenericDocument.class.getSimpleName(), id));
+          String.format("Not exists %s: %s", GenericDocumentRepository.class.getSimpleName(), id));
     }
   }
 
@@ -109,5 +109,12 @@ public class PurchaseOrderGenericDocumentRepository implements
   @CacheEvict(cacheNames = "purchaseOrderGenericDocument", allEntries = true)
   public void deleteAll() {
     mongoTemplate.remove(new Query(), PurchaseOrderGenericDocument.class);
+  }
+
+  @Override
+  public long getCategoryRelated(String categoryId) {
+    Query query = new Query(Criteria.where("purchaseOrderLines.categoryId").is(categoryId));
+
+    return mongoTemplate.count(query, PurchaseOrderDocument.class);
   }
 }

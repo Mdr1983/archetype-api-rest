@@ -4,7 +4,6 @@ import com.mdemanuel.application.domain.model.domain.mongo.purchase_order.Purcha
 import com.mdemanuel.application.domain.ports.primary.dto.request.PurchaseOrderDto;
 import com.mdemanuel.application.domain.ports.primary.dto.request.SearchCriteriaDto;
 import com.mdemanuel.application.domain.ports.secondary.repository.RepositoryUtils;
-import com.mdemanuel.application.domain.ports.secondary.repository.mongo.purchase_order.CustomPurchaseOrderDocumentRepository;
 import com.mdemanuel.application.domain.ports.secondary.repository.mongo.purchase_order.PurchaseOrderDocumentRepository;
 import com.mdemanuel.application.domain.service.cache.CacheService;
 import com.mdemanuel.application.domain.service.mapper.PurchaseOrderDtoMongoMapper;
@@ -25,8 +24,6 @@ public class PurchaseOrderMongoServiceImpl implements PurchaseOrderMongoService 
   @Autowired
   private PurchaseOrderDocumentRepository purchaseOrderDocumentRepository;
   @Autowired
-  private CustomPurchaseOrderDocumentRepository customPurchaseOrderDocumentRepository;
-  @Autowired
   private PurchaseOrderDtoMongoMapper purchaseOrderDtoMongoMapper;
   @Autowired
   private DocumentMongoService documentMongoService;
@@ -41,7 +38,7 @@ public class PurchaseOrderMongoServiceImpl implements PurchaseOrderMongoService 
 
   @Override
   public Page<PurchaseOrderDto> getAllPurchaseOrder(SearchCriteriaDto dto) {
-    Page<PurchaseOrderDocument> result = customPurchaseOrderDocumentRepository.findAll(
+    Page<PurchaseOrderDocument> result = purchaseOrderDocumentRepository.findAll(
         documentMongoService.getDocumentMongoSpecification(PurchaseOrderDocument.class, dto),
         RepositoryUtils.getPageable(dto));
 

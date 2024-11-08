@@ -1,11 +1,12 @@
-com\mdemanuel\secadapter\repository\purchase_order\PurchaseOrderRepositoryImpl.class
+com\mdemanuel\secadapter\repository\mongo\audit\AuditEntryDocumentRepositoryImpl.class
 com\mdemanuel\secadapter\repository\extractor\PurchaseOrderListServiceResultSetExtractor.class
 com\mdemanuel\secadapter\repository\postgres\master\CategoryRepositoryImpl.class
 com\mdemanuel\secadapter\repository\mongo\master\CategoryGenericDocumentRepository.class
 com\mdemanuel\secadapter\repository\postgres\audit\AuditExitRepositoryImpl.class
 com\mdemanuel\secadapter\repository\mongo\purchase_order\PurchaseOrderGenericDocumentRepository.class
-com\mdemanuel\secadapter\repository\mongo\purchase_order\CustomPurchaseOrderDocumentRepositoryImpl.class
-com\mdemanuel\secadapter\repository\mongo\master\CustomCategoryDocumentRepository.class
+com\mdemanuel\secadapter\repository\mongo\master\CategoryDocumentRepositoryImpl.class
 com\mdemanuel\secadapter\repository\extractor\PurchaseOrderServiceResultSetExtractor.class
+com\mdemanuel\secadapter\repository\postgres\purchase_order\PurchaseOrderRepositoryImpl.class
+com\mdemanuel\secadapter\repository\mongo\audit\AuditExitDocumentRepositoryImpl.class
 com\mdemanuel\secadapter\repository\postgres\audit\AuditEntryRepositoryImpl.class
-com\mdemanuel\secadapter\repository\mongo\purchase_order\CustomPurchaseOrderGenericDocumentRepositoryImpl.class
+com\mdemanuel\secadapter\repository\mongo\purchase_order\PurchaseOrderDocumentRepositoryImpl.class

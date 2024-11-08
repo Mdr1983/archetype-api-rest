@@ -5,8 +5,7 @@ import com.mdemanuel.application.domain.ports.primary.dto.request.CategoryDto;
 import com.mdemanuel.application.domain.ports.primary.dto.request.SearchCriteriaDto;
 import com.mdemanuel.application.domain.ports.secondary.repository.RepositoryUtils;
 import com.mdemanuel.application.domain.ports.secondary.repository.mongo.master.CategoryDocumentRepository;
-import com.mdemanuel.application.domain.ports.secondary.repository.mongo.master.CustomCategoryDocumentRepository;
-import com.mdemanuel.application.domain.ports.secondary.repository.mongo.purchase_order.CustomPurchaseOrderDocumentRepository;
+import com.mdemanuel.application.domain.ports.secondary.repository.mongo.purchase_order.PurchaseOrderDocumentRepository;
 import com.mdemanuel.application.domain.service.cache.CacheService;
 import com.mdemanuel.application.domain.service.exceptions.ItemInUseException;
 import com.mdemanuel.application.domain.service.mapper.MasterDtoMongoMapper;
@@ -27,9 +26,7 @@ public class MasterMongoServiceImpl implements MasterMongoService {
   @Autowired
   private CategoryDocumentRepository categoryDocumentRepository;
   @Autowired
-  private CustomCategoryDocumentRepository customCategoryDocumentRepository;
-  @Autowired
-  private CustomPurchaseOrderDocumentRepository customPurchaseOrderDocumentRepository;
+  private PurchaseOrderDocumentRepository purchaseOrderDocumentRepository;
   @Autowired
   private MasterDtoMongoMapper masterDtoMongoMapper;
   @Autowired
@@ -44,7 +41,7 @@ public class MasterMongoServiceImpl implements MasterMongoService {
 
   @Override
   public Page<CategoryDto> getAllCategory(SearchCriteriaDto dto) {
-    Page<CategoryDocument> result = customCategoryDocumentRepository.findAll(
+    Page<CategoryDocument> result = categoryDocumentRepository.findAll(
         documentMongoService.getDocumentMongoSpecification(CategoryDocument.class, dto),
         RepositoryUtils.getPageable(dto));
 
@@ -101,7 +98,7 @@ public class MasterMongoServiceImpl implements MasterMongoService {
     String categoryId = documentMongoService.getDocumentByCode(code, CategoryDocument.class, true, false).getId();
 
     // Validación: Verificar si la categoría está siendo utilizada
-    if (customPurchaseOrderDocumentRepository.getCategoryRelated(categoryId) > 0) {
+    if (purchaseOrderDocumentRepository.getCategoryRelated(categoryId) > 0) {
       throw new ItemInUseException(CategoryDocument.class.getSimpleName(), "Code", categoryId);
     }
 

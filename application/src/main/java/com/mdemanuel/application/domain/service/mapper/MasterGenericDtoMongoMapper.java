@@ -41,8 +41,7 @@ public abstract class MasterGenericDtoMongoMapper {
   public String getCategoryCode(String id)
       throws EntityMappingException {
     if (id != null) {
-      CategoryGenericDocument categoryGenericDocument = categoryGenericDocumentRepository.findById(id)
-          .orElse(null);
+      CategoryGenericDocument categoryGenericDocument = categoryGenericDocumentRepository.findById(id);
       if (categoryGenericDocument == null) {
         throw new EntityMappingException("CategoryGenericDocument not found");
       }

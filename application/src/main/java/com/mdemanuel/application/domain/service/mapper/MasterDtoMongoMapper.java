@@ -46,7 +46,7 @@ public abstract class MasterDtoMongoMapper {
   public String getCategoryCode(String id)
       throws EntityMappingException {
     if (id != null) {
-      CategoryDocument categoryEntity = categoryDocumentRepository.findById(id).orElse(null);
+      CategoryDocument categoryEntity = categoryDocumentRepository.findById(id);
       if (categoryEntity == null) {
         throw new EntityMappingException("CategoryDocument not found");
       }

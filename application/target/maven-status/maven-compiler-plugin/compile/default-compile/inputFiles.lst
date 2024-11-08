@@ -47,9 +47,6 @@ Z:\workspace\Github-Mdr1983\archetype-api-rest\application\src\main\java\com\mde
 Z:\workspace\Github-Mdr1983\archetype-api-rest\application\src\main\java\com\mdemanuel\application\domain\ports\secondary\repository\mongo\audit\AuditExitDocumentRepository.java
 Z:\workspace\Github-Mdr1983\archetype-api-rest\application\src\main\java\com\mdemanuel\application\domain\ports\secondary\repository\mongo\GenericDocumentRepository.java
 Z:\workspace\Github-Mdr1983\archetype-api-rest\application\src\main\java\com\mdemanuel\application\domain\ports\secondary\repository\mongo\master\CategoryDocumentRepository.java
-Z:\workspace\Github-Mdr1983\archetype-api-rest\application\src\main\java\com\mdemanuel\application\domain\ports\secondary\repository\mongo\master\CustomCategoryDocumentRepository.java
-Z:\workspace\Github-Mdr1983\archetype-api-rest\application\src\main\java\com\mdemanuel\application\domain\ports\secondary\repository\mongo\purchase_order\CustomPurchaseOrderDocumentRepository.java
-Z:\workspace\Github-Mdr1983\archetype-api-rest\application\src\main\java\com\mdemanuel\application\domain\ports\secondary\repository\mongo\purchase_order\CustomPurchaseOrderGenericDocumentRepository.java
 Z:\workspace\Github-Mdr1983\archetype-api-rest\application\src\main\java\com\mdemanuel\application\domain\ports\secondary\repository\mongo\purchase_order\PurchaseOrderDocumentRepository.java
 Z:\workspace\Github-Mdr1983\archetype-api-rest\application\src\main\java\com\mdemanuel\application\domain\ports\secondary\repository\MongoCriteriaPageableQuery.java
 Z:\workspace\Github-Mdr1983\archetype-api-rest\application\src\main\java\com\mdemanuel\application\domain\ports\secondary\repository\postgres\audit\AuditEntryRepository.java

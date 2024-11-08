@@ -2,7 +2,6 @@ package com.mdemanuel.application.domain.ports.secondary.repository.mongo;
 
 import com.mdemanuel.application.domain.ports.secondary.repository.DocumentMongoSpecification;
 import java.util.List;
-import java.util.Optional;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Repository;
@@ -12,7 +11,7 @@ public interface GenericDocumentRepository<T> {
 
   T findByCode(String code);
 
-  Optional<T> findById(String id);
+  T findById(String id);
 
   List<T> findAll();
 
@@ -25,4 +24,6 @@ public interface GenericDocumentRepository<T> {
   void deleteById(String id);
 
   void deleteAll();
+
+  long getCategoryRelated(String categoryId);
 }

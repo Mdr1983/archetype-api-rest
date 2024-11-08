@@ -7,7 +7,6 @@ import com.mdemanuel.application.domain.ports.primary.dto.request.GenericDto;
 import com.mdemanuel.application.domain.ports.primary.dto.request.SearchCriteriaDto;
 import com.mdemanuel.application.domain.ports.secondary.repository.RepositoryUtils;
 import com.mdemanuel.application.domain.ports.secondary.repository.mongo.GenericDocumentRepository;
-import com.mdemanuel.application.domain.ports.secondary.repository.mongo.purchase_order.CustomPurchaseOrderGenericDocumentRepository;
 import com.mdemanuel.application.domain.service.cache.CacheService;
 import com.mdemanuel.application.domain.service.exceptions.ItemInUseException;
 import com.mdemanuel.application.domain.service.mapper.MasterGenericDtoMongoMapper;
@@ -29,8 +28,6 @@ public class MasterGenericMongoServiceImpl implements MasterGenericMongoService 
   private GenericDocumentRepository<CategoryGenericDocument> categoryGenericDocumentRepository;
   @Autowired
   private GenericDocumentRepository<PurchaseOrderGenericDocument> purchaseOrderGenericDocumentRepository;
-  @Autowired
-  private CustomPurchaseOrderGenericDocumentRepository customPurchaseOrderGenericDocumentRepository;
   @Autowired
   private MasterGenericDtoMongoMapper masterGenericDtoMongoMapper;
   @Autowired
@@ -107,7 +104,7 @@ public class MasterGenericMongoServiceImpl implements MasterGenericMongoService 
         .getId();
 
     // Validación: Verificar si la categoría está siendo utilizada
-    if (customPurchaseOrderGenericDocumentRepository.getCategoryRelated(code) > 0) {
+    if (purchaseOrderGenericDocumentRepository.getCategoryRelated(code) > 0) {
       throw new ItemInUseException(CategoryDocument.class.getSimpleName(), "Code", code);
     }
 

@@ -7,7 +7,6 @@ import com.mdemanuel.application.domain.ports.secondary.repository.mongo.Generic
 import com.mdemanuel.application.util.SpringBeanUtil;
 import jakarta.persistence.EntityNotFoundException;
 import java.util.List;
-import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.cache.annotation.CachePut;
@@ -44,8 +43,8 @@ public class CategoryGenericDocumentRepository implements GenericDocumentReposit
   @Cacheable(cacheNames = "categoryGenericDocument",
       key = "{ #root.methodName, #id }",
       unless = "#result == null")
-  public Optional<CategoryGenericDocument> findById(String id) {
-    return Optional.ofNullable(mongoTemplate.findById(id, CategoryGenericDocument.class));
+  public CategoryGenericDocument findById(String id) {
+    return mongoTemplate.findById(id, CategoryGenericDocument.class);
   }
 
   @Override
@@ -96,12 +95,12 @@ public class CategoryGenericDocumentRepository implements GenericDocumentReposit
     CategoryGenericDocumentRepository service = SpringBeanUtil.getInstance()
         .getBean(CategoryGenericDocumentRepository.class);
 
-    Optional<CategoryGenericDocument> entity = findById(id);
-    if (entity.isPresent()) {
-      service.delete(entity.get());
+    CategoryGenericDocument entity = findById(id);
+    if (entity != null) {
+      service.delete(entity);
     } else {
       throw new EntityNotFoundException(
-          String.format("Not exists %s: %s", CategoryGenericDocument.class.getSimpleName(), id));
+          String.format("Not exists %s: %s", GenericDocumentRepository.class.getSimpleName(), id));
     }
   }
 
@@ -109,5 +108,10 @@ public class CategoryGenericDocumentRepository implements GenericDocumentReposit
   @CacheEvict(cacheNames = "categoryGenericDocument", allEntries = true)
   public void deleteAll() {
     mongoTemplate.remove(new Query(), CategoryGenericDocument.class);
+  }
+
+  @Override
+  public long getCategoryRelated(String categoryId) {
+    return 0;
   }
 }

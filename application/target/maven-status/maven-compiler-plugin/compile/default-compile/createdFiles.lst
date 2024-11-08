@@ -15,7 +15,6 @@ com\mdemanuel\application\domain\model\domain\postgres\purchase_order\PurchaseOr
 com\mdemanuel\application\domain\model\domain\postgres\purchase_order\PurchaseOrderLineEntity$PurchaseOrderLineEntityBuilder.class
 com\mdemanuel\application\domain\service\mapper\PurchaseOrderGenericDtoMongoMapperImpl.class
 com\mdemanuel\application\domain\model\domain\mongo\purchase_order\PurchaseOrderGenericDocument$PurchaseOrderGenericDocumentBuilder.class
-com\mdemanuel\application\domain\ports\secondary\repository\mongo\purchase_order\CustomPurchaseOrderDocumentRepository.class
 com\mdemanuel\application\domain\model\util\DbTables.class
 com\mdemanuel\application\domain\model\domain\postgres\audit\AuditEntryEntity$AuditEntryEntityBuilderImpl.class
 com\mdemanuel\application\domain\model\domain\mongo\audit\AuditEntryDocument$AuditEntryDocumentBuilder.class
@@ -37,7 +36,6 @@ com\mdemanuel\application\domain\model\domain\postgres\audit\AuditExitEntity$Aud
 com\mdemanuel\application\domain\model\domain\postgres\MetadataEntity$MetadataEntityBuilderImpl.class
 com\mdemanuel\application\domain\ports\primary\dto\request\MetadataDto.class
 com\mdemanuel\application\domain\ports\primary\dto\request\PurchaseOrderDataDto$PurchaseOrderDataDtoBuilder.class
-com\mdemanuel\application\domain\ports\secondary\repository\mongo\purchase_order\CustomPurchaseOrderGenericDocumentRepository.class
 com\mdemanuel\application\domain\model\domain\mongo\audit\AuditExitDocument.class
 com\mdemanuel\application\domain\model\domain\BaseDocument$BaseDocumentBuilderImpl.class
 com\mdemanuel\application\domain\service\audit\impl\AuditEntryDocumentServiceImpl.class
@@ -163,7 +161,6 @@ com\mdemanuel\application\domain\service\exceptions\ExceptionCode.class
 com\mdemanuel\application\domain\ports\secondary\repository\mongo\audit\AuditEntryDocumentRepository.class
 com\mdemanuel\application\config\MongoDbInitializer.class
 com\mdemanuel\application\domain\model\config\secondary\DatasourcesSecondaryConfiguration.class
-com\mdemanuel\application\domain\ports\secondary\repository\mongo\master\CustomCategoryDocumentRepository.class
 com\mdemanuel\application\domain\ports\secondary\repository\postgres\audit\AuditEntryRepository.class
 com\mdemanuel\application\util\aspect\LogExecutionAspect.class
 com\mdemanuel\application\domain\ports\primary\dto\request\PurchaseOrderLineDto$PurchaseOrderLineDtoBuilderImpl.class
