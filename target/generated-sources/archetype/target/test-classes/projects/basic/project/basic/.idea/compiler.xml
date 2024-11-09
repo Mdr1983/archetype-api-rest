@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Annotation profile for archetype-logistic-api" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <option name="mapstruct.defaultComponentModel" value="spring" />
+        <option name="mapstruct.suppressGeneratorTimestamp" value="true" />
+        <option name="mapstruct.suppressGeneratorVersionInfoComment" value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.34/lombok-1.18.34.jar" />
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok-mapstruct-binding/0.2.0/lombok-mapstruct-binding-0.2.0.jar" />
+          <entry name="$MAVEN_REPOSITORY$/org/mapstruct/mapstruct-processor/1.6.0/mapstruct-processor-1.6.0.jar" />
+          <entry name="$MAVEN_REPOSITORY$/org/mapstruct/mapstruct/1.6.0/mapstruct-1.6.0.jar" />
+        </processorPath>
+        <module name="vas-back-init" />
+        <module name="vas-back-application" />
+        <module name="vas-back-priadapter" />
+        <module name="vas-back-secadapter" />
+      </profile>
+      <profile name="Annotation profile for basic" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <option name="mapstruct.defaultComponentModel" value="spring" />
+        <option name="mapstruct.suppressGeneratorTimestamp" value="true" />
+        <option name="mapstruct.suppressGeneratorVersionInfoComment" value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$PROJECT_DIR$/../../../M2_REPO/org/projectlombok/lombok/1.18.34/lombok-1.18.34.jar" />
+          <entry name="$PROJECT_DIR$/../../../M2_REPO/org/projectlombok/lombok-mapstruct-binding/0.2.0/lombok-mapstruct-binding-0.2.0.jar" />
+          <entry name="$PROJECT_DIR$/../../../M2_REPO/org/mapstruct/mapstruct-processor/1.6.0/mapstruct-processor-1.6.0.jar" />
+          <entry name="$PROJECT_DIR$/../../../M2_REPO/org/mapstruct/mapstruct/1.6.0/mapstruct-1.6.0.jar" />
+        </processorPath>
+        <module name="secadapter" />
+        <module name="init" />
+        <module name="priadapter" />
+        <module name="application" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="archetype-logistic-api-application" target="22" />
+      <module name="archetype-logistic-api-init" target="22" />
+      <module name="archetype-logistic-api-priadapter" target="22" />
+      <module name="archetype-logistic-api-secadapter" target="22" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="application" options="-parameters -Amapstruct.defaultComponentModel=spring -Amapstruct.suppressGeneratorTimestamp=true -Amapstruct.suppressGeneratorVersionInfoComment=true" />
+      <module name="basic" options="-parameters -Amapstruct.defaultComponentModel=spring -Amapstruct.suppressGeneratorTimestamp=true -Amapstruct.suppressGeneratorVersionInfoComment=true" />
+      <module name="archetype-logistic-api" options="-parameters -Amapstruct.defaultComponentModel=spring -Amapstruct.suppressGeneratorTimestamp=true -Amapstruct.suppressGeneratorVersionInfoComment=true" />
+      <module name="archetype-logistic-api-application" options="-parameters -Amapstruct.defaultComponentModel=spring -Amapstruct.suppressGeneratorTimestamp=true -Amapstruct.suppressGeneratorVersionInfoComment=true" />
+      <module name="archetype-logistic-api-init" options="-parameters -Amapstruct.defaultComponentModel=spring -Amapstruct.suppressGeneratorTimestamp=true -Amapstruct.suppressGeneratorVersionInfoComment=true" />
+      <module name="archetype-logistic-api-priadapter" options="-parameters -Amapstruct.defaultComponentModel=spring -Amapstruct.suppressGeneratorTimestamp=true -Amapstruct.suppressGeneratorVersionInfoComment=true" />
+      <module name="archetype-logistic-api-secadapter" options="-parameters -Amapstruct.defaultComponentModel=spring -Amapstruct.suppressGeneratorTimestamp=true -Amapstruct.suppressGeneratorVersionInfoComment=true" />
+      <module name="init" options="-parameters -Amapstruct.defaultComponentModel=spring -Amapstruct.suppressGeneratorTimestamp=true -Amapstruct.suppressGeneratorVersionInfoComment=true" />
+      <module name="priadapter" options="-parameters -Amapstruct.defaultComponentModel=spring -Amapstruct.suppressGeneratorTimestamp=true -Amapstruct.suppressGeneratorVersionInfoComment=true" />
+      <module name="secadapter" options="-parameters -Amapstruct.defaultComponentModel=spring -Amapstruct.suppressGeneratorTimestamp=true -Amapstruct.suppressGeneratorVersionInfoComment=true" />
+      <module name="vas-back-application" options="-parameters -Amapstruct.defaultComponentModel=spring -Amapstruct.suppressGeneratorTimestamp=true -Amapstruct.suppressGeneratorVersionInfoComment=true" />
+      <module name="vas-back-init" options="-parameters -Amapstruct.defaultComponentModel=spring -Amapstruct.suppressGeneratorTimestamp=true -Amapstruct.suppressGeneratorVersionInfoComment=true" />
+      <module name="vas-back-priadapter" options="-parameters -Amapstruct.defaultComponentModel=spring -Amapstruct.suppressGeneratorTimestamp=true -Amapstruct.suppressGeneratorVersionInfoComment=true" />
+      <module name="vas-back-secadapter" options="-parameters -Amapstruct.defaultComponentModel=spring -Amapstruct.suppressGeneratorTimestamp=true -Amapstruct.suppressGeneratorVersionInfoComment=true" />
+    </option>
+  </component>
+</project>

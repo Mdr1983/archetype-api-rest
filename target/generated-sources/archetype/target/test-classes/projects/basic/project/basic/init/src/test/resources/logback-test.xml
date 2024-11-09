@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<configuration>
+
+  <contextName>@project.artifactId@-@project.version@_@build.timestamp@</contextName>
+
+  <if condition='property("profile").contains("test") || property("profile").contains("h2")'>
+    <then>
+      <root level="DEBUG">
+        <appender-ref ref="CONSOLE"/>
+      </root>
+    </then>
+  </if>
+
+</configuration>

@@ -1,0 +1,1028 @@
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="ANALYZE_INJECTED_CODE" value="false" />
+  </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="9227da5b-6ced-443e-b3ab-e63b6fdc4ee0" name="Changes" comment="">
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/pom.xml" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/META-INF/maven/archetype-metadata.xml" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/.idea/CoverUsage.xml" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/.idea/checkstyle-idea.xml" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/.idea/git_toolbox_blame.xml" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/.idea/misc.xml" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/CONTRIBUTING.md" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/LICENSE.md" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/README.md" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/__artifactId__.iml" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/application/.classpath" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/application/.factorypath" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/application/.project" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/application/.settings/org.eclipse.core.resources.prefs" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/application/.settings/org.eclipse.jdt.apt.core.prefs" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/application/.settings/org.eclipse.jdt.core.prefs" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/application/.settings/org.eclipse.m2e.core.prefs" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/application/.settings/org.hibernate.eclipse.console.prefs" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/application/.settings/org.springframework.ide.eclipse.prefs" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/application/__artifactId__.iml" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/application/dependencies.txt" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/application/pom.xml" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/application/src/main/java/__artifactId__/config/MongoDbInitializer.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/application/src/main/java/__artifactId__/config/RedisConfig.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/application/src/main/java/__artifactId__/config/SpringConfig.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/application/src/main/java/__artifactId__/domain/model/config/primary/DatasourcesPrimaryConfiguration.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/application/src/main/java/__artifactId__/domain/model/config/secondary/DatasourcesSecondaryConfiguration.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/application/src/main/java/__artifactId__/domain/model/domain/BaseDocument.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/application/src/main/java/__artifactId__/domain/model/domain/BaseEntity.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/application/src/main/java/__artifactId__/domain/model/domain/mongo/GenericDocument.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/application/src/main/java/__artifactId__/domain/model/domain/mongo/audit/AuditEntryDocument.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/application/src/main/java/__artifactId__/domain/model/domain/mongo/audit/AuditExitDocument.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/application/src/main/java/__artifactId__/domain/model/domain/mongo/master/CategoryDocument.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/application/src/main/java/__artifactId__/domain/model/domain/mongo/master/CategoryGenericDocument.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/application/src/main/java/__artifactId__/domain/model/domain/mongo/purchase_order/PurchaseOrderDocument.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/application/src/main/java/__artifactId__/domain/model/domain/mongo/purchase_order/PurchaseOrderGenericDocument.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/application/src/main/java/__artifactId__/domain/model/domain/mongo/purchase_order/PurchaseOrderLineDocument.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/application/src/main/java/__artifactId__/domain/model/domain/postgres/MetadataEntity.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/application/src/main/java/__artifactId__/domain/model/domain/postgres/audit/AuditEntryEntity.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/application/src/main/java/__artifactId__/domain/model/domain/postgres/audit/AuditExitEntity.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/application/src/main/java/__artifactId__/domain/model/domain/postgres/master/CategoryEntity.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/application/src/main/java/__artifactId__/domain/model/domain/postgres/purchase_order/PurchaseOrderEntity.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/application/src/main/java/__artifactId__/domain/model/domain/postgres/purchase_order/PurchaseOrderLineEntity.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/application/src/main/java/__artifactId__/domain/model/exception/BadParamsException.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/application/src/main/java/__artifactId__/domain/model/exception/BaseException.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/application/src/main/java/__artifactId__/domain/model/exception/CourierConnectionStrategyException.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/application/src/main/java/__artifactId__/domain/model/exception/EntityMappingException.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/application/src/main/java/__artifactId__/domain/model/exception/ExceptionCode.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/application/src/main/java/__artifactId__/domain/model/exception/ExternalServiceException.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/application/src/main/java/__artifactId__/domain/model/exception/SqlBadExecution.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/application/src/main/java/__artifactId__/domain/model/util/DbDocuments.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/application/src/main/java/__artifactId__/domain/model/util/DbTables.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/application/src/main/java/__artifactId__/domain/ports/primary/.gitkeep" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/application/src/main/java/__artifactId__/domain/ports/primary/config/AuditEntryFilter.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/application/src/main/java/__artifactId__/domain/ports/primary/dto/request/CategoryDataDto.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/application/src/main/java/__artifactId__/domain/ports/primary/dto/request/CategoryDto.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/application/src/main/java/__artifactId__/domain/ports/primary/dto/request/GenericDto.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/application/src/main/java/__artifactId__/domain/ports/primary/dto/request/MetadataDto.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/application/src/main/java/__artifactId__/domain/ports/primary/dto/request/PurchaseOrderDataDto.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/application/src/main/java/__artifactId__/domain/ports/primary/dto/request/PurchaseOrderDto.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/application/src/main/java/__artifactId__/domain/ports/primary/dto/request/PurchaseOrderLineDto.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/application/src/main/java/__artifactId__/domain/ports/primary/dto/request/SearchCriteriaDto.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/application/src/main/java/__artifactId__/domain/ports/primary/dto/request/pojo/OperatorsFilter.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/application/src/main/java/__artifactId__/domain/ports/primary/dto/response/controller/ApiExceptionResponseDto.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/application/src/main/java/__artifactId__/domain/ports/primary/dto/response/controller/ApiResponseDto.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/application/src/main/java/__artifactId__/domain/ports/primary/dto/response/controller/ExceptionErrorDto.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/application/src/main/java/__artifactId__/domain/ports/secondary/repository/DocumentMongoSpecification.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/application/src/main/java/__artifactId__/domain/ports/secondary/repository/EntitySpecification.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/application/src/main/java/__artifactId__/domain/ports/secondary/repository/MongoCriteriaPageableQuery.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/application/src/main/java/__artifactId__/domain/ports/secondary/repository/RepositoryUtils.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/application/src/main/java/__artifactId__/domain/ports/secondary/repository/mongo/GenericDocumentRepository.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/application/src/main/java/__artifactId__/domain/ports/secondary/repository/mongo/audit/AuditEntryDocumentRepository.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/application/src/main/java/__artifactId__/domain/ports/secondary/repository/mongo/audit/AuditExitDocumentRepository.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/application/src/main/java/__artifactId__/domain/ports/secondary/repository/mongo/master/CategoryDocumentRepository.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/application/src/main/java/__artifactId__/domain/ports/secondary/repository/mongo/purchase_order/PurchaseOrderDocumentRepository.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/application/src/main/java/__artifactId__/domain/ports/secondary/repository/postgres/audit/AuditEntryRepository.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/application/src/main/java/__artifactId__/domain/ports/secondary/repository/postgres/audit/AuditExitRepository.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/application/src/main/java/__artifactId__/domain/ports/secondary/repository/postgres/master/CategoryRepository.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/application/src/main/java/__artifactId__/domain/ports/secondary/repository/postgres/purchase_order/PurchaseOrderRepository.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/application/src/main/java/__artifactId__/domain/service/audit/AuditEntryDocumentService.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/application/src/main/java/__artifactId__/domain/service/audit/AuditEntryService.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/application/src/main/java/__artifactId__/domain/service/audit/AuditExitDocumentService.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/application/src/main/java/__artifactId__/domain/service/audit/AuditExitService.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/application/src/main/java/__artifactId__/domain/service/audit/impl/AuditEntryDocumentServiceImpl.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/application/src/main/java/__artifactId__/domain/service/audit/impl/AuditEntryServiceImpl.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/application/src/main/java/__artifactId__/domain/service/audit/impl/AuditExitDocumentServiceImpl.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/application/src/main/java/__artifactId__/domain/service/audit/impl/AuditExitServiceImpl.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/application/src/main/java/__artifactId__/domain/service/cache/CacheService.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/application/src/main/java/__artifactId__/domain/service/cache/impl/CacheServiceImpl.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/application/src/main/java/__artifactId__/domain/service/exceptions/AdapterException.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/application/src/main/java/__artifactId__/domain/service/exceptions/BadFormatException.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/application/src/main/java/__artifactId__/domain/service/exceptions/CriterianException.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/application/src/main/java/__artifactId__/domain/service/exceptions/DuplicatedItemException.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/application/src/main/java/__artifactId__/domain/service/exceptions/ExceptionCode.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/application/src/main/java/__artifactId__/domain/service/exceptions/ItemInUseException.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/application/src/main/java/__artifactId__/domain/service/exceptions/ItemNotFoundException.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/application/src/main/java/__artifactId__/domain/service/exceptions/SqlExecutionException.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/application/src/main/java/__artifactId__/domain/service/exceptions/ValidateJsonException.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/application/src/main/java/__artifactId__/domain/service/mapper/MasterDtoMapper.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/application/src/main/java/__artifactId__/domain/service/mapper/MasterDtoMongoMapper.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/application/src/main/java/__artifactId__/domain/service/mapper/MasterGenericDtoMongoMapper.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/application/src/main/java/__artifactId__/domain/service/mapper/PurchaseOrderDtoMapper.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/application/src/main/java/__artifactId__/domain/service/mapper/PurchaseOrderDtoMongoMapper.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/application/src/main/java/__artifactId__/domain/service/mapper/PurchaseOrderGenericDtoMongoMapper.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/application/src/main/java/__artifactId__/domain/service/master/MasterGenericMongoService.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/application/src/main/java/__artifactId__/domain/service/master/MasterMongoService.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/application/src/main/java/__artifactId__/domain/service/master/MasterService.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/application/src/main/java/__artifactId__/domain/service/master/impl/MasterGenericMongoServiceImpl.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/application/src/main/java/__artifactId__/domain/service/master/impl/MasterMongoServiceImpl.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/application/src/main/java/__artifactId__/domain/service/master/impl/MasterServiceImpl.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/application/src/main/java/__artifactId__/domain/service/pojo/LogLevel.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/application/src/main/java/__artifactId__/domain/service/purchase_order/PurchaseOrderGenericMongoService.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/application/src/main/java/__artifactId__/domain/service/purchase_order/PurchaseOrderMongoService.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/application/src/main/java/__artifactId__/domain/service/purchase_order/PurchaseOrderService.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/application/src/main/java/__artifactId__/domain/service/purchase_order/impl/PurchaseOrderGenericMongoServiceImpl.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/application/src/main/java/__artifactId__/domain/service/purchase_order/impl/PurchaseOrderMongoServiceImpl.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/application/src/main/java/__artifactId__/domain/service/purchase_order/impl/PurchaseOrderServiceImpl.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/application/src/main/java/__artifactId__/domain/service/util/CommonUtils.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/application/src/main/java/__artifactId__/domain/service/util/ConstantsUtils.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/application/src/main/java/__artifactId__/domain/service/util/DateUtils.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/application/src/main/java/__artifactId__/domain/service/util/DocumentMongoService.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/application/src/main/java/__artifactId__/domain/service/util/EntityService.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/application/src/main/java/__artifactId__/domain/service/util/SearchCriteriaDtoDeserializer.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/application/src/main/java/__artifactId__/domain/service/util/SearchCriteriaDtoSerializer.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/application/src/main/java/__artifactId__/domain/service/util/SearchCriteriaGroupDtoDeserializer.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/application/src/main/java/__artifactId__/domain/service/util/SearchCriteriaGroupDtoSerializer.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/application/src/main/java/__artifactId__/util/SpringBeanUtil.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/application/src/main/java/__artifactId__/util/Utils.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/application/src/main/java/__artifactId__/util/aspect/LogExecution.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/application/src/main/java/__artifactId__/util/aspect/LogExecutionAspect.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/application/src/main/java/__artifactId__/util/elastic/LogbackCompatibilityWrapper4ElasticsearchAppender.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/application/src/main/java/__artifactId__/util/json/JsonValidationSchema.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/application/src/main/java/__artifactId__/util/redis/CacheLogInterceptor.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/application/src/main/java/__artifactId__/util/redis/CustomKeyPrefixSerializer.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/checkstyle-suppressions.xml" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/checkstyle.xml" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/dependencies.txt" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/init/.classpath" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/init/.factorypath" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/init/.project" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/init/.settings/org.eclipse.core.resources.prefs" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/init/.settings/org.eclipse.jdt.apt.core.prefs" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/init/.settings/org.eclipse.jdt.core.prefs" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/init/.settings/org.eclipse.m2e.core.prefs" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/init/.settings/org.hibernate.eclipse.console.prefs" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/init/.settings/org.springframework.ide.eclipse.boot.prefs" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/init/.settings/org.springframework.ide.eclipse.prefs" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/init/dependencies.txt" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/init/pom.xml" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/init/src/main/java/__artifactId__/StartRestApplication.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/init/src/main/resources/application-h2.yml" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/init/src/main/resources/application-local.yml" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/init/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/init/src/main/resources/bootstrap.yml" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/init/src/main/resources/jsonSchema/category.json" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/init/src/main/resources/jsonSchema/purchase_order.json" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/init/src/main/resources/jsonSchema/search_criteria.json" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/init/src/main/resources/logback_conf.xml" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/init/src/main/resources/spy.properties" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/init/src/test/java/priadapter/BaseIntegrationTest.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/init/src/test/java/priadapter/api/adapter/ControllerMaster.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/init/src/test/resources/application.yml" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/init/src/test/resources/bootstrap.yml" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/init/src/test/resources/data-h2.sql" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/init/src/test/resources/data.sql" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/init/src/test/resources/logback-test.xml" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/init/src/test/resources/schema-h2.sql" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/init/src/test/resources/schema.sql" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/init/src/test/resources/schema_postgres.sql" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/init/src/test/resources/schema_postgres_vas.sql" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/pom.xml" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/priadapter/.classpath" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/priadapter/.factorypath" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/priadapter/.project" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/priadapter/.settings/org.eclipse.core.resources.prefs" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/priadapter/.settings/org.eclipse.jdt.apt.core.prefs" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/priadapter/.settings/org.eclipse.jdt.core.prefs" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/priadapter/.settings/org.eclipse.m2e.core.prefs" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/priadapter/.settings/org.hibernate.eclipse.console.prefs" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/priadapter/.settings/org.springframework.ide.eclipse.prefs" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/priadapter/dependencies.txt" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/priadapter/pom.xml" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/priadapter/src/main/java/__artifactId__/api/adapter/ControllerMaster.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/priadapter/src/main/java/__artifactId__/api/adapter/ControllerMongoMaster.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/priadapter/src/main/java/__artifactId__/api/adapter/ControllerMongoMasterGeneric.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/priadapter/src/main/java/__artifactId__/api/adapter/ControllerMongoPurchaseOrder.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/priadapter/src/main/java/__artifactId__/api/adapter/ControllerMongoPurchaseOrderGeneric.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/priadapter/src/main/java/__artifactId__/api/adapter/ControllerPurchaseOrder.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/priadapter/src/main/java/__artifactId__/api/adapter/ControllerRestCache.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/priadapter/src/main/java/__artifactId__/api/adapter/ControllerUtils.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/priadapter/src/main/java/__artifactId__/api/adapter/CustomRestExceptionHandler.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/priadapter/src/main/java/__artifactId__/api/config/CorsConfig.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/priadapter/src/main/java/__artifactId__/api/config/CustomJdbcAspect.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/priadapter/src/main/java/__artifactId__/api/config/KeyExtractor.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/priadapter/src/main/java/__artifactId__/api/mapper/.gitkeep" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/priadapter/src/main/java/__artifactId__/api/model/response/.gitkeep" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/redis_init.png" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/secadapter/.classpath" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/secadapter/.factorypath" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/secadapter/.project" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/secadapter/.settings/org.eclipse.core.resources.prefs" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/secadapter/.settings/org.eclipse.jdt.apt.core.prefs" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/secadapter/.settings/org.eclipse.jdt.core.prefs" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/secadapter/.settings/org.eclipse.m2e.core.prefs" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/secadapter/.settings/org.hibernate.eclipse.console.prefs" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/secadapter/.settings/org.springframework.ide.eclipse.prefs" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/secadapter/dependencies.txt" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/secadapter/pom.xml" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/secadapter/src/main/java/__artifactId__/repository/.gitkeep" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/secadapter/src/main/java/__artifactId__/repository/extractor/PurchaseOrderListServiceResultSetExtractor.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/secadapter/src/main/java/__artifactId__/repository/extractor/PurchaseOrderServiceResultSetExtractor.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/secadapter/src/main/java/__artifactId__/repository/mongo/audit/AuditEntryDocumentRepositoryImpl.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/secadapter/src/main/java/__artifactId__/repository/mongo/audit/AuditExitDocumentRepositoryImpl.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/secadapter/src/main/java/__artifactId__/repository/mongo/master/CategoryDocumentRepositoryImpl.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/secadapter/src/main/java/__artifactId__/repository/mongo/master/CategoryGenericDocumentRepository.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/secadapter/src/main/java/__artifactId__/repository/mongo/purchase_order/PurchaseOrderDocumentRepositoryImpl.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/secadapter/src/main/java/__artifactId__/repository/mongo/purchase_order/PurchaseOrderGenericDocumentRepository.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/secadapter/src/main/java/__artifactId__/repository/postgres/audit/AuditEntryRepositoryImpl.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/secadapter/src/main/java/__artifactId__/repository/postgres/audit/AuditExitRepositoryImpl.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/secadapter/src/main/java/__artifactId__/repository/postgres/master/CategoryRepositoryImpl.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/secadapter/src/main/java/__artifactId__/repository/postgres/purchase_order/PurchaseOrderRepositoryImpl.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/swagger_init.png" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/update_readme.ps1" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/main/resources/archetype-resources/update_readme2.sh" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/test/resources/projects/basic/archetype.properties" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/src/test/resources/projects/basic/goal.txt" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/${artifactId}-archetype-${version}.jar" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/META-INF/maven/archetype-metadata.xml" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/.idea/CoverUsage.xml" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/.idea/checkstyle-idea.xml" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/.idea/git_toolbox_blame.xml" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/.idea/misc.xml" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/CONTRIBUTING.md" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/LICENSE.md" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/README.md" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/__artifactId__.iml" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/application/.classpath" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/application/.factorypath" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/application/.project" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/application/.settings/org.eclipse.core.resources.prefs" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/application/.settings/org.eclipse.jdt.apt.core.prefs" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/application/.settings/org.eclipse.jdt.core.prefs" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/application/.settings/org.eclipse.m2e.core.prefs" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/application/.settings/org.hibernate.eclipse.console.prefs" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/application/.settings/org.springframework.ide.eclipse.prefs" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/application/__artifactId__.iml" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/application/dependencies.txt" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/application/pom.xml" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/application/src/main/java/__artifactId__/config/MongoDbInitializer.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/application/src/main/java/__artifactId__/config/RedisConfig.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/application/src/main/java/__artifactId__/config/SpringConfig.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/application/src/main/java/__artifactId__/domain/model/config/primary/DatasourcesPrimaryConfiguration.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/application/src/main/java/__artifactId__/domain/model/config/secondary/DatasourcesSecondaryConfiguration.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/application/src/main/java/__artifactId__/domain/model/domain/BaseDocument.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/application/src/main/java/__artifactId__/domain/model/domain/BaseEntity.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/application/src/main/java/__artifactId__/domain/model/domain/mongo/GenericDocument.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/application/src/main/java/__artifactId__/domain/model/domain/mongo/audit/AuditEntryDocument.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/application/src/main/java/__artifactId__/domain/model/domain/mongo/audit/AuditExitDocument.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/application/src/main/java/__artifactId__/domain/model/domain/mongo/master/CategoryDocument.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/application/src/main/java/__artifactId__/domain/model/domain/mongo/master/CategoryGenericDocument.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/application/src/main/java/__artifactId__/domain/model/domain/mongo/purchase_order/PurchaseOrderDocument.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/application/src/main/java/__artifactId__/domain/model/domain/mongo/purchase_order/PurchaseOrderGenericDocument.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/application/src/main/java/__artifactId__/domain/model/domain/mongo/purchase_order/PurchaseOrderLineDocument.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/application/src/main/java/__artifactId__/domain/model/domain/postgres/MetadataEntity.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/application/src/main/java/__artifactId__/domain/model/domain/postgres/audit/AuditEntryEntity.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/application/src/main/java/__artifactId__/domain/model/domain/postgres/audit/AuditExitEntity.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/application/src/main/java/__artifactId__/domain/model/domain/postgres/master/CategoryEntity.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/application/src/main/java/__artifactId__/domain/model/domain/postgres/purchase_order/PurchaseOrderEntity.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/application/src/main/java/__artifactId__/domain/model/domain/postgres/purchase_order/PurchaseOrderLineEntity.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/application/src/main/java/__artifactId__/domain/model/exception/BadParamsException.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/application/src/main/java/__artifactId__/domain/model/exception/BaseException.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/application/src/main/java/__artifactId__/domain/model/exception/CourierConnectionStrategyException.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/application/src/main/java/__artifactId__/domain/model/exception/EntityMappingException.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/application/src/main/java/__artifactId__/domain/model/exception/ExceptionCode.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/application/src/main/java/__artifactId__/domain/model/exception/ExternalServiceException.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/application/src/main/java/__artifactId__/domain/model/exception/SqlBadExecution.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/application/src/main/java/__artifactId__/domain/model/util/DbDocuments.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/application/src/main/java/__artifactId__/domain/model/util/DbTables.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/application/src/main/java/__artifactId__/domain/ports/primary/.gitkeep" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/application/src/main/java/__artifactId__/domain/ports/primary/config/AuditEntryFilter.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/application/src/main/java/__artifactId__/domain/ports/primary/dto/request/CategoryDataDto.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/application/src/main/java/__artifactId__/domain/ports/primary/dto/request/CategoryDto.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/application/src/main/java/__artifactId__/domain/ports/primary/dto/request/GenericDto.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/application/src/main/java/__artifactId__/domain/ports/primary/dto/request/MetadataDto.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/application/src/main/java/__artifactId__/domain/ports/primary/dto/request/PurchaseOrderDataDto.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/application/src/main/java/__artifactId__/domain/ports/primary/dto/request/PurchaseOrderDto.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/application/src/main/java/__artifactId__/domain/ports/primary/dto/request/PurchaseOrderLineDto.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/application/src/main/java/__artifactId__/domain/ports/primary/dto/request/SearchCriteriaDto.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/application/src/main/java/__artifactId__/domain/ports/primary/dto/request/pojo/OperatorsFilter.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/application/src/main/java/__artifactId__/domain/ports/primary/dto/response/controller/ApiExceptionResponseDto.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/application/src/main/java/__artifactId__/domain/ports/primary/dto/response/controller/ApiResponseDto.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/application/src/main/java/__artifactId__/domain/ports/primary/dto/response/controller/ExceptionErrorDto.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/application/src/main/java/__artifactId__/domain/ports/secondary/repository/DocumentMongoSpecification.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/application/src/main/java/__artifactId__/domain/ports/secondary/repository/EntitySpecification.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/application/src/main/java/__artifactId__/domain/ports/secondary/repository/MongoCriteriaPageableQuery.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/application/src/main/java/__artifactId__/domain/ports/secondary/repository/RepositoryUtils.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/application/src/main/java/__artifactId__/domain/ports/secondary/repository/mongo/GenericDocumentRepository.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/application/src/main/java/__artifactId__/domain/ports/secondary/repository/mongo/audit/AuditEntryDocumentRepository.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/application/src/main/java/__artifactId__/domain/ports/secondary/repository/mongo/audit/AuditExitDocumentRepository.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/application/src/main/java/__artifactId__/domain/ports/secondary/repository/mongo/master/CategoryDocumentRepository.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/application/src/main/java/__artifactId__/domain/ports/secondary/repository/mongo/purchase_order/PurchaseOrderDocumentRepository.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/application/src/main/java/__artifactId__/domain/ports/secondary/repository/postgres/audit/AuditEntryRepository.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/application/src/main/java/__artifactId__/domain/ports/secondary/repository/postgres/audit/AuditExitRepository.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/application/src/main/java/__artifactId__/domain/ports/secondary/repository/postgres/master/CategoryRepository.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/application/src/main/java/__artifactId__/domain/ports/secondary/repository/postgres/purchase_order/PurchaseOrderRepository.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/application/src/main/java/__artifactId__/domain/service/audit/AuditEntryDocumentService.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/application/src/main/java/__artifactId__/domain/service/audit/AuditEntryService.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/application/src/main/java/__artifactId__/domain/service/audit/AuditExitDocumentService.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/application/src/main/java/__artifactId__/domain/service/audit/AuditExitService.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/application/src/main/java/__artifactId__/domain/service/audit/impl/AuditEntryDocumentServiceImpl.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/application/src/main/java/__artifactId__/domain/service/audit/impl/AuditEntryServiceImpl.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/application/src/main/java/__artifactId__/domain/service/audit/impl/AuditExitDocumentServiceImpl.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/application/src/main/java/__artifactId__/domain/service/audit/impl/AuditExitServiceImpl.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/application/src/main/java/__artifactId__/domain/service/cache/CacheService.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/application/src/main/java/__artifactId__/domain/service/cache/impl/CacheServiceImpl.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/application/src/main/java/__artifactId__/domain/service/exceptions/AdapterException.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/application/src/main/java/__artifactId__/domain/service/exceptions/BadFormatException.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/application/src/main/java/__artifactId__/domain/service/exceptions/CriterianException.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/application/src/main/java/__artifactId__/domain/service/exceptions/DuplicatedItemException.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/application/src/main/java/__artifactId__/domain/service/exceptions/ExceptionCode.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/application/src/main/java/__artifactId__/domain/service/exceptions/ItemInUseException.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/application/src/main/java/__artifactId__/domain/service/exceptions/ItemNotFoundException.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/application/src/main/java/__artifactId__/domain/service/exceptions/SqlExecutionException.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/application/src/main/java/__artifactId__/domain/service/exceptions/ValidateJsonException.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/application/src/main/java/__artifactId__/domain/service/mapper/MasterDtoMapper.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/application/src/main/java/__artifactId__/domain/service/mapper/MasterDtoMongoMapper.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/application/src/main/java/__artifactId__/domain/service/mapper/MasterGenericDtoMongoMapper.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/application/src/main/java/__artifactId__/domain/service/mapper/PurchaseOrderDtoMapper.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/application/src/main/java/__artifactId__/domain/service/mapper/PurchaseOrderDtoMongoMapper.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/application/src/main/java/__artifactId__/domain/service/mapper/PurchaseOrderGenericDtoMongoMapper.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/application/src/main/java/__artifactId__/domain/service/master/MasterGenericMongoService.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/application/src/main/java/__artifactId__/domain/service/master/MasterMongoService.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/application/src/main/java/__artifactId__/domain/service/master/MasterService.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/application/src/main/java/__artifactId__/domain/service/master/impl/MasterGenericMongoServiceImpl.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/application/src/main/java/__artifactId__/domain/service/master/impl/MasterMongoServiceImpl.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/application/src/main/java/__artifactId__/domain/service/master/impl/MasterServiceImpl.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/application/src/main/java/__artifactId__/domain/service/pojo/LogLevel.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/application/src/main/java/__artifactId__/domain/service/purchase_order/PurchaseOrderGenericMongoService.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/application/src/main/java/__artifactId__/domain/service/purchase_order/PurchaseOrderMongoService.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/application/src/main/java/__artifactId__/domain/service/purchase_order/PurchaseOrderService.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/application/src/main/java/__artifactId__/domain/service/purchase_order/impl/PurchaseOrderGenericMongoServiceImpl.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/application/src/main/java/__artifactId__/domain/service/purchase_order/impl/PurchaseOrderMongoServiceImpl.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/application/src/main/java/__artifactId__/domain/service/purchase_order/impl/PurchaseOrderServiceImpl.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/application/src/main/java/__artifactId__/domain/service/util/CommonUtils.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/application/src/main/java/__artifactId__/domain/service/util/ConstantsUtils.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/application/src/main/java/__artifactId__/domain/service/util/DateUtils.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/application/src/main/java/__artifactId__/domain/service/util/DocumentMongoService.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/application/src/main/java/__artifactId__/domain/service/util/EntityService.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/application/src/main/java/__artifactId__/domain/service/util/SearchCriteriaDtoDeserializer.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/application/src/main/java/__artifactId__/domain/service/util/SearchCriteriaDtoSerializer.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/application/src/main/java/__artifactId__/domain/service/util/SearchCriteriaGroupDtoDeserializer.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/application/src/main/java/__artifactId__/domain/service/util/SearchCriteriaGroupDtoSerializer.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/application/src/main/java/__artifactId__/util/SpringBeanUtil.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/application/src/main/java/__artifactId__/util/Utils.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/application/src/main/java/__artifactId__/util/aspect/LogExecution.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/application/src/main/java/__artifactId__/util/aspect/LogExecutionAspect.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/application/src/main/java/__artifactId__/util/elastic/LogbackCompatibilityWrapper4ElasticsearchAppender.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/application/src/main/java/__artifactId__/util/json/JsonValidationSchema.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/application/src/main/java/__artifactId__/util/redis/CacheLogInterceptor.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/application/src/main/java/__artifactId__/util/redis/CustomKeyPrefixSerializer.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/checkstyle-suppressions.xml" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/checkstyle.xml" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/dependencies.txt" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/init/.classpath" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/init/.factorypath" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/init/.project" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/init/.settings/org.eclipse.core.resources.prefs" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/init/.settings/org.eclipse.jdt.apt.core.prefs" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/init/.settings/org.eclipse.jdt.core.prefs" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/init/.settings/org.eclipse.m2e.core.prefs" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/init/.settings/org.hibernate.eclipse.console.prefs" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/init/.settings/org.springframework.ide.eclipse.boot.prefs" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/init/.settings/org.springframework.ide.eclipse.prefs" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/init/dependencies.txt" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/init/pom.xml" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/init/src/main/java/__artifactId__/StartRestApplication.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/init/src/main/resources/application-h2.yml" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/init/src/main/resources/application-local.yml" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/init/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/init/src/main/resources/bootstrap.yml" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/init/src/main/resources/jsonSchema/category.json" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/init/src/main/resources/jsonSchema/purchase_order.json" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/init/src/main/resources/jsonSchema/search_criteria.json" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/init/src/main/resources/logback_conf.xml" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/init/src/main/resources/spy.properties" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/init/src/test/java/priadapter/BaseIntegrationTest.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/init/src/test/java/priadapter/api/adapter/ControllerMaster.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/init/src/test/resources/application.yml" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/init/src/test/resources/bootstrap.yml" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/init/src/test/resources/data-h2.sql" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/init/src/test/resources/data.sql" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/init/src/test/resources/logback-test.xml" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/init/src/test/resources/schema-h2.sql" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/init/src/test/resources/schema.sql" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/init/src/test/resources/schema_postgres.sql" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/init/src/test/resources/schema_postgres_vas.sql" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/pom.xml" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/priadapter/.classpath" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/priadapter/.factorypath" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/priadapter/.project" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/priadapter/.settings/org.eclipse.core.resources.prefs" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/priadapter/.settings/org.eclipse.jdt.apt.core.prefs" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/priadapter/.settings/org.eclipse.jdt.core.prefs" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/priadapter/.settings/org.eclipse.m2e.core.prefs" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/priadapter/.settings/org.hibernate.eclipse.console.prefs" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/priadapter/.settings/org.springframework.ide.eclipse.prefs" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/priadapter/dependencies.txt" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/priadapter/pom.xml" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/priadapter/src/main/java/__artifactId__/api/adapter/ControllerMaster.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/priadapter/src/main/java/__artifactId__/api/adapter/ControllerMongoMaster.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/priadapter/src/main/java/__artifactId__/api/adapter/ControllerMongoMasterGeneric.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/priadapter/src/main/java/__artifactId__/api/adapter/ControllerMongoPurchaseOrder.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/priadapter/src/main/java/__artifactId__/api/adapter/ControllerMongoPurchaseOrderGeneric.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/priadapter/src/main/java/__artifactId__/api/adapter/ControllerPurchaseOrder.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/priadapter/src/main/java/__artifactId__/api/adapter/ControllerRestCache.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/priadapter/src/main/java/__artifactId__/api/adapter/ControllerUtils.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/priadapter/src/main/java/__artifactId__/api/adapter/CustomRestExceptionHandler.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/priadapter/src/main/java/__artifactId__/api/config/CorsConfig.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/priadapter/src/main/java/__artifactId__/api/config/CustomJdbcAspect.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/priadapter/src/main/java/__artifactId__/api/config/KeyExtractor.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/priadapter/src/main/java/__artifactId__/api/mapper/.gitkeep" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/priadapter/src/main/java/__artifactId__/api/model/response/.gitkeep" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/redis_init.png" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/secadapter/.classpath" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/secadapter/.factorypath" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/secadapter/.project" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/secadapter/.settings/org.eclipse.core.resources.prefs" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/secadapter/.settings/org.eclipse.jdt.apt.core.prefs" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/secadapter/.settings/org.eclipse.jdt.core.prefs" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/secadapter/.settings/org.eclipse.m2e.core.prefs" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/secadapter/.settings/org.hibernate.eclipse.console.prefs" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/secadapter/.settings/org.springframework.ide.eclipse.prefs" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/secadapter/dependencies.txt" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/secadapter/pom.xml" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/secadapter/src/main/java/__artifactId__/repository/.gitkeep" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/secadapter/src/main/java/__artifactId__/repository/extractor/PurchaseOrderListServiceResultSetExtractor.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/secadapter/src/main/java/__artifactId__/repository/extractor/PurchaseOrderServiceResultSetExtractor.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/secadapter/src/main/java/__artifactId__/repository/mongo/audit/AuditEntryDocumentRepositoryImpl.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/secadapter/src/main/java/__artifactId__/repository/mongo/audit/AuditExitDocumentRepositoryImpl.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/secadapter/src/main/java/__artifactId__/repository/mongo/master/CategoryDocumentRepositoryImpl.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/secadapter/src/main/java/__artifactId__/repository/mongo/master/CategoryGenericDocumentRepository.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/secadapter/src/main/java/__artifactId__/repository/mongo/purchase_order/PurchaseOrderDocumentRepositoryImpl.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/secadapter/src/main/java/__artifactId__/repository/mongo/purchase_order/PurchaseOrderGenericDocumentRepository.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/secadapter/src/main/java/__artifactId__/repository/postgres/audit/AuditEntryRepositoryImpl.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/secadapter/src/main/java/__artifactId__/repository/postgres/audit/AuditExitRepositoryImpl.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/secadapter/src/main/java/__artifactId__/repository/postgres/master/CategoryRepositoryImpl.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/secadapter/src/main/java/__artifactId__/repository/postgres/purchase_order/PurchaseOrderRepositoryImpl.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/swagger_init.png" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/update_readme.ps1" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/classes/archetype-resources/update_readme2.sh" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/maven-archiver/pom.properties" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/archetype.properties" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/goal.txt" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/.idea/CoverUsage.xml" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/.idea/checkstyle-idea.xml" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/.idea/git_toolbox_blame.xml" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/.idea/misc.xml" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/CONTRIBUTING.md" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/LICENSE.md" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/README.md" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/application/.classpath" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/application/.factorypath" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/application/.project" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/application/.settings/org.eclipse.core.resources.prefs" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/application/.settings/org.eclipse.jdt.apt.core.prefs" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/application/.settings/org.eclipse.jdt.core.prefs" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/application/.settings/org.eclipse.m2e.core.prefs" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/application/.settings/org.hibernate.eclipse.console.prefs" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/application/.settings/org.springframework.ide.eclipse.prefs" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/application/dependencies.txt" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/application/pom.xml" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/application/src/main/java/it/pkg/application/config/MongoDbInitializer.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/application/src/main/java/it/pkg/application/config/RedisConfig.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/application/src/main/java/it/pkg/application/config/SpringConfig.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/application/src/main/java/it/pkg/application/domain/model/config/primary/DatasourcesPrimaryConfiguration.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/application/src/main/java/it/pkg/application/domain/model/config/secondary/DatasourcesSecondaryConfiguration.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/application/src/main/java/it/pkg/application/domain/model/domain/BaseDocument.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/application/src/main/java/it/pkg/application/domain/model/domain/BaseEntity.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/application/src/main/java/it/pkg/application/domain/model/domain/mongo/GenericDocument.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/application/src/main/java/it/pkg/application/domain/model/domain/mongo/audit/AuditEntryDocument.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/application/src/main/java/it/pkg/application/domain/model/domain/mongo/audit/AuditExitDocument.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/application/src/main/java/it/pkg/application/domain/model/domain/mongo/master/CategoryDocument.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/application/src/main/java/it/pkg/application/domain/model/domain/mongo/master/CategoryGenericDocument.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/application/src/main/java/it/pkg/application/domain/model/domain/mongo/purchase_order/PurchaseOrderDocument.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/application/src/main/java/it/pkg/application/domain/model/domain/mongo/purchase_order/PurchaseOrderGenericDocument.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/application/src/main/java/it/pkg/application/domain/model/domain/mongo/purchase_order/PurchaseOrderLineDocument.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/application/src/main/java/it/pkg/application/domain/model/domain/postgres/MetadataEntity.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/application/src/main/java/it/pkg/application/domain/model/domain/postgres/audit/AuditEntryEntity.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/application/src/main/java/it/pkg/application/domain/model/domain/postgres/audit/AuditExitEntity.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/application/src/main/java/it/pkg/application/domain/model/domain/postgres/master/CategoryEntity.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/application/src/main/java/it/pkg/application/domain/model/domain/postgres/purchase_order/PurchaseOrderEntity.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/application/src/main/java/it/pkg/application/domain/model/domain/postgres/purchase_order/PurchaseOrderLineEntity.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/application/src/main/java/it/pkg/application/domain/model/exception/BadParamsException.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/application/src/main/java/it/pkg/application/domain/model/exception/BaseException.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/application/src/main/java/it/pkg/application/domain/model/exception/CourierConnectionStrategyException.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/application/src/main/java/it/pkg/application/domain/model/exception/EntityMappingException.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/application/src/main/java/it/pkg/application/domain/model/exception/ExceptionCode.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/application/src/main/java/it/pkg/application/domain/model/exception/ExternalServiceException.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/application/src/main/java/it/pkg/application/domain/model/exception/SqlBadExecution.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/application/src/main/java/it/pkg/application/domain/model/util/DbDocuments.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/application/src/main/java/it/pkg/application/domain/model/util/DbTables.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/application/src/main/java/it/pkg/application/domain/ports/primary/.gitkeep" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/application/src/main/java/it/pkg/application/domain/ports/primary/config/AuditEntryFilter.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/application/src/main/java/it/pkg/application/domain/ports/primary/dto/request/CategoryDataDto.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/application/src/main/java/it/pkg/application/domain/ports/primary/dto/request/CategoryDto.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/application/src/main/java/it/pkg/application/domain/ports/primary/dto/request/GenericDto.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/application/src/main/java/it/pkg/application/domain/ports/primary/dto/request/MetadataDto.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/application/src/main/java/it/pkg/application/domain/ports/primary/dto/request/PurchaseOrderDataDto.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/application/src/main/java/it/pkg/application/domain/ports/primary/dto/request/PurchaseOrderDto.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/application/src/main/java/it/pkg/application/domain/ports/primary/dto/request/PurchaseOrderLineDto.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/application/src/main/java/it/pkg/application/domain/ports/primary/dto/request/SearchCriteriaDto.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/application/src/main/java/it/pkg/application/domain/ports/primary/dto/request/pojo/OperatorsFilter.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/application/src/main/java/it/pkg/application/domain/ports/primary/dto/response/controller/ApiExceptionResponseDto.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/application/src/main/java/it/pkg/application/domain/ports/primary/dto/response/controller/ApiResponseDto.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/application/src/main/java/it/pkg/application/domain/ports/primary/dto/response/controller/ExceptionErrorDto.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/application/src/main/java/it/pkg/application/domain/ports/secondary/repository/DocumentMongoSpecification.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/application/src/main/java/it/pkg/application/domain/ports/secondary/repository/EntitySpecification.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/application/src/main/java/it/pkg/application/domain/ports/secondary/repository/MongoCriteriaPageableQuery.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/application/src/main/java/it/pkg/application/domain/ports/secondary/repository/RepositoryUtils.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/application/src/main/java/it/pkg/application/domain/ports/secondary/repository/mongo/GenericDocumentRepository.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/application/src/main/java/it/pkg/application/domain/ports/secondary/repository/mongo/audit/AuditEntryDocumentRepository.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/application/src/main/java/it/pkg/application/domain/ports/secondary/repository/mongo/audit/AuditExitDocumentRepository.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/application/src/main/java/it/pkg/application/domain/ports/secondary/repository/mongo/master/CategoryDocumentRepository.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/application/src/main/java/it/pkg/application/domain/ports/secondary/repository/mongo/purchase_order/PurchaseOrderDocumentRepository.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/application/src/main/java/it/pkg/application/domain/ports/secondary/repository/postgres/audit/AuditEntryRepository.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/application/src/main/java/it/pkg/application/domain/ports/secondary/repository/postgres/audit/AuditExitRepository.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/application/src/main/java/it/pkg/application/domain/ports/secondary/repository/postgres/master/CategoryRepository.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/application/src/main/java/it/pkg/application/domain/ports/secondary/repository/postgres/purchase_order/PurchaseOrderRepository.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/application/src/main/java/it/pkg/application/domain/service/audit/AuditEntryDocumentService.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/application/src/main/java/it/pkg/application/domain/service/audit/AuditEntryService.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/application/src/main/java/it/pkg/application/domain/service/audit/AuditExitDocumentService.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/application/src/main/java/it/pkg/application/domain/service/audit/AuditExitService.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/application/src/main/java/it/pkg/application/domain/service/audit/impl/AuditEntryDocumentServiceImpl.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/application/src/main/java/it/pkg/application/domain/service/audit/impl/AuditEntryServiceImpl.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/application/src/main/java/it/pkg/application/domain/service/audit/impl/AuditExitDocumentServiceImpl.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/application/src/main/java/it/pkg/application/domain/service/audit/impl/AuditExitServiceImpl.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/application/src/main/java/it/pkg/application/domain/service/cache/CacheService.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/application/src/main/java/it/pkg/application/domain/service/cache/impl/CacheServiceImpl.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/application/src/main/java/it/pkg/application/domain/service/exceptions/AdapterException.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/application/src/main/java/it/pkg/application/domain/service/exceptions/BadFormatException.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/application/src/main/java/it/pkg/application/domain/service/exceptions/CriterianException.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/application/src/main/java/it/pkg/application/domain/service/exceptions/DuplicatedItemException.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/application/src/main/java/it/pkg/application/domain/service/exceptions/ExceptionCode.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/application/src/main/java/it/pkg/application/domain/service/exceptions/ItemInUseException.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/application/src/main/java/it/pkg/application/domain/service/exceptions/ItemNotFoundException.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/application/src/main/java/it/pkg/application/domain/service/exceptions/SqlExecutionException.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/application/src/main/java/it/pkg/application/domain/service/exceptions/ValidateJsonException.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/application/src/main/java/it/pkg/application/domain/service/mapper/MasterDtoMapper.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/application/src/main/java/it/pkg/application/domain/service/mapper/MasterDtoMongoMapper.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/application/src/main/java/it/pkg/application/domain/service/mapper/MasterGenericDtoMongoMapper.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/application/src/main/java/it/pkg/application/domain/service/mapper/PurchaseOrderDtoMapper.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/application/src/main/java/it/pkg/application/domain/service/mapper/PurchaseOrderDtoMongoMapper.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/application/src/main/java/it/pkg/application/domain/service/mapper/PurchaseOrderGenericDtoMongoMapper.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/application/src/main/java/it/pkg/application/domain/service/master/MasterGenericMongoService.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/application/src/main/java/it/pkg/application/domain/service/master/MasterMongoService.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/application/src/main/java/it/pkg/application/domain/service/master/MasterService.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/application/src/main/java/it/pkg/application/domain/service/master/impl/MasterGenericMongoServiceImpl.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/application/src/main/java/it/pkg/application/domain/service/master/impl/MasterMongoServiceImpl.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/application/src/main/java/it/pkg/application/domain/service/master/impl/MasterServiceImpl.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/application/src/main/java/it/pkg/application/domain/service/pojo/LogLevel.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/application/src/main/java/it/pkg/application/domain/service/purchase_order/PurchaseOrderGenericMongoService.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/application/src/main/java/it/pkg/application/domain/service/purchase_order/PurchaseOrderMongoService.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/application/src/main/java/it/pkg/application/domain/service/purchase_order/PurchaseOrderService.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/application/src/main/java/it/pkg/application/domain/service/purchase_order/impl/PurchaseOrderGenericMongoServiceImpl.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/application/src/main/java/it/pkg/application/domain/service/purchase_order/impl/PurchaseOrderMongoServiceImpl.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/application/src/main/java/it/pkg/application/domain/service/purchase_order/impl/PurchaseOrderServiceImpl.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/application/src/main/java/it/pkg/application/domain/service/util/CommonUtils.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/application/src/main/java/it/pkg/application/domain/service/util/ConstantsUtils.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/application/src/main/java/it/pkg/application/domain/service/util/DateUtils.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/application/src/main/java/it/pkg/application/domain/service/util/DocumentMongoService.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/application/src/main/java/it/pkg/application/domain/service/util/EntityService.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/application/src/main/java/it/pkg/application/domain/service/util/SearchCriteriaDtoDeserializer.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/application/src/main/java/it/pkg/application/domain/service/util/SearchCriteriaDtoSerializer.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/application/src/main/java/it/pkg/application/domain/service/util/SearchCriteriaGroupDtoDeserializer.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/application/src/main/java/it/pkg/application/domain/service/util/SearchCriteriaGroupDtoSerializer.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/application/src/main/java/it/pkg/application/util/SpringBeanUtil.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/application/src/main/java/it/pkg/application/util/Utils.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/application/src/main/java/it/pkg/application/util/aspect/LogExecution.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/application/src/main/java/it/pkg/application/util/aspect/LogExecutionAspect.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/application/src/main/java/it/pkg/application/util/elastic/LogbackCompatibilityWrapper4ElasticsearchAppender.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/application/src/main/java/it/pkg/application/util/json/JsonValidationSchema.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/application/src/main/java/it/pkg/application/util/redis/CacheLogInterceptor.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/application/src/main/java/it/pkg/application/util/redis/CustomKeyPrefixSerializer.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/checkstyle-suppressions.xml" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/checkstyle.xml" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/dependencies.txt" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/init/.classpath" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/init/.factorypath" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/init/.project" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/init/.settings/org.eclipse.core.resources.prefs" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/init/.settings/org.eclipse.jdt.apt.core.prefs" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/init/.settings/org.eclipse.jdt.core.prefs" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/init/.settings/org.eclipse.m2e.core.prefs" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/init/.settings/org.hibernate.eclipse.console.prefs" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/init/.settings/org.springframework.ide.eclipse.boot.prefs" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/init/.settings/org.springframework.ide.eclipse.prefs" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/init/dependencies.txt" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/init/pom.xml" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/init/src/main/java/it/pkg/init/StartRestApplication.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/init/src/main/resources/application-h2.yml" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/init/src/main/resources/application-local.yml" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/init/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/init/src/main/resources/bootstrap.yml" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/init/src/main/resources/jsonSchema/category.json" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/init/src/main/resources/jsonSchema/purchase_order.json" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/init/src/main/resources/jsonSchema/search_criteria.json" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/init/src/main/resources/logback_conf.xml" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/init/src/main/resources/spy.properties" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/init/src/test/java/it/pkg/priadapter/BaseIntegrationTest.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/init/src/test/java/it/pkg/priadapter/api/adapter/ControllerMaster.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/init/src/test/resources/application.yml" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/init/src/test/resources/bootstrap.yml" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/init/src/test/resources/data-h2.sql" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/init/src/test/resources/data.sql" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/init/src/test/resources/logback-test.xml" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/init/src/test/resources/schema-h2.sql" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/init/src/test/resources/schema.sql" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/init/src/test/resources/schema_postgres.sql" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/init/src/test/resources/schema_postgres_vas.sql" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/pom.xml" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/priadapter/.classpath" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/priadapter/.factorypath" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/priadapter/.project" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/priadapter/.settings/org.eclipse.core.resources.prefs" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/priadapter/.settings/org.eclipse.jdt.apt.core.prefs" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/priadapter/.settings/org.eclipse.jdt.core.prefs" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/priadapter/.settings/org.eclipse.m2e.core.prefs" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/priadapter/.settings/org.hibernate.eclipse.console.prefs" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/priadapter/.settings/org.springframework.ide.eclipse.prefs" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/priadapter/dependencies.txt" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/priadapter/pom.xml" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/priadapter/src/main/java/it/pkg/priadapter/api/adapter/ControllerMaster.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/priadapter/src/main/java/it/pkg/priadapter/api/adapter/ControllerMongoMaster.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/priadapter/src/main/java/it/pkg/priadapter/api/adapter/ControllerMongoMasterGeneric.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/priadapter/src/main/java/it/pkg/priadapter/api/adapter/ControllerMongoPurchaseOrder.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/priadapter/src/main/java/it/pkg/priadapter/api/adapter/ControllerMongoPurchaseOrderGeneric.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/priadapter/src/main/java/it/pkg/priadapter/api/adapter/ControllerPurchaseOrder.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/priadapter/src/main/java/it/pkg/priadapter/api/adapter/ControllerRestCache.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/priadapter/src/main/java/it/pkg/priadapter/api/adapter/ControllerUtils.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/priadapter/src/main/java/it/pkg/priadapter/api/adapter/CustomRestExceptionHandler.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/priadapter/src/main/java/it/pkg/priadapter/api/config/CorsConfig.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/priadapter/src/main/java/it/pkg/priadapter/api/config/CustomJdbcAspect.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/priadapter/src/main/java/it/pkg/priadapter/api/config/KeyExtractor.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/priadapter/src/main/java/it/pkg/priadapter/api/mapper/.gitkeep" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/priadapter/src/main/java/it/pkg/priadapter/api/model/response/.gitkeep" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/redis_init.png" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/secadapter/.classpath" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/secadapter/.factorypath" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/secadapter/.project" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/secadapter/.settings/org.eclipse.core.resources.prefs" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/secadapter/.settings/org.eclipse.jdt.apt.core.prefs" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/secadapter/.settings/org.eclipse.jdt.core.prefs" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/secadapter/.settings/org.eclipse.m2e.core.prefs" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/secadapter/.settings/org.hibernate.eclipse.console.prefs" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/secadapter/.settings/org.springframework.ide.eclipse.prefs" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/secadapter/dependencies.txt" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/secadapter/pom.xml" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/secadapter/src/main/java/it/pkg/secadapter/repository/.gitkeep" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/secadapter/src/main/java/it/pkg/secadapter/repository/extractor/PurchaseOrderListServiceResultSetExtractor.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/secadapter/src/main/java/it/pkg/secadapter/repository/extractor/PurchaseOrderServiceResultSetExtractor.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/secadapter/src/main/java/it/pkg/secadapter/repository/mongo/audit/AuditEntryDocumentRepositoryImpl.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/secadapter/src/main/java/it/pkg/secadapter/repository/mongo/audit/AuditExitDocumentRepositoryImpl.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/secadapter/src/main/java/it/pkg/secadapter/repository/mongo/master/CategoryDocumentRepositoryImpl.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/secadapter/src/main/java/it/pkg/secadapter/repository/mongo/master/CategoryGenericDocumentRepository.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/secadapter/src/main/java/it/pkg/secadapter/repository/mongo/purchase_order/PurchaseOrderDocumentRepositoryImpl.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/secadapter/src/main/java/it/pkg/secadapter/repository/mongo/purchase_order/PurchaseOrderGenericDocumentRepository.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/secadapter/src/main/java/it/pkg/secadapter/repository/postgres/audit/AuditEntryRepositoryImpl.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/secadapter/src/main/java/it/pkg/secadapter/repository/postgres/audit/AuditExitRepositoryImpl.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/secadapter/src/main/java/it/pkg/secadapter/repository/postgres/master/CategoryRepositoryImpl.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/secadapter/src/main/java/it/pkg/secadapter/repository/postgres/purchase_order/PurchaseOrderRepositoryImpl.java" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/swagger_init.png" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/update_readme.ps1" afterDir="false" />
+      <change afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/target/generated-sources/archetype/target/test-classes/projects/basic/project/basic/update_readme2.sh" afterDir="false" />
+      <change beforePath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/README.md" beforeDir="false" afterPath="${symbol_dollar}PROJECT_DIR${symbol_dollar}/README.md" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="package-info" />
+        <option value="JUnit5 &amp; Mockito" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="${symbol_dollar}PROJECT_DIR${symbol_dollar}" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="customMavenHome" value="Z:${symbol_escape}SW${symbol_escape}apache-maven-3.9.9" />
+        <option name="mavenHomeTypeForPersistence" value="CUSTOM" />
+        <option name="useMavenConfig" value="false" />
+        <option name="userSettingsFile" value="Z:${symbol_escape}SW${symbol_escape}apache-maven-3.9.9${symbol_escape}conf${symbol_escape}settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="MavenRunner">
+    <option name="jreName" value="22" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
+  <component name="ProjectId" id="2lKszlPXx0QnMPd5JA3EYtWNzm3" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="true" />
+    <option name="flattenModules" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Application.StartRestApplication (1).executor": "Run",
+    "Application.StartRestApplication.executor": "Debug",
+    "Application.StartRestApplication_1.executor": "Debug",
+    "Application.StartRestApplication_2.executor": "Run",
+    "JUnit.ControllerMaster.executor": "Run",
+    "JUnit.ControllerMaster.getAllCategory.executor": "Debug",
+    "JUnit.ControllerMaster.getAllCategory_WhenServiceThrowsException_ThenReturns500.executor": "Run",
+    "JUnit.ControllerMaster2.getAllCategory.executor": "Run",
+    "JUnit.JsonValidationSchemaTest.testLoadSchemas.executor": "Debug",
+    "JUnit.JsonValidationSchemaTest.testValidateJson.executor": "Debug",
+    "JUnit.JsonValidationSchemaTest2.validateJson_validJson_noExceptionThrown.executor": "Debug",
+    "JUnit.JsonValidationSchemaUnitTest.executor": "Run",
+    "JUnit.JsonValidationSchemaUnitTest.validateJson_invalidJson_throwsValidateJsonException.executor": "Debug",
+    "JUnit.JsonValidationSchemaUnitTest.validateJson_validJson_noExceptionThrown.executor": "Debug",
+    "JUnit.UtilsTest.executor": "Run",
+    "JUnit.UtilsTest.testGetValidationErrors.executor": "Run",
+    "JUnit.UtilsTest.testGetValidationErrorsSingleViolation.executor": "Run",
+    "JUnit.UtilsTest.testJoinDateTime.executor": "Run",
+    "Maven.${artifactId} [archetype:${artifactId}].executor": "Run",
+    "Maven.${artifactId} [archetype:create-from-project].executor": "Run",
+    "Maven.${artifactId} [clean,install].executor": "Run",
+    "Maven.archetype-logistic-api [clean,install].executor": "Run",
+    "Maven.vas-back [clean,install].executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "Z:/workspace/Github-Mdr1983/${artifactId}/secadapter/src/main/java/${packageInPathFormat}/secadapter/repository/mongo/audit",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.28780934",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "preferences.TestMe.templates"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="Z:${symbol_escape}workspace${symbol_escape}Github-Mdr1983${symbol_escape}${artifactId}${symbol_escape}secadapter${symbol_escape}src${symbol_escape}main${symbol_escape}java${symbol_escape}com${symbol_escape}mdemanuel${symbol_escape}secadapter${symbol_escape}repository${symbol_escape}mongo${symbol_escape}audit" />
+      <recent name="Z:${symbol_escape}workspace${symbol_escape}Github-Mdr1983${symbol_escape}${artifactId}${symbol_escape}secadapter${symbol_escape}src${symbol_escape}main${symbol_escape}java${symbol_escape}com${symbol_escape}mdemanuel${symbol_escape}secadapter${symbol_escape}repository${symbol_escape}purchase_order" />
+      <recent name="Z:${symbol_escape}workspace${symbol_escape}Github-Mdr1983${symbol_escape}${artifactId}${symbol_escape}secadapter${symbol_escape}src${symbol_escape}main${symbol_escape}java${symbol_escape}com${symbol_escape}mdemanuel${symbol_escape}secadapter${symbol_escape}repository${symbol_escape}postgres${symbol_escape}audit" />
+      <recent name="Z:${symbol_escape}workspace${symbol_escape}Github-Mdr1983${symbol_escape}${artifactId}${symbol_escape}secadapter${symbol_escape}src${symbol_escape}main${symbol_escape}java${symbol_escape}com${symbol_escape}mdemanuel${symbol_escape}secadapter${symbol_escape}repository${symbol_escape}mongo${symbol_escape}purchase_order" />
+      <recent name="Z:${symbol_escape}workspace${symbol_escape}Github-Mdr1983${symbol_escape}${artifactId}${symbol_escape}secadapter${symbol_escape}src${symbol_escape}main${symbol_escape}java${symbol_escape}com${symbol_escape}mdemanuel${symbol_escape}secadapter${symbol_escape}repository${symbol_escape}mongo${symbol_escape}master" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="${package}.application.util" />
+      <recent name="${package}.priadapter" />
+      <recent name="${package}.vas_back.application.domain.ports.secondary.repository.vas" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="${package}.secadapter.repository.mongo.purchase_order" />
+      <recent name="${package}.secadapter.repository.mongo.master" />
+      <recent name="${package}.secadapter.repository.extractor" />
+      <recent name="${package}.secadapter.repository.postgres.master" />
+      <recent name="${package}.priadapter.api.adapter" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Maven.${artifactId} [archetype:create-from-project]">
+    <configuration name="StartRestApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <envs>
+        <env name="PROFILE" value="local" />
+      </envs>
+      <option name="MAIN_CLASS_NAME" value="${package}.init.StartRestApplication" />
+      <module name="init" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="${package}.init.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ControllerMaster2.getAllCategory" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="init" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="${package}.priadapter.api.adapter.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="${package}.priadapter.api.adapter" />
+      <option name="MAIN_CLASS_NAME" value="${package}.priadapter.api.adapter.ControllerMaster2" />
+      <option name="METHOD_NAME" value="getAllCategory" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ControllerMaster.getAllCategory" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="init" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="${package}.priadapter.api.adapter.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="${package}.priadapter.api.adapter" />
+      <option name="MAIN_CLASS_NAME" value="${package}.priadapter.api.adapter.ControllerMaster" />
+      <option name="METHOD_NAME" value="getAllCategory" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="JsonValidationSchemaUnitTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="init" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="${package}.application.util.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="${package}.application.util" />
+      <option name="MAIN_CLASS_NAME" value="${package}.application.util.JsonValidationSchemaUnitTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="JsonValidationSchemaUnitTest.validateJson_invalidJson_throwsValidateJsonException" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="init" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="${package}.application.util.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="${package}.application.util" />
+      <option name="MAIN_CLASS_NAME" value="${package}.application.util.JsonValidationSchemaUnitTest" />
+      <option name="METHOD_NAME" value="validateJson_invalidJson_throwsValidateJsonException" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="archetype-logistic-api" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="archetype-logistic-api" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="${artifactId} [archetype:create-from-project]" type="MavenRunConfiguration" factoryName="Maven" nameIsGenerated="true">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="cmdOptions" />
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="archetype:create-from-project" />
+              </list>
+            </option>
+            <option name="multimoduleDir" />
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="projectsCmdOptionValues">
+              <list />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="${symbol_dollar}PROJECT_DIR${symbol_dollar}" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
+    <configuration name="${artifactId} [clean,install]" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="cmdOptions" />
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="clean" />
+                <option value="install" />
+              </list>
+            </option>
+            <option name="multimoduleDir" />
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="projectsCmdOptionValues">
+              <list />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="${symbol_dollar}PROJECT_DIR${symbol_dollar}" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Application.StartRestApplication" />
+      <item itemvalue="JUnit.ControllerMaster.getAllCategory" />
+      <item itemvalue="JUnit.ControllerMaster2.getAllCategory" />
+      <item itemvalue="JUnit.JsonValidationSchemaUnitTest" />
+      <item itemvalue="JUnit.JsonValidationSchemaUnitTest.validateJson_invalidJson_throwsValidateJsonException" />
+      <item itemvalue="Maven.${artifactId} [archetype:create-from-project]" />
+      <item itemvalue="Maven.${artifactId} [clean,install]" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.StartRestApplication" />
+        <item itemvalue="JUnit.ControllerMaster2.getAllCategory" />
+        <item itemvalue="JUnit.ControllerMaster.getAllCategory" />
+        <item itemvalue="JUnit.JsonValidationSchemaUnitTest.validateJson_invalidJson_throwsValidateJsonException" />
+        <item itemvalue="JUnit.JsonValidationSchemaUnitTest" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9227da5b-6ced-443e-b3ab-e63b6fdc4ee0" name="Changes" comment="" />
+      <created>1724940366522</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1724940366522</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://${symbol_dollar}PROJECT_DIR${symbol_dollar}/init/src/test/java/${packageInPathFormat}/priadapter/api/adapter/ControllerMaster.java</url>
+          <line>29</line>
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://${symbol_dollar}PROJECT_DIR${symbol_dollar}/application/src/main/java/${packageInPathFormat}/application/domain/service/purchase_order/impl/PurchaseOrderServiceImpl.java</url>
+          <line>68</line>
+          <option name="timeStamp" value="34" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://${symbol_dollar}PROJECT_DIR${symbol_dollar}/secadapter/src/main/java/${packageInPathFormat}/secadapter/repository/postgres/purchase_order/PurchaseOrderRepositoryImpl.java</url>
+          <line>182</line>
+          <option name="timeStamp" value="46" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="${package}.application.domain.ports.primary.dto.request.GenericDto" memberName="metadata" />
+      </pinned-members>
+    </pin-to-top-manager>
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="query" language="JAVA" />
+      </configuration>
+    </watches-manager>
+  </component>
+</project>

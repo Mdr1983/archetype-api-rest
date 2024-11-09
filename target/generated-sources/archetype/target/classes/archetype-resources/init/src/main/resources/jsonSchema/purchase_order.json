@@ -1,0 +1,54 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "metadata": {
+      "type": "object",
+      "properties": {
+        "executedBy": {
+          "type": "string"
+        }
+      },
+      "required": ["executedBy"],
+      "additionalProperties": false
+    },
+    "data": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "string"
+        },
+        "purchaseOrderDate": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "purchaseOrderLines": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "item": {
+                "type": "string"
+              },
+              "description": {
+                "type": "string"
+              },
+              "categoryCode": {
+                "type": "string"
+              },
+              "quantity": {
+                "type": "integer"
+              }
+            },
+            "required": ["item", "description", "categoryCode", "quantity"],
+            "additionalProperties": false
+          }
+        }
+      },
+      "required": ["code", "purchaseOrderDate", "purchaseOrderLines"],
+      "additionalProperties": false
+    }
+  },
+  "required": ["metadata", "data"],
+  "additionalProperties": false
+}

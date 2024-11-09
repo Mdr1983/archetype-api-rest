@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="ANALYZE_INJECTED_CODE" value="false" />
+  </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="9227da5b-6ced-443e-b3ab-e63b6fdc4ee0" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="package-info" />
+        <option value="JUnit5 &amp; Mockito" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="customMavenHome" value="Z:\SW\apache-maven-3.9.9" />
+        <option name="mavenHomeTypeForPersistence" value="CUSTOM" />
+        <option name="useMavenConfig" value="false" />
+        <option name="userSettingsFile" value="Z:\SW\apache-maven-3.9.9\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="MavenRunner">
+    <option name="jreName" value="22" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
+  <component name="ProjectId" id="2lKszlPXx0QnMPd5JA3EYtWNzm3" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="true" />
+    <option name="flattenModules" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Application.StartRestApplication (1).executor": "Run",
+    "Application.StartRestApplication.executor": "Debug",
+    "Application.StartRestApplication_1.executor": "Debug",
+    "Application.StartRestApplication_2.executor": "Run",
+    "JUnit.ControllerMaster.executor": "Run",
+    "JUnit.ControllerMaster.getAllCategory.executor": "Debug",
+    "JUnit.ControllerMaster.getAllCategory_WhenServiceThrowsException_ThenReturns500.executor": "Run",
+    "JUnit.ControllerMaster2.getAllCategory.executor": "Run",
+    "JUnit.JsonValidationSchemaTest.testLoadSchemas.executor": "Debug",
+    "JUnit.JsonValidationSchemaTest.testValidateJson.executor": "Debug",
+    "JUnit.JsonValidationSchemaTest2.validateJson_validJson_noExceptionThrown.executor": "Debug",
+    "JUnit.JsonValidationSchemaUnitTest.executor": "Run",
+    "JUnit.JsonValidationSchemaUnitTest.validateJson_invalidJson_throwsValidateJsonException.executor": "Debug",
+    "JUnit.JsonValidationSchemaUnitTest.validateJson_validJson_noExceptionThrown.executor": "Debug",
+    "JUnit.UtilsTest.executor": "Run",
+    "JUnit.UtilsTest.testGetValidationErrors.executor": "Run",
+    "JUnit.UtilsTest.testGetValidationErrorsSingleViolation.executor": "Run",
+    "JUnit.UtilsTest.testJoinDateTime.executor": "Run",
+    "Maven.basic [archetype:basic].executor": "Run",
+    "Maven.basic [clean,install].executor": "Run",
+    "Maven.archetype-logistic-api [clean,install].executor": "Run",
+    "Maven.vas-back [clean,install].executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "Z:/workspace/Github-Mdr1983/basic/secadapter/src/main/java/it/pkg/secadapter/repository/mongo/audit",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.28780934",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "preferences.TestMe.templates"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="Z:\workspace\Github-Mdr1983\basic\secadapter\src\main\java\com\mdemanuel\secadapter\repository\mongo\audit" />
+      <recent name="Z:\workspace\Github-Mdr1983\basic\secadapter\src\main\java\com\mdemanuel\secadapter\repository\purchase_order" />
+      <recent name="Z:\workspace\Github-Mdr1983\basic\secadapter\src\main\java\com\mdemanuel\secadapter\repository\postgres\audit" />
+      <recent name="Z:\workspace\Github-Mdr1983\basic\secadapter\src\main\java\com\mdemanuel\secadapter\repository\mongo\purchase_order" />
+      <recent name="Z:\workspace\Github-Mdr1983\basic\secadapter\src\main\java\com\mdemanuel\secadapter\repository\mongo\master" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="it.pkg.application.util" />
+      <recent name="it.pkg.priadapter" />
+      <recent name="it.pkg.vas_back.application.domain.ports.secondary.repository.vas" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="it.pkg.secadapter.repository.mongo.purchase_order" />
+      <recent name="it.pkg.secadapter.repository.mongo.master" />
+      <recent name="it.pkg.secadapter.repository.extractor" />
+      <recent name="it.pkg.secadapter.repository.postgres.master" />
+      <recent name="it.pkg.priadapter.api.adapter" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Maven.basic [archetype:create-from-project]">
+    <configuration name="StartRestApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <envs>
+        <env name="PROFILE" value="local" />
+      </envs>
+      <option name="MAIN_CLASS_NAME" value="it.pkg.init.StartRestApplication" />
+      <module name="init" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="it.pkg.init.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ControllerMaster2.getAllCategory" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="init" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="it.pkg.priadapter.api.adapter.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="it.pkg.priadapter.api.adapter" />
+      <option name="MAIN_CLASS_NAME" value="it.pkg.priadapter.api.adapter.ControllerMaster2" />
+      <option name="METHOD_NAME" value="getAllCategory" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ControllerMaster.getAllCategory" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="init" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="it.pkg.priadapter.api.adapter.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="it.pkg.priadapter.api.adapter" />
+      <option name="MAIN_CLASS_NAME" value="it.pkg.priadapter.api.adapter.ControllerMaster" />
+      <option name="METHOD_NAME" value="getAllCategory" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="JsonValidationSchemaUnitTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="init" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="it.pkg.application.util.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="it.pkg.application.util" />
+      <option name="MAIN_CLASS_NAME" value="it.pkg.application.util.JsonValidationSchemaUnitTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="JsonValidationSchemaUnitTest.validateJson_invalidJson_throwsValidateJsonException" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="init" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="it.pkg.application.util.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="it.pkg.application.util" />
+      <option name="MAIN_CLASS_NAME" value="it.pkg.application.util.JsonValidationSchemaUnitTest" />
+      <option name="METHOD_NAME" value="validateJson_invalidJson_throwsValidateJsonException" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="archetype-logistic-api" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="archetype-logistic-api" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="basic [archetype:create-from-project]" type="MavenRunConfiguration" factoryName="Maven" nameIsGenerated="true">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="cmdOptions" />
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="archetype:create-from-project" />
+              </list>
+            </option>
+            <option name="multimoduleDir" />
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="projectsCmdOptionValues">
+              <list />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
+    <configuration name="basic [clean,install]" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="cmdOptions" />
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="clean" />
+                <option value="install" />
+              </list>
+            </option>
+            <option name="multimoduleDir" />
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="projectsCmdOptionValues">
+              <list />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Application.StartRestApplication" />
+      <item itemvalue="JUnit.ControllerMaster.getAllCategory" />
+      <item itemvalue="JUnit.ControllerMaster2.getAllCategory" />
+      <item itemvalue="JUnit.JsonValidationSchemaUnitTest" />
+      <item itemvalue="JUnit.JsonValidationSchemaUnitTest.validateJson_invalidJson_throwsValidateJsonException" />
+      <item itemvalue="Maven.basic [archetype:create-from-project]" />
+      <item itemvalue="Maven.basic [clean,install]" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.StartRestApplication" />
+        <item itemvalue="JUnit.ControllerMaster2.getAllCategory" />
+        <item itemvalue="JUnit.ControllerMaster.getAllCategory" />
+        <item itemvalue="JUnit.JsonValidationSchemaUnitTest.validateJson_invalidJson_throwsValidateJsonException" />
+        <item itemvalue="JUnit.JsonValidationSchemaUnitTest" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9227da5b-6ced-443e-b3ab-e63b6fdc4ee0" name="Changes" comment="" />
+      <created>1724940366522</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1724940366522</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/init/src/test/java/it/pkg/priadapter/api/adapter/ControllerMaster.java</url>
+          <line>29</line>
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/application/src/main/java/it/pkg/application/domain/service/purchase_order/impl/PurchaseOrderServiceImpl.java</url>
+          <line>68</line>
+          <option name="timeStamp" value="34" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/secadapter/src/main/java/it/pkg/secadapter/repository/postgres/purchase_order/PurchaseOrderRepositoryImpl.java</url>
+          <line>182</line>
+          <option name="timeStamp" value="46" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="it.pkg.application.domain.ports.primary.dto.request.GenericDto" memberName="metadata" />
+      </pinned-members>
+    </pin-to-top-manager>
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="query" language="JAVA" />
+      </configuration>
+    </watches-manager>
+  </component>
+</project>

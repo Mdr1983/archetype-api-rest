@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: archetype-api-rest
+  #cloud:
+    #config:
+      #failFast: true
+      #enabled: true
+      #name: ${spring.application.name}
+      #profile: ${PROFILE}
+      #uri: ${SCCS}
+      #server:
+        #git:
+          #search-paths: config
+logging:
+  #config: ${SCCS}/sccs/${spring.application.name}/${PROFILE}/master/base_logback.xml
+  config: classpath:logback_conf.xml
+

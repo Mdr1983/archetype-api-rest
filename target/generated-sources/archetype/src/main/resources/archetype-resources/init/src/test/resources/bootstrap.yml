@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: archetype-api-rest
+cloud:
+  config:
+    failFast: true
+    enabled: false

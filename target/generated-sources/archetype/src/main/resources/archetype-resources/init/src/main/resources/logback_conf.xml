@@ -1,0 +1,110 @@
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
+<configuration>
+  <property name="url-elastic" value="http://localhost:9200/_bulk"/>
+
+  <property resource="application.yml"/>
+
+  <springProperty scope="context" name="appName" source="spring.application.name" defaultValue="name_default"/>
+  <springProperty scope="context" name="appVersion" source="app.version" defaultValue="0.0.0"/>
+  <springProperty scope="context" name="profile" source="spring.profiles.active" defaultValue="local"/>
+
+  <logger name="org" level="WARN"/>
+  <logger name="_org" level="WARN"/>
+  <logger name="org.springframework.cache" level="DEBUG"/>
+  <logger name="sun.net.www.protocol.http.HttpURLConnection" level="INFO"/>
+  <logger name="brave.Tracer" level="INFO"/>
+  <logger name="com.zaxxer.hikari.pool.HikariPool" level="INFO"/>
+  <logger name="io.lettuce" level="INFO"/>
+
+  <appender name="ELASTIC" class="${package}.application.util.elastic.LogbackCompatibilityWrapper4ElasticsearchAppender">
+    <url>${symbol_dollar}{url-elastic}</url>
+    <index>${symbol_dollar}{appName}</index>
+    <loggerName>es-logger</loggerName> <!-- optional -->
+    <errorLoggerName>es-error-logger</errorLoggerName> <!-- optional -->
+    <connectTimeout>30000</connectTimeout> <!-- optional (in ms, default 30000) -->
+    <readTimeout>30000</readTimeout> <!-- optional (in ms, default 30000) -->
+    <maxRetries>3</maxRetries> <!-- optional (default 3) -->
+    <sleepTime>250</sleepTime> <!-- optional (in ms, default 250) -->
+    <errorsToStderr>false</errorsToStderr> <!-- optional (default false) -->
+    <includeCallerData>false</includeCallerData> <!-- optional (default false) -->
+    <logsToStderr>false</logsToStderr> <!-- optional (default false) -->
+    <maxQueueSize>104857600</maxQueueSize> <!-- optional (default 104857600) -->
+    <rawJsonMessage>false</rawJsonMessage> <!-- optional (default false) -->
+    <includeMdc>true</includeMdc> <!-- optional (default false) -->
+    <maxMessageSize>-1</maxMessageSize> <!-- optional (default -1 -->
+    <attributes>
+      <attribute>
+        <name>host</name>
+        <value>${symbol_dollar}{HOSTNAME}</value>
+        <allowEmpty>false</allowEmpty>
+      </attribute>
+      <attribute>
+        <name>app</name>
+        <value>${symbol_dollar}{appName}</value>
+        <allowEmpty>false</allowEmpty>
+      </attribute>
+      <attribute>
+        <name>app-version</name>
+        <value>${symbol_dollar}{appVersion}</value>
+        <allowEmpty>false</allowEmpty>
+      </attribute>
+      <attribute>
+        <name>logger</name>
+        <value>%logger</value>
+      </attribute>
+      <attribute>
+        <name>level</name>
+        <value>%level</value>
+      </attribute>
+      <attribute>
+        <name>SpanId</name>
+        <value>%X{SpanId}</value>
+      </attribute>
+      <attribute>
+        <name>TraceId</name>
+        <value>%X{TraceId}</value>
+      </attribute>
+      <attribute>
+        <name>stacktrace</name>
+        <value>%ex</value>
+      </attribute>
+    </attributes>
+    <headers>
+      <header>
+        <name>Content-Type</name>
+        <value>application/json</value>
+      </header>
+    </headers>
+  </appender>
+
+  <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+    <layout class="ch.qos.logback.classic.PatternLayout">
+      <Pattern>
+        %d{HH:mm:ss.SSS} [%t][%X] %-5level %logger{36} - %msg%n
+      </Pattern>
+    </layout>
+  </appender>
+
+  <logger name="es-error-logger" level="ERROR" additivity="false">
+    <appender-ref ref="CONSOLE"/>
+  </logger>
+
+  <logger name="es-logger" level="INFO" additivity="false">
+    <appender-ref ref="ELASTIC"/>
+  </logger>
+
+  <if condition='property("profile") == "test" || property("profile") == "h2"'>
+    <then>
+      <root level="INFO">
+        <appender-ref ref="CONSOLE"/>
+      </root>
+    </then>
+    <else>
+      <root level="INFO">
+        <appender-ref ref="ELASTIC"/>
+      </root>
+    </else>
+  </if>
+</configuration>
