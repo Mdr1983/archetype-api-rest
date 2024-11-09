@@ -12,7 +12,7 @@
   <artifactId>application</artifactId>
   <name>${project.groupId}.${project.artifactId}</name>
   <packaging>${packaging.type}</packaging>
-  <description>Módulo Core Api Arquetipo Logística</description>
+  <description>Módulo application del Arquetipo API REST</description>
 
   <dependencies>
     <dependency>

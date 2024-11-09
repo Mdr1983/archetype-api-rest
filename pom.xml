@@ -14,7 +14,7 @@
   <artifactId>archetype-api-rest</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <name>archetype-api-rest</name>
-  <description>Arquetipo de logística con API REST</description>
+  <description>Arquetipo con API REST</description>
 
   <packaging>pom</packaging>
 

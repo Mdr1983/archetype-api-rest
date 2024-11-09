@@ -13,7 +13,7 @@
   <artifactId>priadapter</artifactId>
   <name>${project.groupId}.${project.artifactId}</name>
   <packaging>${packaging.type}</packaging>
-  <description>Módulo para los adaptadores primarios</description>
+  <description>Módulo Priadapter del Arquetipo API REST</description>
 
   <dependencies>
     <dependency>

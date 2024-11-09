@@ -13,7 +13,7 @@
   <artifactId>init</artifactId>
   <name>${project.groupId}.${project.artifactId}</name>
   <packaging>${packaging.type}</packaging>
-  <description>Módulo Spring boot para Api Arquetipo Logística</description>
+  <description>Módulo Init del Arquetipo API REST</description>
 
   <dependencies>
     <dependency>
