@@ -10,7 +10,7 @@
   <artifactId>secadapter</artifactId>
   <name>${project.groupId}.${project.artifactId}</name>
   <packaging>${packaging.type}</packaging>
-  <description>Módulo Secadapter del Arquetipo API REST</description>
+  <description>Módulo Secadaptermvn  del Arquetipo API REST</description>
 
   <dependencies>
     <dependency>
