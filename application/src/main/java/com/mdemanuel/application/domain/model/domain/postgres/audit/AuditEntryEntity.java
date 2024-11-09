@@ -4,7 +4,6 @@ import com.mdemanuel.application.domain.model.domain.BaseEntity;
 import com.mdemanuel.application.domain.model.util.DbTables;
 import com.vladmihalcea.hibernate.type.json.JsonBinaryType;
 import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;

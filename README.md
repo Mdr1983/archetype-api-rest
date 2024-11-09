@@ -20,8 +20,7 @@ graph TD;
 ## Dependencias
 
 ```
-<!-- DEPENDENCIES_START -->
-<!-- DEPENDENCIES_START -->
+Revisar fichero dependecies.txt
 ```
 
 ## Comenzando 🚀

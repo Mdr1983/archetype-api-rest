@@ -1,4 +1,4 @@
-#Fri Nov 08 18:24:06 CET 2024
+#Sat Nov 09 12:10:30 CET 2024
 Z\:\\workspace\\Github-Mdr1983\\archetype-api-rest\\application\\src\\main\\java\\com\\mdemanuel\\application\\config\\MongoDbInitializer.java=1730236968720
 Z\:\\workspace\\Github-Mdr1983\\archetype-api-rest\\application\\src\\main\\java\\com\\mdemanuel\\application\\config\\RedisConfig.java=1729866591668
 Z\:\\workspace\\Github-Mdr1983\\archetype-api-rest\\application\\src\\main\\java\\com\\mdemanuel\\application\\config\\SpringConfig.java=1730073943180
@@ -15,7 +15,7 @@ Z\:\\workspace\\Github-Mdr1983\\archetype-api-rest\\application\\src\\main\\java
 Z\:\\workspace\\Github-Mdr1983\\archetype-api-rest\\application\\src\\main\\java\\com\\mdemanuel\\application\\domain\\model\\domain\\mongo\\purchase_order\\PurchaseOrderGenericDocument.java=1730104293072
 Z\:\\workspace\\Github-Mdr1983\\archetype-api-rest\\application\\src\\main\\java\\com\\mdemanuel\\application\\domain\\model\\domain\\mongo\\purchase_order\\PurchaseOrderLineDocument.java=1730468140621
 Z\:\\workspace\\Github-Mdr1983\\archetype-api-rest\\application\\src\\main\\java\\com\\mdemanuel\\application\\domain\\model\\domain\\postgres\\MetadataEntity.java=1730123450976
-Z\:\\workspace\\Github-Mdr1983\\archetype-api-rest\\application\\src\\main\\java\\com\\mdemanuel\\application\\domain\\model\\domain\\postgres\\audit\\AuditEntryEntity.java=1731080257990
+Z\:\\workspace\\Github-Mdr1983\\archetype-api-rest\\application\\src\\main\\java\\com\\mdemanuel\\application\\domain\\model\\domain\\postgres\\audit\\AuditEntryEntity.java=1731150498577
 Z\:\\workspace\\Github-Mdr1983\\archetype-api-rest\\application\\src\\main\\java\\com\\mdemanuel\\application\\domain\\model\\domain\\postgres\\audit\\AuditExitEntity.java=1731080265093
 Z\:\\workspace\\Github-Mdr1983\\archetype-api-rest\\application\\src\\main\\java\\com\\mdemanuel\\application\\domain\\model\\domain\\postgres\\master\\CategoryEntity.java=1731080271566
 Z\:\\workspace\\Github-Mdr1983\\archetype-api-rest\\application\\src\\main\\java\\com\\mdemanuel\\application\\domain\\model\\domain\\postgres\\purchase_order\\PurchaseOrderEntity.java=1731080869157
@@ -46,7 +46,7 @@ Z\:\\workspace\\Github-Mdr1983\\archetype-api-rest\\application\\src\\main\\java
 Z\:\\workspace\\Github-Mdr1983\\archetype-api-rest\\application\\src\\main\\java\\com\\mdemanuel\\application\\domain\\ports\\secondary\\repository\\EntitySpecification.java=1729928018295
 Z\:\\workspace\\Github-Mdr1983\\archetype-api-rest\\application\\src\\main\\java\\com\\mdemanuel\\application\\domain\\ports\\secondary\\repository\\MongoCriteriaPageableQuery.java=1730232784372
 Z\:\\workspace\\Github-Mdr1983\\archetype-api-rest\\application\\src\\main\\java\\com\\mdemanuel\\application\\domain\\ports\\secondary\\repository\\RepositoryUtils.java=1729264160196
-Z\:\\workspace\\Github-Mdr1983\\archetype-api-rest\\application\\src\\main\\java\\com\\mdemanuel\\application\\domain\\ports\\secondary\\repository\\mongo\\GenericDocumentRepository.java=1731086622445
+Z\:\\workspace\\Github-Mdr1983\\archetype-api-rest\\application\\src\\main\\java\\com\\mdemanuel\\application\\domain\\ports\\secondary\\repository\\mongo\\GenericDocumentRepository.java=1731087783065
 Z\:\\workspace\\Github-Mdr1983\\archetype-api-rest\\application\\src\\main\\java\\com\\mdemanuel\\application\\domain\\ports\\secondary\\repository\\mongo\\audit\\AuditEntryDocumentRepository.java=1731083749999
 Z\:\\workspace\\Github-Mdr1983\\archetype-api-rest\\application\\src\\main\\java\\com\\mdemanuel\\application\\domain\\ports\\secondary\\repository\\mongo\\audit\\AuditExitDocumentRepository.java=1731083771639
 Z\:\\workspace\\Github-Mdr1983\\archetype-api-rest\\application\\src\\main\\java\\com\\mdemanuel\\application\\domain\\ports\\secondary\\repository\\mongo\\master\\CategoryDocumentRepository.java=1731084591601
