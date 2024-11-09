@@ -18,7 +18,7 @@ import org.springframework.test.context.junit.jupiter.SpringExtension;
 @SpringBootTest(classes = StartRestApplication.class)
 @ActiveProfiles({"test"})
 @EntityScan(basePackages = {
-    "com.byl.mdemanuel.application.domain"
+    "com.mdemanuel.application.domain"
 })
 //@AutoConfigureWireMock(port = 0, files = {"classpath:/wiremock/"})
 public class BaseIntegrationTest {
