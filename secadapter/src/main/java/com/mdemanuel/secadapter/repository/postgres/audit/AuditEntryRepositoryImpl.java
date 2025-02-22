@@ -1,5 +1,6 @@
 package com.mdemanuel.secadapter.repository.postgres.audit;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.mdemanuel.application.domain.model.domain.postgres.audit.AuditEntryEntity;
 import com.mdemanuel.application.domain.ports.secondary.repository.postgres.audit.AuditEntryRepository;
 import java.sql.Types;
@@ -16,6 +17,9 @@ import org.springframework.transaction.annotation.Transactional;
 
 @Repository
 public class AuditEntryRepositoryImpl implements AuditEntryRepository {
+
+  @Autowired
+  private ObjectMapper objectMapper;
 
   private static final String QUERY_INSERT = "INSERT INTO audit_entry (trace_id, span_id, url, http_method, "
       + "parameters, request_body, response_body, http_status, key_value, elapsed_time) "
@@ -35,8 +39,10 @@ public class AuditEntryRepositoryImpl implements AuditEntryRepository {
     namedParameters.addValue("url", entity.getUrl(), Types.VARCHAR);
     namedParameters.addValue("http_method", entity.getHttpMethod(), Types.VARCHAR);
     namedParameters.addValue("parameters", entity.getParameters(), Types.VARCHAR);
-    namedParameters.addValue("request_body", entity.getRequestBody(), Types.JAVA_OBJECT);
-    namedParameters.addValue("response_body", entity.getResponseBody(), Types.JAVA_OBJECT);
+    namedParameters.addValue("request_body", objectMapper.valueToTree(entity.getRequestBody()).toString(),
+        Types.OTHER);
+    namedParameters.addValue("response_body", objectMapper.valueToTree(entity.getResponseBody()).toString(),
+        Types.OTHER);
     namedParameters.addValue("http_status", entity.getHttpStatus(), Types.SMALLINT);
     namedParameters.addValue("key_value", entity.getKeyValue(), Types.VARCHAR);
     namedParameters.addValue("elapsed_time", entity.getElapsedTime(), Types.INTEGER);
