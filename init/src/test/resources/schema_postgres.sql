@@ -79,6 +79,6 @@ CREATE TABLE purchase_order_line (
   updated_at TIMESTAMP DEFAULT NULL,
   PRIMARY KEY (id),
   FOREIGN KEY (purchase_order_id) REFERENCES purchase_order(id),
-  FOREIGN KEY (category_id) REFERENCES category(category_id)
+  FOREIGN KEY (category_id) REFERENCES category(id)
 );
 CREATE INDEX idx_purchase_order_line_item ON purchase_order_line(item);
