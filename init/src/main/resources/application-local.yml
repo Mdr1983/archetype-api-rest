@@ -5,7 +5,7 @@ logging:
     level: '%5p [${spring.application.name:},%X{traceId:-},%X{spanId:-}]'
 
 spring:
-  #Postgres
+  # SQL Server
   datasource:
     datasource-initializer-enabled: false
     minimum-idle: 5
@@ -16,26 +16,14 @@ spring:
     connection-timeout: 30000
     hikari:
       connection-test-query: SELECT 1
-    jdbcUrl: jdbc:postgresql://localhost:15432/archetype-api-rest?useUnicode=true&characterEncoding=utf8
-    username: postgres
-    password: 'example'
-    driverClassName: org.postgresql.Driver
+    jdbcUrl: jdbc:sqlserver://BI-DEVELOP.lvi.lan:1433;databaseName=AUTOLINE;encrypt=true;trustServerCertificate=true;
+    username: APP_autoline
+    password: 'u7WVIsizOUdL'
+    driverClassName: com.microsoft.sqlserver.jdbc.SQLServerDriver
     poolName: HikariCP-Principal
+
   # Configuración JPA
   jpa:
-    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    database-platform: org.hibernate.dialect.SQLServerDialect
     show-sql: true  # Muestra las consultas SQL en la consola
     open-in-view: false  # Evitar problemas de rendimiento en producción
-  #Mongodb
-  data:
-    mongodb:
-      #uri: mongodb://localhost:27017/archetype-api-rest
-      uri: mongodb://root:example@localhost:27017/archetype-api-rest?authSource=admin
-      database: archetype-api-rest
-      username: root
-      password: example
-      authentication-database: admin
-      connection-timeout: 1000
-      socket-timeout: 3000
-      #ssl: true
-      #replica-set: nombreReplicaSet

@@ -1,0 +1,114 @@
+name: Deploy to Docker Swarm
+
+on:
+  workflow_dispatch:
+    inputs:
+      image:
+        description: Nombre de la imagen a desplegar (ej. mi-app:latest)
+        required: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest # Asegúrate de que esta etiqueta coincida con tu runner
+    steps:
+      - name: Clone code
+        uses: actions/checkout@v4
+        with:
+          # Esto es crucial para operaciones Git. Asegura que el runner tenga contexto Git
+          # y permisos (a través de GITHUB_TOKEN o tu PAT de Gitea).
+          token: ${{ secrets.GITHUB_TOKEN }} # Usa GITHUB_TOKEN (por defecto) o ${{ secrets.GITEA_PAT }} si creaste uno
+
+      - name: Show image and version to deploy
+        id: extract_version # ID para acceder a las salidas de este paso
+        run: |
+          # El input de la imagen puede ser como 'mi-app:1.0.0' o 'mi-app:latest'
+          IMAGE_FULL_NAME="${{ inputs.image }}"
+          echo "Imagen completa a desplegar: $IMAGE_FULL_NAME"
+
+          IMAGE_NAME=$(echo "$IMAGE_FULL_NAME" | grep -oP '^.*(?=:)')
+          echo "Aplicación de la imagen extraída: $IMAGE_NAME"
+          echo "image_name=$IMAGE_NAME" >> "$GITHUB_OUTPUT" # Establecer como salida para pasos posteriores
+          
+          # Extrae la parte de la etiqueta (ej. "1.0.0" de "mi-app:1.0.0")
+          # Usamos un patrón que captura lo que viene DESPUÉS del último ':'
+          IMAGE_TAG=$(echo "$IMAGE_FULL_NAME" | grep -oP '(?<=:).*')
+
+          # Si no se proporciona una etiqueta explícitamente (ej. 'mi-app'), por defecto usamos 'latest' o una versión personalizada
+          if [ -z "$IMAGE_TAG" ]; then
+              IMAGE_TAG="latest" # O cualquier otro valor por defecto que prefieras
+          fi
+
+          echo "Versión/Etiqueta de la imagen extraída: $IMAGE_TAG"
+          echo "image_version=$IMAGE_TAG" >> "$GITHUB_OUTPUT" # Establecer como salida para pasos posteriores
+
+      - name: Create TAG in Gitea
+        # Ejecutar este paso solo si la image_version NO es 'latest'
+        # (generalmente no se taggea 'latest' en Git) Y todos los pasos previos han sido exitosos.
+        if: steps.extract_version.outputs.image_version != 'latest' && success()
+        run: |
+          IMAGE_NAME=${{ steps.extract_version.outputs.image_name }}
+          VERSION=${{ steps.extract_version.outputs.image_version }}
+          TAG_NAME="deploy-$IMAGE_NAME-v$VERSION" # Añade un prefijo como 'deploy-' para diferenciar tags de despliegue
+
+          echo "Configurando usuario Git para el tag..."
+          git config user.name "Gitea Deploy Bot"
+          git config user.email "deploy-bot@gitea.com"
+
+          echo "Verificando si el tag $TAG_NAME ya existe localmente..."
+          if git tag -l | grep -q "^$TAG_NAME$"; then
+            echo "El tag $TAG_NAME ya existe localmente."
+          fi
+
+          echo "Verificando si el tag $TAG_NAME ya existe remotamente..."
+          if git ls-remote --tags origin | grep -q "refs/tags/$TAG_NAME$"; then
+            echo "El tag $TAG_NAME ya existe remotamente."
+            # Opcional: Si quieres sobreescribir tags existentes de despliegue, descomenta la siguiente línea:
+            # git push --delete origin "$TAG_NAME"
+          fi
+
+          echo "Creando tag $TAG_NAME..."
+          git tag "$TAG_NAME" -m "Versión $VERSION desplegada de la imagen ${{ inputs.image }}"
+
+          echo "Subiendo tag $TAG_NAME a Gitea..."
+          git push origin "$TAG_NAME"
+
+          echo "Tag $TAG_NAME creado y subido exitosamente."
+          
+      - name: Configure Docker to allow insecure registries
+        run: |
+          # Accede a la variable DOCKER_REGISTRY_URL para configurar el registro inseguro
+          echo "Configurando Docker para permitir el registro inseguro: ${{ vars.DOCKER_REGISTRY_URL }}"
+          mkdir -p ~/.docker
+          # Usa comillas dobles externas y simples internas para la interpolación de la variable
+          echo '{ "insecure-registries": ["${{ vars.DOCKER_REGISTRY_URL }}"] }' > ~/.docker/config.json
+          cat ~/.docker/config.json
+          echo "Configuración de Docker aplicada."
+
+      - name: Pull image of insecure registries (opcional en Swarm)
+        run: |
+          docker pull ${{ vars.DOCKER_REGISTRY_URL }}/${{ inputs.image }} || true
+
+      - name: Verify service
+        id: check_service
+        run: |
+          if docker service ls --format '{{.Name}}' | grep -q '^mi-app$'; then
+            echo "exists=true" >> $GITHUB_OUTPUT
+          else
+            echo "exists=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Update service in Swarm
+        if: steps.check_service.outputs.exists == 'true'
+        run: |
+          docker service update \
+            --image ${{ vars.DOCKER_REGISTRY_URL }}/${{ inputs.image }} \
+            ${{ steps.extract_version.outputs.image_name }}
+
+      - name: Create new service in Swarm
+        if: steps.check_service.outputs.exists == 'false'
+        run: |
+          docker service create \
+            --name ${{ steps.extract_version.outputs.image_name }} \
+            --publish 8081:8081 \
+            ${{ vars.DOCKER_REGISTRY_URL }}/${{ inputs.image }}
+

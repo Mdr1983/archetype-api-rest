@@ -1,20 +1,20 @@
-# Arquetipo API REST
+# Autoline Back
 
-Arquetipo para proyectos que exponen un API Rest.
+Proyecto de back para la parte de Autoline.
 
 Sigue una arquitectura hexagonal.
 
 ```mermaid
 graph TD;
-    archetype-api-rest-->application;
-    archetype-api-rest-->init;
-    archetype-api-rest-->priadapter;
-    archetype-api-rest-->secadapter;
+    autoline-back-->application;
+    autoline-back-->init;
+    autoline-back-->priadapter;
+    autoline-back-->secadapter;
 ```
 
 ## Pre-requisitos 📋
 
-* Jdk21
+* Jdk24
 * Docker
 
 ## Dependencias
@@ -33,10 +33,10 @@ Pasos a seguir para poder arracar el proyecto:
 git clone https://github.com/Mdr1983/docker.git
 ```
 
-2. Descargar el proyecto de archetype-api-rest desde github.
+2. Descargar el proyecto de autoline-back desde github.
 
 ```
-git clone https://github.com/Mdr1983/archetype-api-rest.git
+git clone https://github.com/Mdr1983/autoline-back.git
 ```
 
 3. Seguir las indicaciones de la sección [Instalación](#instalacion)  
@@ -64,7 +64,7 @@ Algunas de las características del proyecto son:
 
 Por defecto la aplicación se inicia en el puerto **8081**.
 
-El API de entrada de swagger sería http://localhost:8081/archetype-api-rest/swagger-ui/index.html#/ 
+El API de entrada de swagger sería http://localhost:8081/autoline-back/swagger-ui/index.html#/ 
 
 ### Compilar aplicación
 
@@ -111,7 +111,7 @@ En el fichero bootstrap.yml esta definido el acceso a SCCS
 ```
 spring:
   application:
-    name: archetype-api-rest
+    name: autoline-back
   cloud:
     config:
       failFast: true
@@ -154,7 +154,7 @@ Hay que comentar su contenido, excepto la parte de logging.
 ```
 #spring:
 #  application:
-#    name: archetype-api-rest
+#    name: autoline-back
 #  cloud:
 #    config:
 #      failFast: true
@@ -199,7 +199,7 @@ java -jar init/target/init.jar -Dspring-boot.run.profiles=h2
 
 Si todo ha ido correcto la aplicación se iniciará y se podrá verificar con swagger. 
 
-Para ello acceder a la URL http://localhost:8081/archetype-api-rest/swagger-ui/index.html#/
+Para ello acceder a la URL http://localhost:8081/autoline-back/swagger-ui/index.html#/
 
 ![swagger_init.png](swagger_init.png)
 
@@ -254,13 +254,13 @@ Puedes encontrar mucho más de cómo utilizar este proyecto en nuestra [Wiki](ht
 
 Se utiliza [SemVer](http://semver.org/) para el versionado. 
 
-Para todas las versiones disponibles, mira los [tags](https://github.com/Mdr1983/archetype-api-rest/tags).
+Para todas las versiones disponibles, mira los [tags](https://github.com/Mdr1983/autoline-back/tags).
 
 ## Autores ✒️
 
 * **Manuel Demanuel Rodríguez** - [Mdr1983](https://github.com/Mdr1983)
 
-También puedes mirar la lista de todos los [contribuyentes](https://github.com/Mdr1983/archetype-api-rest/graphs/contributors) quíenes han participado en este proyecto.
+También puedes mirar la lista de todos los [contribuyentes](https://github.com/Mdr1983/autoline-back/graphs/contributors) quíenes han participado en este proyecto.
 
 ## Licencia 📄
 
@@ -288,5 +288,5 @@ mvn install
 3. Para usar el arquetipo en otro poryecto
 
 ```
-mvn archetype:generate -DarchetypeGroupId=com.mdemanuel -DarchetypeArtifactId=archetype-api-rest-archetype -DarchetypeVersion=0.0.1-SNAPSHOT
+mvn archetype:generate -DarchetypeGroupId=com.louzao -DarchetypeArtifactId=autoline-back-archetype -DarchetypeVersion=0.0.1-SNAPSHOT
 ```

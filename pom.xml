@@ -1,247 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-
-  <parent>
-    <groupId>org.springframework.boot</groupId>
-    <artifactId>spring-boot-starter-parent</artifactId>
-    <version>3.3.3</version>
-    <relativePath/>
-  </parent>
-
-  <groupId>com.mdemanuel</groupId>
-  <artifactId>archetype-api-rest</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
-  <name>archetype-api-rest</name>
-  <description>Arquetipo con API REST</description>
-
-  <packaging>pom</packaging>
-
-  <properties>
-    <packaging.type>jar</packaging.type>
-    <outputDirectory>${project.build.directory}/libs</outputDirectory>
-    <java.version>22</java.version>
-    <maven.compiler.source>22</maven.compiler.source>
-    <maven.compiler.target>22</maven.compiler.target>
-    <start-class>com.mdemanuel.init.StartRestApplication</start-class>
-
-    <spring-boot-starter.version>3.3.3</spring-boot-starter.version>
-    <spring-boot-starter-cache.version>3.3.3</spring-boot-starter-cache.version>
-    <spring-cloud-stream.version>4.1.3</spring-cloud-stream.version>
-    <spring-boot-configuration-processor.version>3.3.3</spring-boot-configuration-processor.version>
-    <spring-boot-starter-actuator.version>3.3.3</spring-boot-starter-actuator.version>
-    <spring-boot-starter-data-redis.version>3.3.4</spring-boot-starter-data-redis.version>
-
-    <org.springframework.jdbc.version>3.2.2.RELEASE</org.springframework.jdbc.version>
-    <spring-cloud-starter-bootstrap.version>4.1.4</spring-cloud-starter-bootstrap.version>
-    <spring-cloud-starter-config.version>4.1.3</spring-cloud-starter-config.version>
-    <springdoc-openapi-starter-webmvc-ui.version>2.6.0</springdoc-openapi-starter-webmvc-ui.version>
-
-    <micrometer-core.version>1.13.3</micrometer-core.version>
-    <micrometer-registry-prometheus>1.13.3</micrometer-registry-prometheus>
-    <micrometer-tracing.version>1.3.4</micrometer-tracing.version>
-    <micrometer-tracing-bridge-brave.version>1.3.4</micrometer-tracing-bridge-brave.version>
-
-    <p6spy.version>3.9.1</p6spy.version>
-    <janino.version>3.1.12</janino.version>
-    <lombok.version>1.18.34</lombok.version>
-    <lombok-mapstruct-binding.version>0.2.0</lombok-mapstruct-binding.version>
-    <mapstruct.version>1.6.0</mapstruct.version>
-    <checkstyle>10.18.0</checkstyle>
-    <commons-collections4.version>4.5.0-M2</commons-collections4.version>
-    <logback-elasticsearch-appender.version>1.6</logback-elasticsearch-appender.version>
-    <jackson-datatype-jsr310.version>2.18.0</jackson-datatype-jsr310.version>
-    <json-schema-validator.version>1.5.2</json-schema-validator.version>
-    <hibernate-types-60.version>2.21.1</hibernate-types-60.version>
-
-    <postgresql.version>42.7.4</postgresql.version>
-
-    <logcaptor.version>2.9.3</logcaptor.version>
-
-    <jakarta.persistence-api.version>3.2.0</jakarta.persistence-api.version>
-    <jakarta.validation-api.version>3.1.0</jakarta.validation-api.version>
-    <jakarta.transaction-api.version>2.0.1</jakarta.transaction-api.version>
-    <jakarta.servlet-api.version>6.1.0</jakarta.servlet-api.version>
-    <validation-api.version>2.0.1.Final</validation-api.version>
-
-    <gson.version>2.11.0</gson.version>
-    <jackson-datatype-jdk8.version>2.17.2</jackson-datatype-jdk8.version>
-    <jackson-module-parameter-names.version>2.14.2</jackson-module-parameter-names.version>
-    <h2.version>2.3.232</h2.version>
-    <rest-assured.version>5.5.0</rest-assured.version>
-    <mockito-core.version>5.14.2</mockito-core.version>
-    <mockito-junit-jupiter.version>5.14.2</mockito-junit-jupiter.version>
-
-    <maven-jar-plugin.version>3.4.2</maven-jar-plugin.version>
-    <maven-compiler-plugin.version>3.13.0</maven-compiler-plugin.version>
-    <maven-checkstyle-plugin.version>3.5.0</maven-checkstyle-plugin.version>
-    <maven-dependency-plugin.version>3.8.0</maven-dependency-plugin.version>
-    <exec-maven-plugin.version>1.6.1</exec-maven-plugin.version>
-  </properties>
-
-  <dependencies>
-    <dependency>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-starter</artifactId>
-      <version>${spring-boot-starter.version}</version>
-    </dependency>
-
-    <dependency>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-starter-cache</artifactId>
-      <version>${spring-boot-starter-cache.version}</version>
-    </dependency>
-
-    <dependency>
-      <groupId>org.springframework.cloud</groupId>
-      <artifactId>spring-cloud-stream</artifactId>
-      <version>${spring-cloud-stream.version}</version>
-    </dependency>
-
-    <dependency>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-starter-data-redis</artifactId>
-      <version>${spring-boot-starter-data-redis.version}</version>
-    </dependency>
-
-    <dependency>
-      <groupId>io.micrometer</groupId>
-      <artifactId>micrometer-core</artifactId>
-      <version>${micrometer-core.version}</version>
-    </dependency>
-
-    <dependency>
-      <groupId>io.micrometer</groupId>
-      <artifactId>micrometer-registry-prometheus</artifactId>
-      <version>${micrometer-registry-prometheus}</version>
-      <scope>runtime</scope>
-    </dependency>
-
-    <dependency>
-      <groupId>io.micrometer</groupId>
-      <artifactId>micrometer-tracing</artifactId>
-      <version>${micrometer-tracing.version}</version>
-    </dependency>
-
-    <dependency>
-      <groupId>io.micrometer</groupId>
-      <artifactId>micrometer-tracing-bridge-brave</artifactId>
-      <version>${micrometer-tracing-bridge-brave.version}</version>
-    </dependency>
-
-    <dependency>
-      <groupId>p6spy</groupId>
-      <artifactId>p6spy</artifactId>
-      <version>${p6spy.version}</version>
-    </dependency>
-
-    <dependency>
-      <groupId>org.codehaus.janino</groupId>
-      <artifactId>janino</artifactId>
-      <version>${janino.version}</version>
-    </dependency>
-
-    <dependency>
-      <groupId>org.projectlombok</groupId>
-      <artifactId>lombok</artifactId>
-      <version>${lombok.version}</version>
-      <scope>provided</scope>
-    </dependency>
-
-    <dependency>
-      <groupId>org.mapstruct</groupId>
-      <artifactId>mapstruct</artifactId>
-      <version>${mapstruct.version}</version>
-    </dependency>
-
-    <dependency>
-      <groupId>org.projectlombok</groupId>
-      <artifactId>lombok-mapstruct-binding</artifactId>
-      <version>${lombok-mapstruct-binding.version}</version>
-    </dependency>
-
-    <dependency>
-      <groupId>org.apache.commons</groupId>
-      <artifactId>commons-collections4</artifactId>
-      <version>${commons-collections4.version}</version>
-    </dependency>
-
-    <dependency>
-      <groupId>com.internetitem</groupId>
-      <artifactId>logback-elasticsearch-appender</artifactId>
-      <version>${logback-elasticsearch-appender.version}</version>
-    </dependency>
-
-    <dependency>
-      <groupId>com.fasterxml.jackson.datatype</groupId>
-      <artifactId>jackson-datatype-jsr310</artifactId>
-      <version>${jackson-datatype-jsr310.version}</version>
-    </dependency>
-
-    <dependency>
-      <groupId>com.networknt</groupId>
-      <artifactId>json-schema-validator</artifactId>
-      <version>${json-schema-validator.version}</version>
-    </dependency>
-
-    <dependency>
-      <groupId>com.vladmihalcea</groupId>
-      <artifactId>hibernate-types-60</artifactId>
-      <version>${hibernate-types-60.version}</version>
-    </dependency>
-  </dependencies>
-
-  <modules>
-    <module>init</module>
-    <module>application</module>
-    <module>priadapter</module>
-    <module>secadapter</module>
-  </modules>
+  <artifactId>autoline-back</artifactId>
 
   <build>
     <finalName>${project.artifactId}</finalName>
 
     <plugins>
       <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
-        <version>${maven-compiler-plugin.version}</version>
         <configuration>
-          <compilerVersion>${maven.compiler.source}</compilerVersion>
-          <source>${maven.compiler.source}</source>
-          <target>${maven.compiler.target}</target>
-          <encoding>UTF-8</encoding>
           <annotationProcessorPaths>
             <path>
-              <groupId>org.projectlombok</groupId>
               <artifactId>lombok</artifactId>
+              <groupId>org.projectlombok</groupId>
               <version>${lombok.version}</version>
             </path>
             <path>
-              <groupId>org.projectlombok</groupId>
               <artifactId>lombok-mapstruct-binding</artifactId>
+              <groupId>org.projectlombok</groupId>
               <version>${lombok-mapstruct-binding.version}</version>
             </path>
             <path>
-              <groupId>org.mapstruct</groupId>
               <artifactId>mapstruct-processor</artifactId>
+              <groupId>org.mapstruct</groupId>
               <version>${mapstruct.version}</version>
             </path>
           </annotationProcessorPaths>
-          <showWarnings>true</showWarnings>
           <compilerArgs>
             <arg>-Amapstruct.defaultComponentModel=spring</arg>
             <arg>-Amapstruct.suppressGeneratorTimestamp=true</arg>
             <arg>-Amapstruct.suppressGeneratorVersionInfoComment=true</arg>
           </compilerArgs>
+          <encoding>UTF-8</encoding>
+          <showWarnings>true</showWarnings>
+          <source>${maven.compiler.source}</source>
+          <target>${maven.compiler.target}</target>
         </configuration>
+        <groupId>org.apache.maven.plugins</groupId>
+        <version>${maven-compiler-plugin.version}</version>
       </plugin>
 
       <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-jar-plugin</artifactId>
-        <version>${maven-jar-plugin.version}</version>
         <configuration>
           <archive>
             <manifest>
@@ -252,25 +53,27 @@
             </manifest>
           </archive>
         </configuration>
+        <groupId>org.apache.maven.plugins</groupId>
+        <version>${maven-jar-plugin.version}</version>
       </plugin>
 
       <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-dependency-plugin</artifactId>
-        <version>${maven-dependency-plugin.version}</version>
         <executions>
           <execution>
-            <id>generate-report-dependencies</id>
-            <phase>package</phase>
+            <configuration>
+              <outputFile>${project.basedir}/dependencies.txt</outputFile>
+            </configuration>
             <goals>
               <goal>tree</goal>
               <!--<goal>list</goal>-->
             </goals>
-            <configuration>
-              <outputFile>${project.basedir}/dependencies.txt</outputFile>
-            </configuration>
+            <id>generate-report-dependencies</id>
+            <phase>package</phase>
           </execution>
         </executions>
+        <groupId>org.apache.maven.plugins</groupId>
+        <version>${maven-dependency-plugin.version}</version>
       </plugin>
 
       <!--<plugin>
@@ -297,13 +100,18 @@
       </plugin>-->
 
       <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-checkstyle-plugin</artifactId>
-        <version>${maven-checkstyle-plugin.version}</version>
         <configuration>
           <configLocation>checkstyle.xml</configLocation>
           <suppressionsLocation>checkstyle-suppressions.xml</suppressionsLocation>
         </configuration>
+        <dependencies>
+          <dependency>
+            <artifactId>checkstyle</artifactId>
+            <groupId>com.puppycrawl.tools</groupId>
+            <version>${checkstyle.version}</version>
+          </dependency>
+        </dependencies>
         <executions>
           <execution>
             <goals>
@@ -311,44 +119,244 @@
             </goals>
           </execution>
         </executions>
-        <dependencies>
-          <dependency>
-            <groupId>com.puppycrawl.tools</groupId>
-            <artifactId>checkstyle</artifactId>
-            <version>${checkstyle}</version>
-          </dependency>
-        </dependencies>
+        <groupId>org.apache.maven.plugins</groupId>
+        <version>${maven-checkstyle-plugin.version}</version>
       </plugin>
     </plugins>
   </build>
+
+  <dependencies>
+    <dependency>
+      <groupId>io.micrometer</groupId>
+      <artifactId>context-propagation</artifactId>
+      <version>${micrometer-context-propagation.version}</version>
+    </dependency>
+
+    <dependency>
+      <artifactId>spring-boot-starter</artifactId>
+      <groupId>org.springframework.boot</groupId>
+      <version>${spring-boot-starter.version}</version>
+    </dependency>
+
+    <dependency>
+      <artifactId>spring-boot-starter-cache</artifactId>
+      <groupId>org.springframework.boot</groupId>
+      <version>${spring-boot-starter-cache.version}</version>
+    </dependency>
+
+    <dependency>
+      <artifactId>spring-cloud-stream</artifactId>
+      <groupId>org.springframework.cloud</groupId>
+      <version>${spring-cloud-stream.version}</version>
+    </dependency>
+
+    <dependency>
+      <artifactId>spring-boot-starter-data-redis</artifactId>
+      <groupId>org.springframework.boot</groupId>
+      <version>${spring-boot-starter-data-redis.version}</version>
+    </dependency>
+
+    <dependency>
+      <artifactId>micrometer-core</artifactId>
+      <groupId>io.micrometer</groupId>
+      <version>${micrometer-core.version}</version>
+    </dependency>
+
+    <dependency>
+      <artifactId>micrometer-registry-prometheus</artifactId>
+      <groupId>io.micrometer</groupId>
+      <scope>runtime</scope>
+      <version>${micrometer-registry-prometheus}</version>
+    </dependency>
+
+    <dependency>
+      <artifactId>micrometer-tracing</artifactId>
+      <groupId>io.micrometer</groupId>
+      <version>${micrometer-tracing.version}</version>
+    </dependency>
+
+    <dependency>
+      <artifactId>micrometer-tracing-bridge-brave</artifactId>
+      <groupId>io.micrometer</groupId>
+      <version>${micrometer-tracing-bridge-brave.version}</version>
+    </dependency>
+
+    <dependency>
+      <artifactId>p6spy</artifactId>
+      <groupId>p6spy</groupId>
+      <version>${p6spy.version}</version>
+    </dependency>
+
+    <dependency>
+      <artifactId>janino</artifactId>
+      <groupId>org.codehaus.janino</groupId>
+      <version>${janino.version}</version>
+    </dependency>
+
+    <dependency>
+      <artifactId>lombok</artifactId>
+      <groupId>org.projectlombok</groupId>
+      <scope>provided</scope>
+      <version>${lombok.version}</version>
+    </dependency>
+
+    <dependency>
+      <artifactId>mapstruct</artifactId>
+      <groupId>org.mapstruct</groupId>
+      <version>${mapstruct.version}</version>
+    </dependency>
+
+    <dependency>
+      <artifactId>lombok-mapstruct-binding</artifactId>
+      <groupId>org.projectlombok</groupId>
+      <version>${lombok-mapstruct-binding.version}</version>
+    </dependency>
+
+    <dependency>
+      <artifactId>commons-collections4</artifactId>
+      <groupId>org.apache.commons</groupId>
+      <version>${commons-collections4.version}</version>
+    </dependency>
+
+    <dependency>
+      <artifactId>logback-elasticsearch-appender</artifactId>
+      <groupId>com.internetitem</groupId>
+      <version>${logback-elasticsearch-appender.version}</version>
+    </dependency>
+
+    <dependency>
+      <artifactId>jackson-datatype-jsr310</artifactId>
+      <groupId>com.fasterxml.jackson.datatype</groupId>
+      <version>${jackson-datatype-jsr310.version}</version>
+    </dependency>
+
+    <dependency>
+      <artifactId>json-schema-validator</artifactId>
+      <groupId>com.networknt</groupId>
+      <version>${json-schema-validator.version}</version>
+    </dependency>
+
+    <dependency>
+      <artifactId>hibernate-types-60</artifactId>
+      <groupId>com.vladmihalcea</groupId>
+      <version>${hibernate-types-60.version}</version>
+    </dependency>
+  </dependencies>
+  <description>Autoline con API REST</description>
+  <groupId>com.louzao</groupId>
+  <modelVersion>4.0.0</modelVersion>
+  <modules>
+    <module>init</module>
+    <module>application</module>
+    <module>priadapter</module>
+    <module>secadapter</module>
+  </modules>
+
+  <name>autoline-back</name>
+
+  <packaging>pom</packaging>
+
+  <parent>
+    <artifactId>spring-boot-starter-parent</artifactId>
+    <groupId>org.springframework.boot</groupId>
+    <relativePath/>
+    <version>3.4.2</version>
+  </parent>
+
+  <properties>
+    <poi.version>5.2.3</poi.version>
+    <poi-ooxml.version>5.2.3</poi-ooxml.version>
+
+    <checkstyle.version>10.24.0</checkstyle.version>
+    <commons-collections4.version>4.5.0-M3</commons-collections4.version>
+    <exec-maven-plugin.version>3.5.0</exec-maven-plugin.version>
+    <gson.version>2.13.1</gson.version>
+    <h2.version>2.3.232</h2.version>
+    <hibernate-types-60.version>2.21.1</hibernate-types-60.version>
+
+    <jackson-datatype-jdk8.version>2.19.0</jackson-datatype-jdk8.version>
+    <jackson-datatype-jsr310.version>2.19.0</jackson-datatype-jsr310.version>
+    <jackson-module-parameter-names.version>2.19.0</jackson-module-parameter-names.version>
+    <jakarta.persistence-api.version>3.2.0</jakarta.persistence-api.version>
+    <jakarta.servlet-api.version>6.1.0</jakarta.servlet-api.version>
+    <jakarta.transaction-api.version>2.0.1</jakarta.transaction-api.version>
+
+    <jakarta.validation-api.version>3.1.1</jakarta.validation-api.version>
+    <janino.version>3.1.12</janino.version>
+    <java.version>24</java.version>
+    <json-schema-validator.version>1.5.6</json-schema-validator.version>
+
+    <logback-elasticsearch-appender.version>1.6</logback-elasticsearch-appender.version>
+    <logcaptor.version>2.11.0</logcaptor.version>
+    <lombok-mapstruct-binding.version>0.2.0</lombok-mapstruct-binding.version>
+    <lombok.version>1.18.38</lombok.version>
+
+    <mapstruct.version>1.6.3</mapstruct.version>
+    <maven-checkstyle-plugin.version>3.6.0</maven-checkstyle-plugin.version>
+    <maven-compiler-plugin.version>3.14.0</maven-compiler-plugin.version>
+    <maven-dependency-plugin.version>3.8.1</maven-dependency-plugin.version>
+    <maven-jar-plugin.version>3.4.2</maven-jar-plugin.version>
+    <maven.compiler.source>24</maven.compiler.source>
+    <maven.compiler.target>24</maven.compiler.target>
+    <micrometer-core.version>1.14.4</micrometer-core.version>
+    <micrometer-registry-prometheus>1.14.4</micrometer-registry-prometheus>
+    <micrometer-tracing-bridge-brave.version>1.4.3</micrometer-tracing-bridge-brave.version>
+    <micrometer-tracing.version>1.4.3</micrometer-tracing.version>
+
+    <mockito-core.version>5.18.0</mockito-core.version>
+
+    <mockito-junit-jupiter.version>5.18.0</mockito-junit-jupiter.version>
+
+    <mssql-jdbc>12.9.0.jre11-preview</mssql-jdbc>
+    <org.springframework.jdbc.version>3.2.2.RELEASE</org.springframework.jdbc.version>
+    <outputDirectory>${project.build.directory}/libs</outputDirectory>
+    <p6spy.version>3.9.1</p6spy.version>
+
+    <packaging.type>jar</packaging.type>
+    <rest-assured.version>5.5.2</rest-assured.version>
+    <spring-boot-configuration-processor.version>3.4.5</spring-boot-configuration-processor.version>
+    <spring-boot-starter-actuator.version>3.4.5</spring-boot-starter-actuator.version>
+    <spring-boot-starter-cache.version>3.4.5</spring-boot-starter-cache.version>
+    <spring-boot-starter-data-redis.version>3.4.5</spring-boot-starter-data-redis.version>
+    <spring-boot-starter.version>3.4.5</spring-boot-starter.version>
+
+    <spring-cloud-starter-bootstrap.version>4.2.1</spring-cloud-starter-bootstrap.version>
+    <spring-cloud-starter-config.version>4.2.2</spring-cloud-starter-config.version>
+    <spring-cloud-stream.version>4.2.1</spring-cloud-stream.version>
+    <springdoc-openapi-starter-webmvc-ui.version>2.8.8</springdoc-openapi-starter-webmvc-ui.version>
+    <micrometer-context-propagation.version>1.1.3</micrometer-context-propagation.version>
+    <start-class>com.louzao.init.StartRestApplication</start-class>
+  </properties>
 
   <repositories>
     <repository>
       <id>central</id>
       <name>Maven Central Repository</name>
-      <url>https://repo.maven.apache.org/maven2</url>
       <releases>
         <enabled>true</enabled>
       </releases>
       <snapshots>
         <enabled>false</enabled>
       </snapshots>
+      <url>https://repo.maven.apache.org/maven2</url>
     </repository>
     <repository>
       <id>spring-milestones</id>
       <name>Spring Milestones</name>
-      <url>https://repo.spring.io/milestone</url>
       <snapshots>
         <enabled>false</enabled>
       </snapshots>
+      <url>https://repo.spring.io/milestone</url>
     </repository>
     <repository>
       <id>spring-snapshots</id>
       <name>Spring Snapshots</name>
-      <url>https://repo.spring.io/snapshot</url>
       <releases>
         <enabled>false</enabled>
       </releases>
+      <url>https://repo.spring.io/snapshot</url>
     </repository>
   </repositories>
+
+  <version>0.0.1-SNAPSHOT</version>
 </project>

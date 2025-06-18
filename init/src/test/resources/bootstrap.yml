@@ -1,6 +1,6 @@
 spring:
   application:
-    name: archetype-api-rest
+    name: autoline-back
 cloud:
   config:
     failFast: true

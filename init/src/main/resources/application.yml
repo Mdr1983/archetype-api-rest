@@ -7,7 +7,7 @@ logging:
 server:
   port: 8081
   servlet:
-    context-path: /archetype-api-rest
+    context-path: /autoline-back
 
 management:
   endpoints:
@@ -46,11 +46,11 @@ spring:
       timeout: 15000             # Tiempo de espera en milisegundos
       connection-timeout: 30000  # Tiempo de espera en milisegundos
       client-type: lettuce
-  #cloud:
-    #config:
-      #server:
-        #git:
-        #uri: https://github.com/Mdr1983/config.git
+        #cloud:
+        #config:
+        #server:
+      #git:
+      #uri: https://github.com/Mdr1983/config.git
       #default-label: master
   jackson:
     mapper:

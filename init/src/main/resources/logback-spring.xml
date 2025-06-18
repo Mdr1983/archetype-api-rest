@@ -1,0 +1,108 @@
+<configuration>
+  <appender class="com.louzao.application.util.elastic.LogbackCompatibilityWrapper4ElasticsearchAppender"
+    name="ELASTIC">
+    <attributes>
+      <attribute>
+        <allowEmpty>false</allowEmpty>
+        <name>host</name>
+        <value>${HOSTNAME}</value>
+      </attribute>
+      <attribute>
+        <allowEmpty>false</allowEmpty>
+        <name>app</name>
+        <value>${appName}</value>
+      </attribute>
+      <attribute>
+        <allowEmpty>false</allowEmpty>
+        <name>app-version</name>
+        <value>${appVersion}</value>
+      </attribute>
+      <attribute>
+        <name>logger</name>
+        <value>%logger</value>
+      </attribute>
+      <attribute>
+        <name>level</name>
+        <value>%level</value>
+      </attribute>
+      <attribute>
+        <name>SpanId</name>
+        <value>%X{SpanId}</value>
+      </attribute>
+      <attribute>
+        <name>TraceId</name>
+        <value>%X{TraceId}</value>
+      </attribute>
+      <attribute>
+        <name>stacktrace</name>
+        <value>%ex</value>
+      </attribute>
+    </attributes>
+    <connectTimeout>30000</connectTimeout>
+    <errorLoggerName>es-error-logger</errorLoggerName> <!-- optional -->
+    <errorsToStderr>false</errorsToStderr> <!-- optional -->
+    <headers>
+      <header>
+        <name>Content-Type</name>
+        <value>application/json</value>
+      </header>
+    </headers> <!-- optional (in ms, default 30000) -->
+    <includeCallerData>false</includeCallerData> <!-- optional (in ms, default 30000) -->
+    <includeMdc>true</includeMdc> <!-- optional (default 3) -->
+    <index>${appName}</index> <!-- optional (in ms, default 250) -->
+    <loggerName>es-logger</loggerName> <!-- optional (default false) -->
+    <logsToStderr>false</logsToStderr> <!-- optional (default false) -->
+    <maxMessageSize>-1</maxMessageSize> <!-- optional (default false) -->
+    <maxQueueSize>104857600</maxQueueSize> <!-- optional (default 104857600) -->
+    <maxRetries>3</maxRetries> <!-- optional (default false) -->
+    <rawJsonMessage>false</rawJsonMessage> <!-- optional (default false) -->
+    <readTimeout>30000</readTimeout> <!-- optional (default -1 -->
+    <sleepTime>250</sleepTime>
+    <url>${url-elastic}</url>
+  </appender>
+
+  <appender class="ch.qos.logback.core.ConsoleAppender" name="CONSOLE">
+    <layout class="ch.qos.logback.classic.PatternLayout">
+      <Pattern>
+        %d{HH:mm:ss.SSS} [%t][%X] %-5level %logger{36} - %msg%n
+      </Pattern>
+    </layout>
+  </appender>
+
+  <if condition='property("profile") == "test" || property("profile") == "h2"'>
+    <else>
+      <root level="INFO">
+        <appender-ref ref="ELASTIC"/>
+      </root>
+    </else>
+    <then>
+      <root level="INFO">
+        <appender-ref ref="CONSOLE"/>
+      </root>
+    </then>
+  </if>
+  <logger level="WARN" name="org"/>
+  <logger level="WARN" name="_org"/>
+
+  <logger level="DEBUG" name="org.springframework.cache"/>
+  <logger level="INFO" name="sun.net.www.protocol.http.HttpURLConnection"/>
+  <logger level="INFO" name="brave.Tracer"/>
+  <logger level="INFO" name="com.zaxxer.hikari.pool.HikariPool"/>
+  <logger level="INFO" name="io.lettuce"/>
+  <logger additivity="false" level="ERROR" name="es-error-logger">
+    <appender-ref ref="CONSOLE"/>
+  </logger>
+  <logger additivity="false" level="INFO" name="es-logger">
+    <appender-ref ref="ELASTIC"/>
+  </logger>
+
+  <property name="url-elastic" value="http://localhost:9200/_bulk"/>
+
+  <!--<property resource="application.yml"/>-->
+
+  <springProperty defaultValue="name_default" name="appName" scope="context" source="spring.application.name"/>
+
+  <springProperty defaultValue="0.0.0" name="appVersion" scope="context" source="app.version"/>
+
+  <springProperty defaultValue="local" name="profile" scope="context" source="spring.profiles.active"/>
+</configuration>

@@ -1,88 +1,100 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-
-  <parent>
-    <groupId>com.mdemanuel</groupId>
-    <artifactId>archetype-api-rest</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
-  </parent>
-
   <artifactId>application</artifactId>
-  <name>${project.groupId}.${project.artifactId}</name>
-  <packaging>${packaging.type}</packaging>
-  <description>Módulo application del Arquetipo API REST</description>
 
   <dependencies>
     <dependency>
-      <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-web</artifactId>
+      <groupId>org.springframework.boot</groupId>
     </dependency>
 
     <dependency>
-      <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-data-jdbc</artifactId>
+      <groupId>org.springframework.boot</groupId>
     </dependency>
 
     <dependency>
-      <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-data-mongodb</artifactId>
-    </dependency>
-
-    <dependency>
       <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-starter-data-jpa</artifactId>
     </dependency>
 
     <dependency>
-      <groupId>org.springdoc</groupId>
+      <artifactId>spring-boot-starter-data-jpa</artifactId>
+      <groupId>org.springframework.boot</groupId>
+    </dependency>
+
+    <dependency>
       <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
+      <groupId>org.springdoc</groupId>
       <version>${springdoc-openapi-starter-webmvc-ui.version}</version>
     </dependency>
 
     <dependency>
-      <groupId>jakarta.persistence</groupId>
       <artifactId>jakarta.persistence-api</artifactId>
+      <groupId>jakarta.persistence</groupId>
       <version>${jakarta.persistence-api.version}</version>
     </dependency>
 
     <dependency>
-      <groupId>jakarta.validation</groupId>
       <artifactId>jakarta.validation-api</artifactId>
+      <groupId>jakarta.validation</groupId>
       <version>${jakarta.validation-api.version}</version>
     </dependency>
 
     <dependency>
-      <groupId>jakarta.transaction</groupId>
       <artifactId>jakarta.transaction-api</artifactId>
+      <groupId>jakarta.transaction</groupId>
       <version>${jakarta.transaction-api.version}</version>
     </dependency>
 
     <dependency>
-      <groupId>jakarta.servlet</groupId>
       <artifactId>jakarta.servlet-api</artifactId>
+      <groupId>jakarta.servlet</groupId>
       <version>${jakarta.servlet-api.version}</version>
     </dependency>
 
     <dependency>
-      <groupId>com.fasterxml.jackson.datatype</groupId>
       <artifactId>jackson-datatype-jdk8</artifactId>
+      <groupId>com.fasterxml.jackson.datatype</groupId>
       <version>${jackson-datatype-jdk8.version}</version>
     </dependency>
 
     <dependency>
-      <groupId>com.fasterxml.jackson.module</groupId>
       <artifactId>jackson-module-parameter-names</artifactId>
+      <groupId>com.fasterxml.jackson.module</groupId>
       <version>${jackson-module-parameter-names.version}</version>
     </dependency>
 
     <dependency>
-      <groupId>com.h2database</groupId>
       <artifactId>h2</artifactId>
-      <version>${h2.version}</version>
-      <!--<scope>test</scope>-->
+      <groupId>com.h2database</groupId>
       <scope>runtime</scope>
+      <!--<scope>test</scope>-->
+      <version>${h2.version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.apache.poi</groupId>
+      <artifactId>poi</artifactId>
+      <version>${poi.version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.apache.poi</groupId>
+      <artifactId>poi-ooxml</artifactId>
+      <version>${poi-ooxml.version}</version>
     </dependency>
   </dependencies>
+
+  <description>Módulo application de Financiero API REST</description>
+  <modelVersion>4.0.0</modelVersion>
+  <name>${project.groupId}.${project.artifactId}</name>
+  <packaging>${packaging.type}</packaging>
+
+  <parent>
+    <artifactId>autoline-back</artifactId>
+    <groupId>com.louzao</groupId>
+    <version>0.0.1-SNAPSHOT</version>
+  </parent>
 </project>

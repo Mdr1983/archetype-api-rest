@@ -36,7 +36,9 @@
           }
         }
       },
-      "required": ["operator"]
+      "required": [
+        "operator"
+      ]
     }
   }
 }

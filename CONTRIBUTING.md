@@ -1,8 +1,8 @@
-# Cómo contribuir a archetype-api-rest
+# Cómo contribuir a autoline-back
 
 ## Introducción
 
-¡Gracias por tu interés en contribuir a archetype-api-rest! Tu ayuda es muy apreciada.
+¡Gracias por tu interés en contribuir a autoline-back! Tu ayuda es muy apreciada.
 
 ## Cómo hacer un fork
 
